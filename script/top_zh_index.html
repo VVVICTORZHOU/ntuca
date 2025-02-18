@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTUCA Blog | TOP</title>
+    <link rel="stylesheet" href="top_zh_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="top_zh_index.html">
+                    <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="logo-img">
+                </a>
+            </div>
+            
+            <div class="menu-container">
+                <nav class="desktop-menu">
+                    <ul>
+                        <li><a href="top_zh_index.html" class="current-page"><span>TOP</span>回首頁</a></li>
+                        <li><a href="aboutus_zh_index.html"><span>ABOUT</span>關於我們</a></li>
+                        <li><a href="blog_zh_index.html"><span>BLOG</span>部落格</a></li>
+                        <li><a href="contact_zh_index.html"><span>CONTACT</span>聯繫我們</a></li>
+                        <li><a href="webslink_zh_index.html"><span>LINKS</span>友站連結</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="right-controls">
+                    <a href="blog_zh_index.html" class="search-btn1">
+                        <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
+                    </a>
+                    <a href="top_en_index.html" class="lang-switch">
+                        <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img">
+                    </a>
+                </div>
+                
+                <div class="mobile-controls">
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="top_en_index.html" class="lang-switch mobile-lang">
+                        <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-popup">
+        <div class="search-popup-content">
+            <h2>在部落格中搜索</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="輸入關鍵字...">
+                <button type="button" id="search-submit">搜尋</button>
+            </div>
+            <div class="hot-searches">
+                <span>熱門搜尋：</span>
+                <a href="blog_zh_index.html">氣候變遷</a>
+                <a href="blog_zh_index.html">永續發展</a>
+                <a href="blog_zh_index.html">碳中和</a>
+            </div>
+            <button class="search-popup-close" aria-label="Close Search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="sidebar-title">
+            <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="sidebar-logo-img">
+        </div>
+        <div class="sidebar-search">
+            <a href="blog_zh_index.html" class="search-btn2">
+                <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
+            </a>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="top_zh_index.html" class="current">回首頁</a></li>
+                <li><a href="aboutus_zh_index.html">關於我們</a></li>
+                <li><a href="blog_zh_index.html">部落格</a></li>
+                <li><a href="contact_zh_index.html">聯繫我們</a></li>
+                <li><a href="webslink_zh_index.html">友站連結</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Carousel Container -->
+    <div class="carousel-container">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+              <img src="../img/slider_img1.png" class="d-block w-100" alt="Slide 1">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>第一頁投影片</h5>
+                <p>一些有關這張投影片的簡單介紹，簡短就好。</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="../img/slider_img2.png" class="d-block w-100" alt="Slide 2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>第二頁投影片</h5>
+                <p>一些有關這張投影片的簡單介紹，也簡短就好。</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="../img/slider_img3.png" class="d-block w-100" alt="Slide 3">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>第三頁投影片</h5>
+                <p>一些有關這張投影片的簡單介紹，只要簡短就好。</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+          </button>
+
+    </div>
+
+    <!-- Top Blog -->
+    <div class="top-blog-container">
+        <div class="top-blog-title-container">
+            <h2 class="top-blog-title">最新文章</h2>
+        </div>
+        <div class="top-blog-items-container">
+            <div class="top-blog-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="top-blog-item-img">
+                <div class="top-blog-item-content">
+                    <h3 class="top-blog-item-title">文章標題</h3>
+                    <h5 class="top-blog-item-date">2025/02/29</h5>
+                    <p class="top-blog-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+                </div>
+            </div>
+            <div class="top-blog-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="top-blog-item-img">
+                <div class="top-blog-item-content">
+                    <h3 class="top-blog-item-title">文章標題</h3>
+                    <h5 class="top-blog-item-date">2025/02/29</h5>
+                    <p class="top-blog-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+                </div>
+            </div>
+            <div class="top-blog-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="top-blog-item-img">
+                <div class="top-blog-item-content">
+                    <h3 class="top-blog-item-title">文章標題</h3>
+                    <h5 class="top-blog-item-date">2025/02/29</h5>
+                    <p class="top-blog-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="top-blog-readmore-container">
+            <a href="blog_zh_index.html" class="top-blog-readmore-button">閱讀更多</a>
+        </div>
+    </div>
+
+    <!-- Top SDGs -->
+    <div class="top-sdgs-container">
+        <div class="top-sdgs-title-container">
+            <h2 class="top-sdgs-title">永續發展目標 SDGs</h2>
+        </div>
+        <div class="top-sdgs-content-container">
+            <div class="top-sdgs-logo-container">
+                <img src="../img/sdgs_simplified_logo_img.png" alt="SDGs Logo" class="top-sdgs-logo-img">
+            </div>
+            <div class="top-sdgs-text-container">
+                <p>這個段落目前規劃為統計部落格文章的標籤數量，以另外一種形式導覽目前有的文章標籤。待內容豐富後，可考慮是否以其他分類方式(氣候變遷科學、減緩、調適)等呈現。</p>
+                <p>聯合國永續發展目標（Sustainable Development Goals, SDGs）是一項全球共識，旨在解決全球挑戰，實現全球可持續發展。SDGs共有17個目標，包括消除貧困、零飢餓、健康與福祉、性別平等、清潔水與衛生、負責任生產與消費、氣候行動、生命在陸上、和平與正義、夥伴關係等。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-container">
+            <p>© 2025 台大氣候行動社 NTUCA. All rights reserved.</p>
+            <p>Last Updated: 2025/02/18</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/climateaction_ntu" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/NTUClimateAction" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="top_zh_script.js"></script>
+</body>
+</html>

@@ -461,7 +461,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: #fff;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .tabs-container .tabs-button-container {
@@ -510,8 +510,7 @@ body {
 /* Tab 內容基本樣式 */
 .tab-content {
     background-color: #f6f6f6;
-    margin: 20px 0;
-    padding: 20px;
+    margin: 10px 0;
     width: 90%;
     border-radius: 10px;
     opacity: 1;
@@ -519,16 +518,131 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.tab-logo-container {
-    display: flex;
-    justify-content: center;
+/* 關於NTUCA區域樣式 */
+.tab-content .ntuca-about-section {
+    background-color: #f6f6f6;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.tab-content .ntuca-logo {
+    width: 100px;
     margin-bottom: 20px;
 }
 
-.tab-logo-container img {
-    width: 100px;
-    height: auto;
+.tab-content .ntuca-intro {
+    margin-bottom: 30px;
 }
+
+.tab-content .ntuca-intro p {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tab-content .ntuca-intro .ntuca-slogan {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+
+}
+
+.tab-content .ntuca-core-values {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-content .ntuca-core-values ul {    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-content .ntuca-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.tab-content .ntuca-text-subtitle {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+    padding: 0.4em;
+    border-bottom: #83CBEB 2px solid;
+    width: 300px;
+}
+
+.tab-content .ntuca-text-subtitle span {
+    position: relative;
+    z-index: 2;
+}
+
+.tab-content .ntuca-text-subtitle::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(131, 203, 235, 0.5);
+    font-size: 30px;
+    font-weight: 800;
+    z-index: 1;
+}
+
+
+.tab-content .ntuca-core-values ul {
+    list-style: none;
+    padding-left: 0;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.tab-content .ntuca-core-values ul li {
+    margin-bottom: 15px;
+}
+
+.tab-content .ntuca-core-values ul li strong {
+    color: #83CBEB;
+}
+
+.tab-content .highlight {
+    background-color: #83CBEB;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .ntuca-about-section {
+        padding: 20px;
+    }
+
+    .ntuca-title {
+        font-size: 20px;
+    }
+
+    .ntuca-intro p,
+    .ntuca-core-values ul li {
+        font-size: 14px;
+    }
+
+    .ntuca-logo {
+        width: 120px;
+    }
+}
+
 
 /* 隱藏的 Tab */
 .tab-content.hidden {

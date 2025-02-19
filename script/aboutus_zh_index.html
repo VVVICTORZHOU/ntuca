@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NTUCA Blog | WEBSLINK</title>
-    <link rel="stylesheet" href="webslink_zh_style.css">
+    <title>NTUCA Blog | ABOUT</title>
+    <link rel="stylesheet" href="aboutus_zh_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -20,10 +20,10 @@
                 <nav class="desktop-menu">
                     <ul>
                         <li><a href="top_zh_index.html"><span>TOP</span>回首頁</a></li>
-                        <li><a href="aboutus_zh_index.html"><span>ABOUT</span>關於我們</a></li>
+                        <li><a href="aboutus_zh_index.html" class="current-page"><span>ABOUT</span>關於我們</a></li>
                         <li><a href="blog_zh_index.html"><span>BLOG</span>部落格</a></li>
                         <li><a href="contact_zh_index.html"><span>CONTACT</span>聯繫我們</a></li>
-                        <li><a href="webslink_zh_index.html" class="current-page"><span>LINKS</span>友站連結</a></li>
+                        <li><a href="webslink_zh_index.html"><span>LINKS</span>友站連結</a></li>
                     </ul>
                 </nav>
                 
@@ -31,7 +31,7 @@
                     <a href="blog_zh_index.html" class="search-btn1">
                         <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
                     </a>
-                    <a href="webslink_en_index.html" class="lang-switch">
+                    <a href="aboutus_en_index.html" class="lang-switch">
                         <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img">
                     </a>
                 </div>
@@ -40,7 +40,7 @@
                     <button class="menu-toggle" aria-label="Toggle Menu">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <a href="webslink_en_index.html" class="lang-switch mobile-lang">
+                    <a href="aboutus_en_index.html" class="lang-switch mobile-lang">
                         <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img">
                     </a>
                 </div>
@@ -83,78 +83,53 @@
         <nav class="sidebar-menu">
             <ul>
                 <li><a href="top_zh_index.html">回首頁</a></li>
-                <li><a href="aboutus_zh_index.html">關於我們</a></li>
+                <li><a href="aboutus_zh_index.html" class="current">關於我們</a></li>
                 <li><a href="blog_zh_index.html">部落格</a></li>
                 <li><a href="contact_zh_index.html">聯繫我們</a></li>
-                <li><a href="webslink_zh_index.html" class="current">友站連結</a></li>
+                <li><a href="webslink_zh_index.html">友站連結</a></li>
             </ul>
         </nav>
     </aside>
 
-    <!-- 校內友站 -->
-    <div class="weblinks-container" id="weblinks-container-1">
-        <div class="weblinks-title-container">
-            <h2 class="weblinks-title">校內連結</h2>
+    <!-- 主要內容 Tabs -->
+    <div class="tabs-container">
+        <div class="tabs-button-container">
+            <div class="activate-tab-button" id="tab-button-1">關於本社</div>
+            <div class="deactivate-tab-button" id="tab-button-2">本社成員</div>
+            <div class="deactivate-tab-button" id="tab-button-3">歷年專案</div>
         </div>
-        <div class="weblinks-text-container">
-            <p class="weblinks-text">
-                下面是一些與我們的社群官方帳號連結，以及與本社相關的校內組織。歡迎點擊連結前往他們的網站！
-            </p>
-
+        <div class="tabs-content-container" id="tabs-content-container-1">
+            <div class="tabs-content-title">關於 NTUCA</div>
+            <div class="tab-content">
+                <div class="tab-logo-container">
+                    <img src="../img/ntuca_logo.png" alt="NTUCA Logo" id="tab-logo-img">
+                </div>
+                ...
+            </div>
         </div>
-        <div class="weblinks-link-container">
-            <a href="https://www.facebook.com/NTUClimateAction" class="weblinks-link-button">氣候行動社 Facebook</a>
-            <a href="https://www.instagram.com/climateaction_ntu" class="weblinks-link-button">氣候行動社 Instagram</a>
-
+        <div class="tabs-content-container" id="tabs-content-container-2">
+            <div class="tabs-content-title">NTUCA 的成員</div>
+            <div class="tab-content">...</div>
         </div>
-        <div class="weblinks-link-container">
-            <a href="https://www.ntu.edu.tw/" class="weblinks-link-button">國立台灣大學</a>
-            <a href="https://sustainable.ntu.edu.tw/" class="weblinks-link-button">台大永續辦公室</a>
-        </div>
-    </div>
-
-    <!-- 校外友站 -->
-    <div class="weblinks-container" id="weblinks-container-2">
-        <div class="weblinks-title-container">
-            <h2 class="weblinks-title">校外連結</h2>
-        </div>
-        <div class="weblinks-text-container">
-            <p class="weblinks-text">
-                下面是一些台灣永續與氣候行動相關的官方與民間組織。歡迎點擊連結前往他們的網站！
-            </p>
-
-        </div>
-        <div class="weblinks-link-container">
-            <a href="https://ncsd.ndc.gov.tw/" class="weblinks-link-button">國家永續發展協會</a>
-            <a href="https://www.cca.gov.tw/climatetalks/" class="weblinks-link-button">環境部氣候公民對話平台</a>
-        </div>
-        <div class="weblinks-link-container">
-            <a href="https://proj.moe.edu.tw/esdtaiwan/" class="weblinks-link-button">永續循環校園全球資訊網</a>
-            <a href="https://www.sow.org.tw/" class="weblinks-link-button">荒野保護協會</a>
-        </div>
-        <div class="weblinks-link-container">
-            <a href="https://www.cet-taiwan.org/" class="weblinks-link-button">地球公民基金會</a>
-            <a href="https://gcaa.org.tw/" class="weblinks-link-button">綠色公民行動聯盟</a>
+        <div class="tabs-content-container" id="tabs-content-container-3">
+            <div class="tabs-content-title">NTUCA 歷年專案</div>
+            <div class="tab-content">...</div>
         </div>
     </div>
 
-    <!-- 國際友站 -->
-    <div class="weblinks-container" id="weblinks-container-3">
-        <div class="weblinks-title-container">
-            <h2 class="weblinks-title">國際連結</h2>
+    <!-- 頁尾按鈕 -->
+    <div class="about-contact-container">
+        <div class="about-contact-title-container">
+            <h2 class="about-contact-title"></h2>
         </div>
-        <div class="weblinks-text-container">
-            <p class="weblinks-text">
-                下面是一些國際永續與氣候行動相關的官方與民間組織。歡迎點擊連結前往他們的網站！
+        <div class="about-contact-text-container">
+            <p class="about-contact-text">
+                請透過以下管道與我們聯繫，或是加入我們的行列！
             </p>
         </div>
-        <div class="weblinks-link-container">
-            <a href="https://sdgs.un.org/" class="weblinks-link-button">聯合國永續發展目標網</a>
-            <a href="https://www.unsdsn.org/" class="weblinks-link-button">聯合國永續發展方法網路</a>
-        </div>
-        <div class="weblinks-link-container">
-            <a href="https://jointsdgfund.org/" class="weblinks-link-button">永續發展目標基金</a>
-            <a href="https://sdg.iisd.org/" class="weblinks-link-button">國際永續發展研究所</a>
+        <div class="about-contact-link-container">
+            <a href="contact_zh_index.html" class="about-contact-link-button">聯繫我們</a>
+            <a href="" class="about-contact-link-button disabled-button">加入我們</a>
         </div>
     </div>
 
@@ -174,6 +149,6 @@
         </div>
     </footer>
     
-    <script src="webslink_zh_script.js"></script>
+    <script src="aboutus_zh_script.js"></script>
 </body>
 </html>

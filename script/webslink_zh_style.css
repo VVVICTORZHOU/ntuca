@@ -1,0 +1,612 @@
+/* 字體配置 */
+@font-face {
+    font-family: 'HarmonyOS Sans TC Medium';
+    src: url('C:/Users/VictorZhou/OneDrive - vichouro/Desktop/VSProject/113-2/NTUCA/font/HarmonyOS_Sans_TC_Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans TC Regular';
+    src: url('C:/Users/VictorZhou/OneDrive - vichouro/Desktop/VSProject/113-2/NTUCA/font/HarmonyOS_Sans_TC_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans TC Light';
+    src: url('C:/Users/VictorZhou/OneDrive - vichouro/Desktop/VSProject/113-2/NTUCA/font/HarmonyOS_Sans_TC_Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans TC';
+    src: url('C:/Users/VictorZhou/OneDrive - vichouro/Desktop/VSProject/113-2/NTUCA/font/HarmonyOS_Sans_TC_Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans TC Black';
+    src: url('C:/Users/VictorZhou/OneDrive - vichouro/Desktop/VSProject/113-2/NTUCA/font/HarmonyOS_Sans_TC_Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 基本樣式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    padding-top: 55px; /* 為固定header預留空間 */
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header 樣式 */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#main-header .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.current-page {
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+.current-page:hover {
+    border: none;
+}
+
+/* Logo 樣式 */
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#logo-img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+}
+
+#logo-img:hover {
+    transform: scale(1.1);
+}
+
+/* 桌面選單樣式 */
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.desktop-menu li a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.desktop-menu li a span {
+    color: #83CBEB;
+    font-size: 10px;
+}
+
+.right-controls a, .sidebar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.desktop-menu a:hover, .right-controls a:hover, .sidebar-menu a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* 右側控制項 */
+.right-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#search-icon-img, #lang-icon-img {
+    height: 25px;
+    width: auto;
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+}
+
+.search-btn:hover, .lang-switch:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* 行動控制項 - 默認隱藏 */
+.mobile-controls {
+    display: none;
+    align-items: center;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 15px;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.mobile-lang {
+    position: absolute;
+    right: 20px;
+}
+
+/* 搜尋框樣式 */
+.search-popup {
+    position: fixed;
+    top: -250px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    transition: top 0.3s ease-in-out;
+}
+
+.search-popup.active {
+    top: 0;
+}
+
+.search-popup-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.search-popup h2 {
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 20px;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    border: 2px solid #e7e7e7;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #83CBEB;
+}
+
+.search-box button {
+    padding: 12px 30px;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #83CBEB;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #6ba8c4;
+}
+
+.hot-searches {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hot-searches span {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.hot-searches a {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 15px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hot-searches a:hover {
+    background-color: #e7e7e7;
+}
+
+.search-popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-popup-close:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .search-popup {
+        top: -300px;
+        height: 300px;
+    }
+    .search-popup-content {
+        padding: 20px 15px;
+    }
+    
+    .search-popup h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-box button {
+        width: 100%;
+    }
+    
+    .hot-searches {
+        gap: 10px;
+    }
+}
+
+/* Sidebar 樣式 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1100;
+    transition: left 0.3s ease;
+    padding: 60px 0 20px;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-close:hover {
+    transform: scale(1.1);
+}
+
+.sidebar-title img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.sidebar-search {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: none;
+}
+
+
+/* Footer 樣式 */
+#main-footer {
+    position: relative;
+    /*top: calc(40vw + 1020px);  輪播容器下方1000px */
+    margin-top: 50px;
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#main-footer p {
+    font-family: 'HarmonyOS Sans TC Light', sans-serif;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+#main-footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 2px solid #83CBEB;
+    border-radius: 50%;
+    color: #83CBEB;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #83CBEB;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.social-link i {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        margin-top: 3px;
+    }
+    
+    .social-link {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-link i {
+        font-size: 14px;
+    }
+}
+
+/* 首頁部落格區 */
+.weblinks-container {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#weblinks-container-1, #weblinks-container-3 {
+    background-color: #f7f7f7;
+}
+
+#weblinks-container-2 {
+    background-color: #fff;
+}
+
+
+.weblinks-title-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.weblinks-title-container h2 {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 32px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    background-image: linear-gradient(
+        90deg,
+        #e7e7e7 0%, #e7e7e7 45%,
+        #83cbeb 45%, #83cbeb 55%,
+        #e7e7e7 55%, #e7e7e7 100%
+    );
+    background-size: 50% 5px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+
+.weblinks-text-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.weblinks-text-container p {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 14px;
+    color: #666;
+    padding: 0px;
+}
+
+.weblinks-link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.weblinks-link-container a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 240px;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #fff;
+    border: #83CBEB 2px solid;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+.weblinks-link-container a:hover {
+    background-color: #83CBEB;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.weblinks-link-container a::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(45deg);
+}
+
+.weblinks-link-container a:hover::after {
+    border-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+
+/* 響應式布局 */
+@media (max-width: 768px) {
+    .desktop-menu, .right-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: flex;
+    }
+    
+    .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    body.sidebar-open .sidebar {
+        left: 0;
+    }
+    
+    body.sidebar-open .sidebar-overlay {
+        display: block;
+    }
+
+    .weblinks-title-container h2 {
+        font-size: 24px;
+    }
+
+    .weblinks-text-container {
+        margin-bottom: 20px;
+    }
+
+    .weblinks-text-container p {
+        font-size: 12px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .weblinks-link-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .weblinks-link-container a {
+        width: 200px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    #logo-img {
+        content: url("../img/ntuca_logo.png");
+    }
+}

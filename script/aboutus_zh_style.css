@@ -454,6 +454,9 @@ body {
     }
 }
 
+
+
+
 /* 頁面 tabs 區 */
 .tabs-container {
     display: flex;
@@ -507,6 +510,13 @@ body {
     cursor: pointer;
 }
 
+.tabs-container .tabs-content-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
 /* Tab 內容基本樣式 */
 .tab-content {
     background-color: #f6f6f6;
@@ -527,16 +537,16 @@ body {
     color: #333;
 }
 
-.tab-content .ntuca-logo {
+.tab-content .ntuca-about-section  .ntuca-logo {
     width: 100px;
     margin-bottom: 20px;
 }
 
-.tab-content .ntuca-intro {
+.tab-content .ntuca-about-section  .ntuca-intro {
     margin-bottom: 30px;
 }
 
-.tab-content .ntuca-intro p {
+.tab-content .ntuca-about-section  .ntuca-intro p {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -544,14 +554,15 @@ body {
     margin-bottom: 20px;
 }
 
-.tab-content .ntuca-intro .ntuca-slogan {
+.tab-content .ntuca-about-section  .ntuca-intro .ntuca-slogan {
     width: 100%;
     height: auto;
     margin-top: 0px;
+    max-width: 800px;
 
 }
 
-.tab-content .ntuca-core-values {
+.tab-content .ntuca-about-section  .ntuca-core-values {
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -559,21 +570,21 @@ body {
     align-items: center;
 }
 
-.tab-content .ntuca-core-values ul {    
+.tab-content .ntuca-about-section  .ntuca-core-values ul {    
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.tab-content .ntuca-title {
+.tab-content .ntuca-about-section  .tabs-content-title {
     font-family: 'HarmonyOS Sans TC Black', sans-serif;
     font-size: 24px;
     color: #333;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
-.tab-content .ntuca-text-subtitle {
+.tab-content .ntuca-about-section  .ntuca-text-subtitle {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 18px;
     color: #333;
@@ -583,12 +594,12 @@ body {
     width: 300px;
 }
 
-.tab-content .ntuca-text-subtitle span {
+.tab-content .ntuca-about-section  .ntuca-text-subtitle span {
     position: relative;
     z-index: 2;
 }
 
-.tab-content .ntuca-text-subtitle::before {
+.tab-content .ntuca-about-section .ntuca-text-subtitle::before {
     content: attr(data-number);
     position: absolute;
     top: 0;
@@ -600,7 +611,7 @@ body {
 }
 
 
-.tab-content .ntuca-core-values ul {
+.tab-content  .ntuca-about-section .ntuca-core-values ul {
     list-style: none;
     padding-left: 0;
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
@@ -608,15 +619,15 @@ body {
     color: #333;
 }
 
-.tab-content .ntuca-core-values ul li {
+.tab-content  .ntuca-about-section .ntuca-core-values ul li {
     margin-bottom: 15px;
 }
 
-.tab-content .ntuca-core-values ul li strong {
+.tab-content  .ntuca-about-section .ntuca-core-values ul li strong {
     color: #83CBEB;
 }
 
-.tab-content .highlight {
+.tab-content  .ntuca-about-section .highlight {
     background-color: #83CBEB;
     color: #fff;
     padding: 2px 8px;
@@ -629,20 +640,261 @@ body {
         padding: 20px;
     }
 
-    .ntuca-title {
+    .ntuca-about-section .tabs-content-title {
         font-size: 20px;
     }
 
-    .ntuca-intro p,
-    .ntuca-core-values ul li {
+    .ntuca-about-section .ntuca-intro p,
+    .ntuca-about-section .ntuca-core-values ul li {
         font-size: 14px;
     }
 
-    .ntuca-logo {
+    .ntuca-about-section .ntuca-logo {
         width: 120px;
     }
 }
 
+/* 成員介紹區 */
+.tab-content .ntuca-members-section {
+    background-color: #f6f6f6;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.tab-content  .ntuca-members-section .underconstruction-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.tab-content .ntuca-members-section  .tabs-content-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+/* 歷年專案區 */
+.tab-content .ntuca-projects-section {
+    background-color: #f6f6f6;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.tab-content .ntuca-projects-section .underconstruction-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.tab-content .ntuca-projects-section  .tabs-content-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+/* 时间轴容器样式 */
+.timeline-container {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-wrapper {
+    position: relative;
+    padding-left: 50px;
+}
+
+/* 垂直时间轴线 */
+.timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #83CBEB;
+}
+
+/* 时间轴项目样式 */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 时间戳样式 */
+.timeline-date {
+    position: absolute;
+    left: -85px;
+    top: 0;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 15px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 时间轴圆点 */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -54px;
+    top: 15px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #83CBEB;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 4px #f6f6f6;
+}
+
+/* 内容样式 */
+.timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-title {
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.timeline-tag {
+    display: inline-block;
+    background: #83CBEB;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.timeline-intro {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 20px 10px;
+    }
+    
+    .timeline-wrapper {
+        padding-left: 30px;
+    }
+    
+    .timeline-date {
+        left: -65px;
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+    
+    .timeline-item::before {
+        left: -34px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-title {
+        font-size: 16px;
+    }
+    
+    .timeline-tag {
+        font-size: 12px;
+    }
+    
+    .timeline-intro {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-wrapper {
+        padding-left: 20px;
+    }
+    
+    .timeline-date {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    
+    .timeline-item::before {
+        left: -24px;
+    }
+}
+
+/* 時間軸箭頭樣式 */
+.timeline-wrapper::after {
+    content: '';
+    position: absolute;
+    left: -4px;  /* 調整箭頭位置以對齊時間軸線 */
+    bottom: -10px;
+    width: 10px;
+    height: 10px;
+    border-right: 3px solid #83CBEB;
+    border-bottom: 3px solid #83CBEB;
+    transform: rotate(45deg);
+    background-color: #f6f6f6;
+}
+
+/* 英文標題樣式 */
+.timeline-en-title {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 10px 0;
+}
+
+/* 調整原有標題的 margin */
+.timeline-title {
+    margin-bottom: 5px;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .timeline-en-title {
+        font-size: 12px;
+    }
+    
+    .timeline-wrapper::after {
+        left: -3px;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-wrapper::after {
+        left: -2px;
+        width: 6px;
+        height: 6px;
+    }
+}
 
 /* 隱藏的 Tab */
 .tab-content.hidden {

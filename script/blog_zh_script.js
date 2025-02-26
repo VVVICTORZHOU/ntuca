@@ -42,10 +42,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchClose = document.querySelector('.search-popup-close');
     const searchInput = document.getElementById('search-input');
     const searchSubmit = document.getElementById('search-submit');
+    const blogSearchBtn = document.getElementById('search-submit-main');
     const body = document.body;
     
     // 打開搜索彈窗
     searchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 如果側邊欄已打開，則關閉側邊欄
+        if (body.classList.contains('sidebar-open')) {
+            body.classList.remove('sidebar-open');
+            // 給側邊欄一點時間關閉後再打開搜索彈窗
+            setTimeout(() => {
+                searchPopup.classList.add('active');
+                searchInput.focus();
+                document.body.style.overflow = 'hidden';
+            }, 300); // 等待側邊欄關閉動畫完成
+        } else {
+            searchPopup.classList.add('active');
+            searchInput.focus();
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    blogSearchBtn.addEventListener('click', function(e) {
         e.preventDefault();
         
         // 如果側邊欄已打開，則關閉側邊欄
@@ -283,24 +303,33 @@ document.addEventListener('DOMContentLoaded', function() {
             title: blogData.postTitle[index],
             subTitle: blogData.postSubTitle[index],
             date: blogData.postDate[index],
-            image: '../img/' + blogData.postImage[index],  // 假設圖片存放在 ../img/ 目錄
+            image: '../img/' + blogData.postImage[index],
             tags: blogData.postTagsZh[index].split('#').filter(tag => tag !== '').map(tag => tag.trim()),
             author: blogData.postAuthor[index],
             pinned: blogData.postPinned[index] === '1',
             likes: blogData.postLikes[index],
             content: blogData.postContent[index]
         };
-        
-        // 創建貼文容器
+    
+        // 計算該貼文是否在 20 天內
+        const postDate = new Date(postData.date.replace(/\//g, '-'));
+        const today = new Date();
+        const timeDiff = today - postDate;
+        const dayDiff = timeDiff / (1000 * 60 * 60 * 24);
+    
+        // 創建貼文元素
         const postElement = document.createElement('div');
         postElement.className = 'blog-posts-item';
-        postElement.dataset.date = new Date(postData.date.replace(/(\d+)\/(\d+)\/(\d+)/, '$1-$2-$3')).getTime();
+        postElement.dataset.date = postDate.getTime();
         postElement.dataset.likes = parseInt(postData.likes);
         postElement.dataset.pinned = postData.pinned ? '1' : '0';
-        
-        // 設置貼文HTML結構
+    
+        // 設置貼文 HTML 結構
         postElement.innerHTML = `
-            <img src="${postData.image}" alt="${postData.title}" class="blog-posts-item-img">
+            <div style="position: relative;">
+                <img src="${postData.image}" alt="${postData.title}" class="blog-posts-item-img">
+                ${dayDiff <= 20 ? '<div class="new-label">NEW</div>' : ''}
+            </div>
             <div class="blog-posts-item-content">
                 <h3 class="blog-posts-item-title">${postData.title}</h3>
                 <div class="blog-posts-item-tags">
@@ -314,13 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p class="blog-posts-item-text">${postData.subTitle}</p>
             </div>
         `;
-        
-        // 添加點擊事件（如果需要）
-        postElement.addEventListener('click', function() {
-            // 處理貼文點擊，例如導航到詳情頁
-            console.log('貼文被點擊:', postData.title);
-        });
-        
+    
         return postElement;
     }
     
@@ -359,6 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadPosts() {
         postsContainer.innerHTML = ''; // 清空容器
 
+
         // 為每個貼文創建元素並添加到容器
         for (let i = 0; i < blogData.postTitle.length; i++) {
             const postElement = createPostElement(i);
@@ -377,4 +401,64 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
 
+});
+
+// 部落格貼文搜索功能
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchSubmit = document.getElementById('search-submit-pop');
+    const postsContainer = document.getElementById('posts-container');
+    const filterContent = document.querySelector('.blog-filter-content');
+
+    
+
+    function filterPosts(keyword) {
+        keyword = keyword.trim().toLowerCase();
+        const posts = Array.from(postsContainer.children);
+
+        posts.forEach(post => {
+            const title = post.querySelector('.blog-posts-item-title').textContent.toLowerCase();
+            const subTitle = post.querySelector('.blog-posts-item-text').textContent.toLowerCase();
+            const tags = Array.from(post.querySelectorAll('.blog-posts-item-tags .tag'))
+                             .map(tag => tag.textContent.toLowerCase());
+
+            if (title.includes(keyword) || subTitle.includes(keyword) || tags.some(tag => tag.includes(keyword))) {
+                post.style.display = "block";
+            } else {
+                post.style.display = "none";
+            }
+        });
+    }
+
+    function showFilterTag(keyword) {
+        filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${keyword}</span> 
+                                   <button id="clear-filter">清除篩選</button>`;
+
+        document.getElementById('clear-filter').addEventListener('click', function() {
+            searchInput.value = ''; // 清空輸入框
+            filterContent.innerHTML = '<span>當前篩選：</span>'; // 恢復篩選欄
+            Array.from(postsContainer.children).forEach(post => post.style.display = "block"); // 顯示所有貼文
+        });
+    }
+
+    // 監聽搜索按鈕
+    searchSubmit.addEventListener('click', function() {
+        console.log('搜索關鍵字:', searchInput.value.trim());
+        const keyword = searchInput.value.trim();
+        if (keyword) {
+            filterPosts(keyword);
+            showFilterTag(keyword);
+        }
+    });
+
+    // 監聽 Enter 鍵
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const keyword = searchInput.value.trim();
+            if (keyword) {
+                filterPosts(keyword);
+                showFilterTag(keyword);
+            }
+        }
+    });
 });

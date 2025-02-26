@@ -321,6 +321,8 @@ body {
     }
 }
 
+
+
 /* Sidebar 樣式 */
 .sidebar {
     position: fixed;
@@ -486,19 +488,73 @@ body {
     margin-bottom: 20px;
 }
 
-.blog-filter-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.blog-filter-content span {
+.blog-search-content h3 {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(
+        90deg,
+        #e7e7e7 0%, #e7e7e7 45%,
+        #83cbeb 45%, #83cbeb 55%,
+        #e7e7e7 55%, #e7e7e7 100%
+    );
+    background-size: 100% 5px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
+.blog-search-content .blog-search-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .blog-search-content h3 {
+        font-size: 14px;
+    }
+    .blog-search-content .blog-search-box {
+        margin-bottom: 35px;
+    }
+}
+
+.blog-search-content .blog-search-box input {
+    flex: 1;
+    padding: 12px 20px;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    border: 2px solid #e7e7e7;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.blog-search-content .blog-search-box input:focus {
+    border-color: #83CBEB;
+}
+
+.blog-search-content .blog-search-box button {
+    padding: 12px 30px;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #83CBEB;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blog-search-content .blog-search-box button:hover {
+    background-color: #6ba8c4;
+}
+
+/* 部落格文章列表 */
 .blog-posts-items-container {
     display: flex;
     justify-content: center;
@@ -599,23 +655,27 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    flex-direction: row;
     margin-bottom: 10px;
 }
 
 .sort-dropdown {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
     gap: 10px;
 }
 
 .sort-dropdown label {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 14px;
+    text-align: center;
     color: #666;
 }
 
 .sort-dropdown select {
-    padding: 8px 12px;
+    padding: 8px 16px;
     border: 1px solid #e7e7e7;
     border-radius: 20px;
     background-color: #fff;
@@ -675,6 +735,57 @@ body {
     color: #83CBEB;
 }
 
+.blog-posts-items-container .new-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #83CBEB;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+/* 部落格搜索 */
+.blog-filter-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.blog-filter-content span {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.filter-tag {
+    background-color: #83CBEB;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#clear-filter {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#clear-filter:hover {
+    background-color: #333;
+}
+
+
 /* 響應式調整 */
 @media (max-width: 768px) {
     .blog-sort-content {
@@ -695,4 +806,63 @@ body {
         flex-wrap: wrap;
         gap: 10px;
     }
+}
+
+
+/* 響應式布局 */
+@media (max-width: 768px) {
+    .desktop-menu, .right-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: flex;
+    }
+    
+    .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    body.sidebar-open .sidebar {
+        left: 0;
+    }
+    
+    body.sidebar-open .sidebar-overlay {
+        display: block;
+    }
+
+    .about-contact-title-container h2 {
+        font-size: 24px;
+    }
+
+    .about-contact-text-container {
+        margin-bottom: 20px;
+    }
+
+    .about-contact-text-container p {
+        font-size: 12px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .about-contact-link-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .about-contact-link-container a {
+        width: 200px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .about-contact-link-container .disabled-button {
+        width: 200px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
 }

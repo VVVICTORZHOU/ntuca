@@ -477,3 +477,61 @@ body {
     height: auto;
     margin-bottom: 20px;
 }
+
+/* 響應式布局 */
+@media (max-width: 768px) {
+    .desktop-menu, .right-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: flex;
+    }
+    
+    .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    body.sidebar-open .sidebar {
+        left: 0;
+    }
+    
+    body.sidebar-open .sidebar-overlay {
+        display: block;
+    }
+
+    .about-contact-title-container h2 {
+        font-size: 24px;
+    }
+
+    .about-contact-text-container {
+        margin-bottom: 20px;
+    }
+
+    .about-contact-text-container p {
+        font-size: 12px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .about-contact-link-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .about-contact-link-container a {
+        width: 200px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .about-contact-link-container .disabled-button {
+        width: 200px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+}

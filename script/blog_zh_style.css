@@ -519,6 +519,7 @@ body {
         font-size: 14px;
     }
     .blog-search-content .blog-search-box {
+        margin-top: 10px;
         margin-bottom: 35px;
     }
 }
@@ -785,6 +786,15 @@ body {
     background-color: #333;
 }
 
+.no-results-message {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    background-color: #f6f6f6;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
 
 /* 響應式調整 */
 @media (max-width: 768px) {

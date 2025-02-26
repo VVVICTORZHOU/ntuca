@@ -415,19 +415,35 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterPosts(keyword) {
         keyword = keyword.trim().toLowerCase();
         const posts = Array.from(postsContainer.children);
-
+        let hasResult = 0;
         posts.forEach(post => {
             const title = post.querySelector('.blog-posts-item-title').textContent.toLowerCase();
             const subTitle = post.querySelector('.blog-posts-item-text').textContent.toLowerCase();
             const tags = Array.from(post.querySelectorAll('.blog-posts-item-tags .tag'))
                              .map(tag => tag.textContent.toLowerCase());
 
+            // 如果標題、子標題或標籤中包含關鍵字，則顯示貼文
             if (title.includes(keyword) || subTitle.includes(keyword) || tags.some(tag => tag.includes(keyword))) {
                 post.style.display = "block";
+                hasResult++;
             } else {
                 post.style.display = "none";
             }
-        });
+        });        
+        
+        // 如果沒有結果，顯示提示
+        const noResultsMessage = document.getElementById('no-results-message');
+        if (hasResult === 0) {
+            if (!noResultsMessage) {
+                const message = document.createElement('div');
+                message.id = 'no-results-message';
+                message.className = 'no-results-message';
+                message.innerHTML = `未找到與 "<strong>${keyword}</strong>" 相關的貼文`;
+                postsContainer.appendChild(message);
+            }
+        } else if (noResultsMessage) {
+            noResultsMessage.remove();
+        }
     }
 
     function showFilterTag(keyword) {
@@ -438,6 +454,12 @@ document.addEventListener('DOMContentLoaded', function() {
             searchInput.value = ''; // 清空輸入框
             filterContent.innerHTML = '<span>當前篩選：</span>'; // 恢復篩選欄
             Array.from(postsContainer.children).forEach(post => post.style.display = "block"); // 顯示所有貼文
+            // 如果存在沒有結果的提示，則移除
+            const noResultsMessage = document.getElementById('no-results-message');
+            if (noResultsMessage) {
+                noResultsMessage.remove();
+            }
+
         });
     }
 

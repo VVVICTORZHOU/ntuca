@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     nextLineToCapture = true;
                 } else if (nextLineToCapture && currentField !== 'postContent') {
                     // Capture the data for the current field
-                    Data[currentField].push(line.trim().replace(/<br>/g, ''));
+                    blogData[currentField].push(line.trim().replace(/<br>/g, ''));
                     nextLineToCapture = false;
                 } else if (postContentCapture) {
                     // Special handling for postContent (multiple lines)

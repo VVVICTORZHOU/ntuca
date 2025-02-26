@@ -93,8 +93,62 @@
 
     <!-- 部落格框架 -->
     <div class="blog-container">
-        <img src="../img/underconstruction_img1.png" alt="Under Construction" id="underconstruction-img">
-        <h1>部落格建置中</h1>
+        <div class="blog-search-content">
+            <h2>NTUCA 部落格</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="輸入關鍵字...">
+                <button type="button" id="search-submit">搜尋</button>
+            </div>
+            <div class="hot-searches">
+                <span>熱門搜尋：</span>
+                <a href="blog_zh_index.html">氣候變遷</a>
+                <a href="blog_zh_index.html">永續發展</a>
+                <a href="blog_zh_index.html">碳中和</a>
+            </div>
+        </div>
+        <div class="blog-filter-content">
+            <span>當前篩選：</span>
+        </div>
+        <!-- 排序選單 -->
+        <div class="blog-sort-content">
+            <div class="sort-dropdown">
+                <label for="sort-select">排序方式：</label>
+                <select id="sort-select">
+                    <option value="default">預設排序</option>
+                    <option value="date-desc">由新到舊</option>
+                    <option value="date-asc">由舊到新</option>
+                    <option value="likes">按讚數</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 施工圖 <img src="../img/underconstruction_img1.png" alt="Under Construction" id="underconstruction-img"> -->
+        <div class="blog-posts-items-container" id="posts-container">
+            <div class="blog-posts-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="blog-posts-item-img">
+                <div class="blog-posts-item-content">
+                    <h3 class="blog-posts-item-title">文章標題</h3>
+                    <h5 class="blog-posts-item-date">2025/02/29</h5>
+                    <p class="blog-posts-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+                </div>
+            </div>
+            <div class="blog-posts-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="blog-posts-item-img">
+                <div class="blog-posts-item-content">
+                    <h3 class="blog-posts-item-title">文章標題</h3>
+                    <h5 class="blog-posts-item-date">2025/02/29</h5>
+                    <p class="blog-posts-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+                </div>
+            </div>
+            <div class="blog-posts-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="blog-posts-item-img">
+                <div class="blog-posts-item-content">
+                    <h3 class="blog-posts-item-title">文章標題</h3>
+                    <h5 class="blog-posts-item-date">2025/02/29</h5>
+                    <p class="blog-posts-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 

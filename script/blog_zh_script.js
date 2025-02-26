@@ -266,6 +266,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(blogData.postLikes);
         console.log(blogData.postFormat);
         console.log(blogData.postContent);
+
+        // 初始載入貼文
+        loadPosts();
     }).catch(error => {
         console.error('Error fetching files:', error);
     });
@@ -355,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始載入所有貼文
     function loadPosts() {
         postsContainer.innerHTML = ''; // 清空容器
-        
+
         // 為每個貼文創建元素並添加到容器
         for (let i = 0; i < blogData.postTitle.length; i++) {
             const postElement = createPostElement(i);
@@ -371,18 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sortPosts(this.value);
     });
     
-    // 初始載入貼文
-    loadPosts();
+
     
-    // 在實際應用中，您可能需要添加 AJAX 請求來從服務器獲取貼文數據
-    // 例如：
-    /*
-    fetch('/api/posts')
-        .then(response => response.json())
-        .then(data => {
-            blogData = data;
-            loadPosts();
-        })
-        .catch(error => console.error('Error fetching posts:', error));
-    */
+
 });

@@ -275,6 +275,7 @@ body {
 
 .hot-searches a:hover {
     background-color: #e7e7e7;
+    cursor: pointer;
 }
 
 .search-popup-close {

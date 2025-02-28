@@ -57,10 +57,10 @@
             </div>
             <div class="hot-searches">
                 <span>熱門搜尋：</span>
-                <a href="blog_zh_index.html">氣候變遷</a>
-                <a href="blog_zh_index.html">永續發展</a>
-                <a href="blog_zh_index.html">碳中和</a>
-            </div>
+                <a data-keyword="氣候變遷">氣候變遷</a>
+                <a data-keyword="永續發展">永續發展</a>
+                <a data-keyword="碳中和">碳中和</a>
+            </div>            
             <button class="search-popup-close" aria-label="Close Search">
                 <i class="fas fa-times"></i>
             </button>
@@ -149,12 +149,21 @@
         </div>
     </div>
 
+    <!-- 警示彈窗 -->
+    <div class="alert-popup" id="alert-popup">
+        <div class="alert-content">
+            <p>未找到與 "<strong id="alert-keyword"></strong>" 相關的貼文。</p>
+            <button id="alert-confirm-btn">確認</button>
+        </div>
+    </div>
+    <div class="alert-overlay" id="alert-overlay"></div>
+
 
     <!-- Footer -->
     <footer id="main-footer">
         <div class="footer-container">
             <p>© 2025 台大氣候行動社 NTUCA. All rights reserved.</p>
-            <p>Last Updated: 2025/02/19</p>
+            <p>106319 台北市大安區羅斯福路四段85號8樓</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/climateaction_ntu" target="_blank" class="social-link">
                     <i class="fab fa-instagram"></i>

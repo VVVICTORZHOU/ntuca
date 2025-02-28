@@ -1,3 +1,21 @@
+// 處理從別處跳轉到部落格頁面時的搜索框彈窗
+document.addEventListener('DOMContentLoaded', function() {
+    const searchPopup = document.querySelector('.search-popup');
+    const searchInput = document.getElementById('search-input');
+
+    // 解析 URL 查詢參數
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchOpen = urlParams.get('search');
+
+    // 如果查詢參數中包含 search=open，則彈出搜索框
+    if (searchOpen === 'open') {
+        searchPopup.classList.add('active');
+        searchInput.focus();
+        document.body.style.overflow = 'hidden';
+    }
+
+});
+
 // 彈窗側邊菜單
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -410,43 +428,48 @@ document.addEventListener('DOMContentLoaded', function() {
     const postsContainer = document.getElementById('posts-container');
     const filterContent = document.querySelector('.blog-filter-content');
 
-    
-
     function filterPosts(keyword) {
         keyword = keyword.trim().toLowerCase();
         const posts = Array.from(postsContainer.children);
         let hasResult = 0;
+    
         posts.forEach(post => {
-            const title = post.querySelector('.blog-posts-item-title').textContent.toLowerCase();
-            const subTitle = post.querySelector('.blog-posts-item-text').textContent.toLowerCase();
+            const titleElement = post.querySelector('.blog-posts-item-title');
+            const subTitleElement = post.querySelector('.blog-posts-item-text');
+            
+            if (!titleElement || !subTitleElement) {
+                return;
+            }
+    
+            const title = titleElement.textContent.toLowerCase();
+            const subTitle = subTitleElement.textContent.toLowerCase();
             const tags = Array.from(post.querySelectorAll('.blog-posts-item-tags .tag'))
-                             .map(tag => tag.textContent.toLowerCase());
-
-            // 如果標題、子標題或標籤中包含關鍵字，則顯示貼文
+                                .map(tag => tag.textContent.toLowerCase());
+    
             if (title.includes(keyword) || subTitle.includes(keyword) || tags.some(tag => tag.includes(keyword))) {
                 post.style.display = "block";
                 hasResult++;
             } else {
                 post.style.display = "none";
             }
-        });        
-        
-        // 如果沒有結果，顯示提示
-        const noResultsMessage = document.getElementById('no-results-message');
+        });
+    
+        // 顯示警示彈窗
         if (hasResult === 0) {
-            if (!noResultsMessage) {
-                const message = document.createElement('div');
-                message.id = 'no-results-message';
-                message.className = 'no-results-message';
-                message.innerHTML = `未找到與 "<strong>${keyword}</strong>" 相關的貼文`;
-                postsContainer.appendChild(message);
-            }
-        } else if (noResultsMessage) {
-            noResultsMessage.remove();
+            document.getElementById('alert-keyword').textContent = keyword;
+            document.getElementById('alert-popup').style.display = 'block';
+            document.getElementById('alert-overlay').style.display = 'block';
         }
     }
+    
+    // 監聽確認按鈕，關閉彈窗
+    document.getElementById('alert-confirm-btn').addEventListener('click', function() {
+        document.getElementById('alert-popup').style.display = 'none';
+        document.getElementById('alert-overlay').style.display = 'none';
+    });
 
     function showFilterTag(keyword) {
+        console.log('執行顯示過濾標籤');
         filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${keyword}</span> 
                                    <button id="clear-filter">清除篩選</button>`;
 
@@ -470,6 +493,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (keyword) {
             filterPosts(keyword);
             showFilterTag(keyword);
+            // 等待 0.1 秒後將搜索框彈窗關閉
+            setTimeout(() => {
+                document.querySelector('.search-popup').classList.remove('active');
+                document.body.style.overflow = '';
+            }, 100);
         }
     });
 
@@ -480,7 +508,25 @@ document.addEventListener('DOMContentLoaded', function() {
             if (keyword) {
                 filterPosts(keyword);
                 showFilterTag(keyword);
+                // 等待 0.1 秒後將搜索框彈窗關閉
+                setTimeout(() => {
+                    document.querySelector('.search-popup').classList.remove('active');
+                    document.body.style.overflow = '';
+                }, 100);
             }
         }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hotSearchLinks = document.querySelectorAll('.hot-searches a');
+    const searchInput = document.getElementById('search-input');
+
+    hotSearchLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const keyword = link.getAttribute('data-keyword');
+            searchInput.value = keyword;  // 將點擊的熱門詞填入搜索框
+            searchInput.focus();          // 自動聚焦到輸入框
+        });
     });
 });

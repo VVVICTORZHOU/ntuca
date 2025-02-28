@@ -24,6 +24,10 @@
     font-family: 'HarmonyOS Sans TC Black';
     src: url('C:/Users/VictorZhou/OneDrive - vichouro/Desktop/VSProject/113-2/NTUCA/font/HarmonyOS_Sans_TC_Black.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'EuroScope';
+    src: url('../font/euroscope.ttf') format('truetype');
+}
 
 body {
     margin: 0;
@@ -145,6 +149,102 @@ body {
     transition: border-color 0.3s ease;
 }
 
+/* Developer Mode Button */
+.dev-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.dev-icon:hover {
+    opacity: 1;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 200;
+}
+
+/* Developer Modal */
+.dev-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    z-index: 300;
+    font-family: 'EuroScope', monospace;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.dev-modal h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0f0;
+    text-align: center;
+}
+
+.dev-modal p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.char-input {
+    width: 40px;
+    height: 50px;
+    background-color: #111;
+    color: #0f0;
+    border: 1px solid #333;
+    font-family: 'EuroScope', monospace;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.char-input:focus {
+    outline: none;
+    border-color: #0f0;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.message {
+    text-align: center;
+    height: 20px;
+    margin-top: 15px;
+    color: #FFC000;
+}
+
+.success {
+    color: #0f0;
+}
+
 @media screen and (max-width: 500px) {
     .logo-container img {
         width: 250px;
@@ -163,6 +263,16 @@ body {
         width: 100px;
         font-size: 16px;
     }
+    
+    .dev-modal {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .char-input {
+        width: 30px;
+        height: 40px;
+    }
 }
 </style>
 <body>
@@ -177,5 +287,120 @@ body {
         <a href="top_zh_index.html" class="lang-btn">中文</a>
         <a href="top_en_index.html" class="lang-btn">ENGLISH</a>
     </div>
+    
+    <!-- Developer Mode Icon -->
+    <img src="../img/dev_icon.png" alt="Developer Mode" class="dev-icon" id="devIcon">
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Developer Modal -->
+    <div class="dev-modal" id="devModal">
+        <h2>DEVELOPER MODE</h2>
+        <p>Enter the access code to continue to developer environment. Authorization required.</p>
+        <div class="input-container">
+            <input type="text" maxlength="1" class="char-input" id="char1" pattern="[A-Za-z0-9]">
+            <input type="text" maxlength="1" class="char-input" id="char2" pattern="[A-Za-z0-9]">
+            <input type="text" maxlength="1" class="char-input" id="char3" pattern="[A-Za-z0-9]">
+            <input type="text" maxlength="1" class="char-input" id="char4" pattern="[A-Za-z0-9]">
+            <input type="text" maxlength="1" class="char-input" id="char5" pattern="[A-Za-z0-9]">
+        </div>
+        <div class="message" id="message"></div>
+    </div>
+    
+    <script>
+        // Developer Mode functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const devIcon = document.getElementById('devIcon');
+            const overlay = document.getElementById('overlay');
+            const devModal = document.getElementById('devModal');
+            const message = document.getElementById('message');
+            const inputs = [
+                document.getElementById('char1'),
+                document.getElementById('char2'),
+                document.getElementById('char3'),
+                document.getElementById('char4'),
+                document.getElementById('char5')
+            ];
+            
+            // Open modal when dev icon is clicked
+            devIcon.addEventListener('click', function() {
+                overlay.style.display = 'block';
+                devModal.style.display = 'block';
+                inputs[0].focus(); // Focus on first input
+                clearInputs();
+            });
+            
+            // Close modal when clicking outside
+            overlay.addEventListener('click', function() {
+                overlay.style.display = 'none';
+                devModal.style.display = 'none';
+                message.textContent = '';
+                clearInputs();
+            });
+            
+            // Prevent modal from closing when clicking on it
+            devModal.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            // Auto focus next input
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', function(e) {
+                    // Convert to uppercase
+                    this.value = this.value.toUpperCase();
+                    
+                    // Only allow letters and numbers
+                    if (!/^[A-Z0-9]$/.test(this.value)) {
+                        this.value = '';
+                        return;
+                    }
+                    
+                    // Move to next input if available
+                    if (index < inputs.length - 1 && this.value) {
+                        inputs[index + 1].focus();
+                    }
+                    
+                    // Check password when all fields are filled
+                    if (index === inputs.length - 1 && this.value) {
+                        // wait 0.2 seconds before validating
+                        setTimeout(() => checkPassword(), 200);
+                    }
+                });
+                
+                // Handle backspace to go to previous input
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && !this.value && index > 0) {
+                        inputs[index - 1].focus();
+                    }
+                });
+            });
+            
+            function checkPassword() {
+                const enteredCode = inputs.map(input => input.value).join('');
+
+                if (enteredCode === 'NTUCA') {
+                    message.textContent = 'Access granted. Redirecting...';
+                    message.classList.add('success');
+                    
+                    // Redirect after 0.5 seconds
+                    setTimeout(function() {
+                        window.location.href = 'dev_index.html';
+                    }, 500);
+                } else {
+                    message.textContent = 'Invalid code. Please try again.';
+                    message.classList.remove('success');
+                    clearInputs();
+                    inputs[0].focus();
+                }
+            }
+            
+            function clearInputs() {
+                inputs.forEach(input => {
+                    input.value = '';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

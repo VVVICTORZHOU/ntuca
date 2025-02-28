@@ -275,6 +275,7 @@ body {
 
 .hot-searches a:hover {
     background-color: #e7e7e7;
+    cursor: pointer;
 }
 
 .search-popup-close {
@@ -795,6 +796,53 @@ body {
     border-radius: 5px;
     margin-top: 20px;
 }
+
+/* 警示彈窗樣式 */
+.alert-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1001;
+    display: none;
+}
+
+.alert-popup p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.alert-popup button {
+    padding: 10px 20px;
+    background-color: #83CBEB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert-popup button:hover {
+    background-color: #6ba8c4;
+}
+
+/* 遮罩樣式 */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
 
 /* 響應式調整 */
 @media (max-width: 768px) {

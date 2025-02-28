@@ -161,3 +161,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBtn1 = document.querySelector('.search-btn1');
+
+    searchBtn1.addEventListener('click', function() {
+        // 跳轉到 blog_zh_index.html，並傳遞查詢參數來打開搜索彈窗
+        window.location.href = 'blog_zh_index.html?search=open';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBtn2 = document.querySelector('.search-btn2');
+
+    searchBtn2.addEventListener('click', function() {
+        // 跳轉到 blog_zh_index.html，並傳遞查詢參數來打開搜索彈窗
+        window.location.href = 'blog_zh_index.html?search=open';
+    });
+});

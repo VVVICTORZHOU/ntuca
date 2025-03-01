@@ -259,3 +259,43 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('No post_file_name provided in URL');
     }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const copyLinkButton = document.querySelector('.copy-link-button');
+    const alertPopup = document.querySelector('.alert-popup');
+    const alertOverlay = document.querySelector('.alert-overlay');
+    const alertConfirmButton = document.querySelector('#alert-confirm-btn');
+
+    if (copyLinkButton) {
+        copyLinkButton.addEventListener('click', function(e) {
+            e.preventDefault();  // 防止 <a> 頁面跳轉的預設行為
+
+            // 獲取當前網站 URL 並複製到剪貼簿
+            const currentURL = window.location.href;
+            navigator.clipboard.writeText(currentURL).then(() => {
+                // 顯示彈窗提示成功
+                alertPopup.style.display = 'block';
+                alertOverlay.style.display = 'block';
+
+                // 自動隱藏彈窗
+                setTimeout(() => {
+                    alertPopup.style.display = 'none';
+                    alertOverlay.style.display = 'none';
+                }, 3000); // 彈窗將在 3 秒後自動關閉
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    }
+
+    // 手動點擊確認按鈕也能關閉彈窗
+    if (alertConfirmButton) {
+        alertConfirmButton.addEventListener('click', function() {
+            alertPopup.style.display = 'none';
+            alertOverlay.style.display = 'none';
+        });
+    }
+});
+

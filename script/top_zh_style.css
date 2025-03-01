@@ -591,10 +591,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .top-blog-title-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .top-blog-title-container h2 {
@@ -615,8 +617,7 @@ body {
     background-position: center bottom;
 }
 
-
-.top-blog-items-container {
+.blog-posts-items-container {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -624,7 +625,7 @@ body {
     flex-wrap: wrap;
 }
 
-.top-blog-items-container .top-blog-item {
+.blog-posts-items-container .blog-posts-item {
     width: 300px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -633,29 +634,29 @@ body {
     cursor: pointer;
 }
 
-.top-blog-items-container .top-blog-item:hover {
+.blog-posts-items-container .blog-posts-item:hover {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
 }
 
-.top-blog-items-container .top-blog-item img {
+.blog-posts-items-container .blog-posts-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.top-blog-items-container .top-blog-item .top-blog-item-content {
+.blog-posts-items-container .blog-posts-item .blog-posts-item-content {
     padding: 20px;
 }
 
-.top-blog-items-container .top-blog-item .top-blog-item-content h3 {
+.blog-posts-items-container .blog-posts-item .blog-posts-item-content h3 {
     font-family: 'HarmonyOS Sans TC Medium', sans-serif;
     font-size: 20px;
     color: #333;
     margin-bottom: 8px;
 }
 
-.top-blog-items-container .top-blog-item .top-blog-item-content h5 {
+.blog-posts-items-container .blog-posts-item .blog-posts-item-content h5 {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 10px;
     color: #83cbeb;
@@ -663,7 +664,7 @@ body {
     margin-bottom: 10px;
 }
 
-.top-blog-items-container .top-blog-item .top-blog-item-content p {
+.blog-posts-items-container .blog-posts-item .blog-posts-item-content p {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 14px;
     color: #666;
@@ -789,6 +790,64 @@ body {
     color: #333;
     margin-bottom: 10px;
 }
+
+/* 貼文標籤樣式 */
+.blog-posts-item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.blog-posts-item-tags .tag {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 12px;
+    color: #83CBEB;
+    background-color: rgba(131, 203, 235, 0.1);
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+/* 貼文互動元素樣式 */
+.blog-posts-item-interactions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.blog-posts-item-date {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 12px;
+    color: #83CBEB;
+}
+
+.blog-posts-item-likes, .blog-posts-item-pinned {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 12px;
+    color: #666;
+}
+
+.blog-posts-item-likes i, .blog-posts-item-pinned i {
+    font-size: 14px;
+    color: #83CBEB;
+}
+
+.blog-posts-items-container .new-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #83CBEB;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 
 /* 響應式調整 */
 @media (max-width: 768px) {

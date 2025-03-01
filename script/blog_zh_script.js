@@ -204,9 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 部落格貼文動態載入和排序功能
 document.addEventListener('DOMContentLoaded', function() {
-    // 模擬從 read_doc_zh.js 讀取的數據
-    // 實際應用中，您需要通過 AJAX 或其他方式從後端獲取這些數據
-    
     // 讀取 doc 目錄下的所有 txt 檔案作為貼文數據
     let blogData = {
         fileName: [],
@@ -318,6 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 創建貼文元素的函數
     function createPostElement(index) {
         const postData = {
+            fileName: blogData.fileName[index],
             title: blogData.postTitle[index],
             subTitle: blogData.postSubTitle[index],
             date: blogData.postDate[index],
@@ -341,6 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
         postElement.dataset.date = postDate.getTime();
         postElement.dataset.likes = parseInt(postData.likes);
         postElement.dataset.pinned = postData.pinned ? '1' : '0';
+        postElement.dataset.fileName = postData.fileName;
     
         // 設置貼文 HTML 結構
         postElement.innerHTML = `
@@ -415,11 +414,8 @@ document.addEventListener('DOMContentLoaded', function() {
     sortSelect.addEventListener('change', function() {
         sortPosts(this.value);
     });
-    
-
-    
-
 });
+
 
 // 部落格貼文搜索功能
 document.addEventListener('DOMContentLoaded', function() {
@@ -529,4 +525,14 @@ document.addEventListener('DOMContentLoaded', function() {
             searchInput.focus();          // 自動聚焦到輸入框
         });
     });
+});
+
+// 點擊貼文跳轉到貼文頁面
+const postsContainer = document.getElementById('posts-container');
+postsContainer.addEventListener('click', function(e) {
+    const postElement = e.target.closest('.blog-posts-item');
+    if (!postElement) return;
+
+    const postFileName = postElement.dataset.fileName;
+    window.location.href = `post_zh_index.html?post_file_name=${encodeURIComponent(postFileName)}`;
 });

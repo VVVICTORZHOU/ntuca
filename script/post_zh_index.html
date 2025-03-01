@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NTUCA Blog | CONTACT</title>
-    <link rel="stylesheet" href="contact_zh_style.css">
+    <title>NTUCA Blog | POST</title>
+    <link rel="stylesheet" href="post_zh_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="../img/ntuca_favicon.ico">
 </head>
@@ -21,19 +21,19 @@
                 <nav class="desktop-menu">
                     <ul>
                         <li><a href="top_zh_index.html"><span>TOP</span>回首頁</a></li>
-                        <li><a href="aboutus_zh_index.html"><span>ABOUT</span>關於我們</a></li>
+                        <li><a href="aboutus_zh_index.html" class="current-page"><span>ABOUT</span>關於我們</a></li>
                         <li><a href="blog_zh_index.html"><span>BLOG</span>部落格</a></li>
                         <li><a href="contact_zh_index.html"><span>CONTACT</span>聯繫我們</a></li>
-                        <li><a href="webslink_zh_index.html" class="current-page"><span>LINKS</span>友站連結</a></li>
+                        <li><a href="webslink_zh_index.html"><span>LINKS</span>友站連結</a></li>
                     </ul>
                 </nav>
                 
                 <div class="right-controls">
-                    <a href="contact_zh_index.html" class="search-btn1">
+                    <a class="search-btn1">
                         <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
                     </a>
-                    <a href="contact_en_index.html" class="lang-switch">
-                        <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img">
+                    <a href="post_en_index.html" class="lang-switch">
+                        <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img"> <!-- post 的語言切換涉及將當前貼文檔名傳遞給英文版頁面的步驟 -->
                     </a>
                 </div>
                 
@@ -41,7 +41,7 @@
                     <button class="menu-toggle" aria-label="Toggle Menu">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <a href="blog_en_index.html" class="lang-switch mobile-lang">
+                    <a href="post_en_index.html" class="lang-switch mobile-lang">
                         <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img">
                     </a>
                 </div>
@@ -77,27 +77,41 @@
             <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="sidebar-logo-img">
         </div>
         <div class="sidebar-search">
-            <a href="blog_zh_index.html" class="search-btn2">
+            <a class="search-btn2">
                 <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
             </a>
         </div>
         <nav class="sidebar-menu">
             <ul>
                 <li><a href="top_zh_index.html">回首頁</a></li>
-                <li><a href="aboutus_zh_index.html">關於我們</a></li>
+                <li><a href="aboutus_zh_index.html" class="current">關於我們</a></li>
                 <li><a href="blog_zh_index.html">部落格</a></li>
                 <li><a href="contact_zh_index.html">聯繫我們</a></li>
-                <li><a href="webslink_zh_index.html" class="current">友站連結</a></li>
+                <li><a href="webslink_zh_index.html">友站連結</a></li>
             </ul>
         </nav>
     </aside>
 
-    <!-- 聯繫我們框架 -->
-    <div class="contact-container">
-        <img src="../img/underconstruction_img1.png" alt="Under Construction" id="underconstruction-img">
-        <h1>聯繫我們頁面建置中</h1>
+    <!-- 主要內容 Tabs -->
+    <div class="post-content-container">
+
     </div>
 
+    <!-- 頁尾按鈕 -->
+    <div class="exit-post-container">
+        <div class="exit-post-title-container">
+            <h2 class="exit-post--title"></h2>
+        </div>
+        <div class="exit-post-text-container">
+            <p class="exit-post-text">
+                請透過以下管道與我們聯繫，或是加入我們的行列！
+            </p>
+        </div>
+        <div class="exit-post-link-container">
+            <a href="blog_zh_index.html" class="exit-post-link-button">回前頁</a>
+            <a href="" class="exit-post-link-button disabled-button">分享貼文連結</a>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer id="main-footer">
@@ -115,6 +129,6 @@
         </div>
     </footer>
     
-    <script src="contact_zh_script.js"></script>
+    <script src="post_zh_script.js"></script>
 </body>
 </html>

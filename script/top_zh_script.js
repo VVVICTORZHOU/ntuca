@@ -522,3 +522,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+// 點擊貼文跳轉到貼文頁面
+const postsContainer = document.getElementById('posts-container');
+postsContainer.addEventListener('click', function(e) {
+    const postElement = e.target.closest('.blog-posts-item');
+    if (!postElement) return;
+
+    const postFileName = postElement.dataset.fileName;
+    window.location.href = `post_zh_index.html?post_file_name=${encodeURIComponent(postFileName)}`;
+});

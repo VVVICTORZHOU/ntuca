@@ -532,3 +532,11 @@ postsContainer.addEventListener('click', function(e) {
     const postFileName = postElement.dataset.fileName;
     window.location.href = `post_zh_index.html?post_file_name=${encodeURIComponent(postFileName)}`;
 });
+
+// 寄送電子郵件
+function sendMail() {
+    var email = "contact@example.com"; // 收件人電子郵件地址
+    var subject = "An Email for NTUCA"; // 電子郵件主題
+    var body = "Please write your message here."; // 電子郵件內容
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}

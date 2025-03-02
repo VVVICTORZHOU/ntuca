@@ -180,3 +180,11 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'blog_zh_index.html?search=open';
     });
 });
+
+// 寄送電子郵件
+function sendMail() {
+    var email = "contact@example.com"; // 收件人電子郵件地址
+    var subject = "An Email for NTUCA"; // 電子郵件主題
+    var body = "Please write your message here."; // 電子郵件內容
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}

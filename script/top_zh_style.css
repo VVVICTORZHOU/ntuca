@@ -966,7 +966,7 @@ body {
 
 .facebook-iframe {
     width: 100%;  /* 讓 iframe 寬度佔滿父容器 */
-    max-width: 308px; /* 設置最大寬度，保持大螢幕時仍為 500px */
+    max-width: 370px; /* 設置最大寬度，保持大螢幕時仍為 500px */
     height: 600px;
     border: none;
     overflow: hidden;

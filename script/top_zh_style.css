@@ -966,8 +966,8 @@ body {
 
 .facebook-iframe {
     width: 100%;  /* 讓 iframe 寬度佔滿父容器 */
-    max-width: 500px; /* 設置最大寬度，保持大螢幕時仍為 500px */
-    height: 800px;
+    max-width: 308px; /* 設置最大寬度，保持大螢幕時仍為 500px */
+    height: 600px;
     border: none;
     overflow: hidden;
 }
@@ -979,56 +979,9 @@ body {
 }
 
 
-/* 調整社交連結按鈕樣式 */
-.top-dynamic-content .social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.top-dynamic-content .social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 40px;
-    transition: background-color 0.3s ease;
-}
-
-.top-dynamic-content .social-link i {
-    margin-right: 8px;
-}
-
-/* Instagram 按鈕樣式 */
-.top-dynamic-content .social-link.instagram {
-    background-color: #e4405f;
-}
-
-.top-dynamic-content .social-link.instagram:hover {
-    background-color: #c13546;
-}
-
-/* Facebook 按鈕樣式 */
-.top-dynamic-content .social-link.facebook {
-    background-color: #3b5998;
-}
-
-.top-dynamic-content .social-link.facebook:hover {
-    background-color: #2d4373;
-}
-
 /* 當螢幕寬度較小時調整佈局 */
 @media (max-width: 768px) {
     .top-dynamic-content {
         flex-direction: column;
-    }
-
-    .top-dynamic-content .social-links {
-        flex-direction: row;
-        justify-content: center;
     }
 }

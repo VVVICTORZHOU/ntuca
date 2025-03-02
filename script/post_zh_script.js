@@ -283,6 +283,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (blogData.postTagsZh) {
                     const tags = blogData.postTagsZh.split('#').filter(tag => tag.trim() !== '');
                     tags.forEach(tag => {
+                        // 為每個標籤前添加#
+                        tag = '#' + tag.trim();
                         const tagElement = document.createElement('span');
                         tagElement.classList.add('tag');
                         tagElement.textContent = tag.trim();

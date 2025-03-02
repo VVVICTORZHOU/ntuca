@@ -217,7 +217,8 @@ document.addEventListener('DOMContentLoaded', function() {
         postPinned: [],
         postLikes: [],
         postFormat: [],
-        postContent: []
+        postSeries: [],
+        postContent: [],
     };
 
     // Predefine a list of possible files (from blog1_zh.txt to blog99_zh.txt)
@@ -260,6 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (line.includes('貼文強制釘選')) currentField = 'postPinned';
                     if (line.includes('貼文點讚數')) currentField = 'postLikes';
                     if (line.includes('貼文格式')) currentField = 'postFormat';
+                    if (line.includes('貼文系列')) currentField = 'postSeries';
                     if (line.includes('貼文內容')) {
                         currentField = 'postContent';
                         postContentCapture = true;
@@ -300,6 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(blogData.postPinned);
         console.log(blogData.postLikes);
         console.log(blogData.postFormat);
+        console.log(blogData.postSeries);
         console.log(blogData.postContent);
 
         // 初始載入貼文
@@ -311,6 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 獲取DOM元素
     const postsContainer = document.getElementById('posts-container');
     const sortSelect = document.getElementById('sort-select');
+    const seriesSelect = document.getElementById('series-select');
     
     // 創建貼文元素的函數
     function createPostElement(index) {
@@ -324,6 +328,8 @@ document.addEventListener('DOMContentLoaded', function() {
             author: blogData.postAuthor[index],
             pinned: blogData.postPinned[index] === '1',
             likes: blogData.postLikes[index],
+            format: blogData.postFormat[index],
+            series: blogData.postSeries[index],
             content: blogData.postContent[index]
         };
     
@@ -340,6 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
         postElement.dataset.likes = parseInt(postData.likes);
         postElement.dataset.pinned = postData.pinned ? '1' : '0';
         postElement.dataset.fileName = postData.fileName;
+        postElement.dataset.series = postData.series;
     
         // 設置貼文 HTML 結構
         postElement.innerHTML = `
@@ -395,6 +402,18 @@ document.addEventListener('DOMContentLoaded', function() {
         posts.forEach(post => postsContainer.appendChild(post));
     }
     
+    // 篩選貼文系列的函數
+    filterPostsBySeries = function(series) {
+        const posts = Array.from(postsContainer.children);
+        posts.forEach(post => {
+            if (series === '全部' || post.dataset.series === series) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+    }
+
     // 初始載入所有貼文
     function loadPosts() {
         postsContainer.innerHTML = ''; // 清空容器
@@ -406,9 +425,25 @@ document.addEventListener('DOMContentLoaded', function() {
             postsContainer.appendChild(postElement);
         }
         
+        // 讀取 url 查詢參數是否有 ?series=氣候職人誌 還是 ?series=與部長有約
+        const urlParams = new URLSearchParams(window.location.search);
+        const seriesParam = urlParams.get('series');
+        if (seriesParam) {
+            seriesSelect.value = seriesParam;
+            filterPostsBySeries(seriesParam);
+        } else {
+            seriesSelect.value = '全部';
+            filterPostsBySeries('全部');
+        }
+
         // 應用默認排序
         sortPosts('default');
     }
+
+    // 監聽系列選擇變化
+    seriesSelect.addEventListener('change', function() {
+        filterPostsBySeries(this.value);
+    });
     
     // 監聽排序選擇變化
     sortSelect.addEventListener('change', function() {
@@ -544,3 +579,18 @@ function sendMail() {
     var body = "Please write your message here."; // 電子郵件內容
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+// 部落格子選單展開/收合
+document.addEventListener('DOMContentLoaded', function () {
+    // 行動版：控制部落格子選單展開/收合
+    const blogToggle = document.querySelector('.sidebar-blog-toggle');
+    const sidebarSubmenu = document.querySelector('.sidebar-submenu');
+
+    if (blogToggle) {
+        blogToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            sidebarSubmenu.style.display = sidebarSubmenu.style.display === 'block' ? 'none' : 'block';
+            blogToggle.classList.toggle('active');
+        });
+    }
+});

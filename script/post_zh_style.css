@@ -799,3 +799,84 @@ body {
         gap: 10px;
     }
 }
+
+
+/* 桌面版子菜單 */
+.blog-menu {
+    position: relative;
+}
+
+.blog-menu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 160px;
+    padding: 5px 0;
+}
+
+.blog-menu:hover .submenu {
+    display: block;
+}
+
+.blog-menu .submenu li {
+    list-style: none;
+    padding: 8px 15px;
+}
+
+.blog-menu .submenu li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    padding: 5px 10px;
+}
+
+.blog-menu .submenu li a:hover {
+    background: #83CBEB;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* 行動版子菜單 */
+.sidebar-submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.sidebar-submenu li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.sidebar-submenu li a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-blog-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0px 0px;
+}
+
+.sidebar-blog-toggle i {
+    transition: transform 0.3s;
+}
+
+/* 當展開時改變箭頭方向 */
+.sidebar-blog-toggle.active i {
+    transform: rotate(180deg);
+}

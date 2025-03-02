@@ -22,7 +22,13 @@
                     <ul>
                         <li><a href="top_zh_index.html"><span>TOP</span>回首頁</a></li>
                         <li><a href="aboutus_zh_index.html" class="current-page"><span>ABOUT</span>關於我們</a></li>
-                        <li><a href="blog_zh_index.html"><span>BLOG</span>部落格</a></li>
+                        <li class="blog-menu">
+                            <a href="blog_zh_index.html"><span>BLOG</span>部落格</a>
+                            <ul class="submenu">
+                                <li><a href="blog_zh_index.html?series=氣候職人誌">氣候職人誌</a></li>
+                                <li><a href="blog_zh_index.html?series=與部長有約">與部長有約</a></li>
+                            </ul>
+                        </li>
                         <li><a href="" onclick="sendMail()"><span>CONTACT</span>聯繫我們</a></li>
                         <li><a href="webslink_zh_index.html"><span>LINKS</span>友站連結</a></li>
                     </ul>
@@ -33,7 +39,7 @@
                         <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
                     </a>
                     <a href="aboutus_en_index.html" class="lang-switch">
-                        <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img">
+                        <img src="../img/lang_en_icon.png" alt="EN", id="lang-icon-img"> <!-- post 的語言切換涉及將當前貼文檔名傳遞給英文版頁面的步驟 -->
                     </a>
                 </div>
                 
@@ -85,7 +91,13 @@
             <ul>
                 <li><a href="top_zh_index.html">回首頁</a></li>
                 <li><a href="aboutus_zh_index.html" class="current">關於我們</a></li>
-                <li><a href="blog_zh_index.html">部落格</a></li>
+                <li>
+                    <a href="#" class="sidebar-blog-toggle">部落格 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="blog_zh_index.html?series=氣候職人誌">氣候職人誌</a></li>
+                        <li><a href="blog_zh_index.html?series=與部長有約">與部長有約</a></li>
+                    </ul>
+                </li>
                 <li><a href="" onclick="sendMail()">聯繫我們</a></li>
                 <li><a href="webslink_zh_index.html">友站連結</a></li>
             </ul>

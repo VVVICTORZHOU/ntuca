@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
             postPinned: '',
             postLikes: '',
             postFormat: '',
+            postSeries: '',
             postContent: ''
         };
 
@@ -240,6 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (line.includes('貼文強制釘選')) currentField = 'postPinned';
                         if (line.includes('貼文點讚數')) currentField = 'postLikes';
                         if (line.includes('貼文格式')) currentField = 'postFormat';
+                        if (line.includes('貼文系列')) currentField = 'postSeries';
                         if (line.includes('貼文內容')) {
                             currentField = 'postContent';
                             postContentCapture = true;
@@ -350,3 +352,18 @@ function sendMail() {
     var body = "Please write your message here."; // 電子郵件內容
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+// 部落格子選單展開/收合
+document.addEventListener('DOMContentLoaded', function () {
+    // 行動版：控制部落格子選單展開/收合
+    const blogToggle = document.querySelector('.sidebar-blog-toggle');
+    const sidebarSubmenu = document.querySelector('.sidebar-submenu');
+
+    if (blogToggle) {
+        blogToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            sidebarSubmenu.style.display = sidebarSubmenu.style.display === 'block' ? 'none' : 'block';
+            blogToggle.classList.toggle('active');
+        });
+    }
+});

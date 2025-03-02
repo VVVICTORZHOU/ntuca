@@ -12,7 +12,7 @@
     <header id="main-header">
         <div class="header-container">
             <div class="logo-container">
-                <a href="top_en_index.html">
+                <a href="top_zh_index.html">
                     <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="logo-img">
                 </a>
             </div>
@@ -20,20 +20,26 @@
             <div class="menu-container">
                 <nav class="desktop-menu">
                     <ul>
-                        <li><a href="top_en_index.html"><span>回首頁</span>TOP</a></li>
-                        <li><a href="aboutus_en_index.html"><span>關於我們</span>ABOUT</a></li>
-                        <li><a href="blog_en_index.html"><span>部落格</span>BLOG</a></li>
-                        <li><a href="" onclick="sendMail()"><span>聯繫我們</span>CONTACT</a></li>
-                        <li><a href="webslink_en_index.html" class="current"><span>友站連結</span>LINKS</a></li>
+                        <li><a href="top_en_index.html"><span>TOP</span>回首頁</a></li>
+                        <li><a href="aboutus_en_index.html"><span>ABOUT</span>關於我們</a></li>
+                        <li class="blog-menu">
+                            <a href="blog_en_index.html"><span>BLOG</span>部落格</a>
+                            <ul class="submenu">
+                                <li><a href="blog_en_index.html?series=氣候職人誌">氣候職人誌(e)</a></li>
+                                <li><a href="blog_en_index.html?series=與部長有約">與部長有約(e)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="" onclick="sendMail()"><span>CONTACT</span>聯繫我們</a></li>
+                        <li><a href="webslink_en_index.html" class="current-page"><span>LINKS</span>友站連結</a></li>
                     </ul>
                 </nav>
                 
                 <div class="right-controls">
-                    <a href="blog_en_index.html" class="search-btn1">
-                        <img src="../img/search_icon.png" alt="Search", id="search-icon-img">
+                    <a class="search-btn1">
+                        <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
                     </a>
                     <a href="webslink_zh_index.html" class="lang-switch">
-                        <img src="../img/lang_zh_icon.png" alt="中文", id="lang-icon-img">
+                        <img src="../img/lang_zh_icon.png" alt="ZH", id="lang-icon-img"> <!-- post 的語言切換涉及將當前貼文檔名傳遞給英文版頁面的步驟 -->
                     </a>
                 </div>
                 
@@ -42,7 +48,7 @@
                         <i class="fas fa-bars"></i>
                     </button>
                     <a href="webslink_zh_index.html" class="lang-switch mobile-lang">
-                        <img src="../img/lang_zh_icon.png" alt="中文", id="lang-icon-img">
+                        <img src="../img/lang_zh_icon.png" alt="ZH", id="lang-icon-img">
                     </a>
                 </div>
             </div>
@@ -51,16 +57,16 @@
 
     <div class="search-popup">
         <div class="search-popup-content">
-            <h2>Search for blog</h2>
+            <h2>在部落格中搜索</h2>
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="Keywords...">
-                <button type="button" id="search-submit">Search</button>
+                <input type="text" id="search-input" placeholder="輸入關鍵字...">
+                <button type="button" id="search-submit">搜尋</button>
             </div>
             <div class="hot-searches">
-                <span>Hot search：</span>
-                <a href="blog_en_index.html">Climate Change</a>
-                <a href="blog_en_index.html">Sustainable Development</a>
-                <a href="blog_en_index.html">Carbon Neutrality</a>
+                <span>熱門搜尋：</span>
+                <a href="blog_en_index.html">氣候變遷</a>
+                <a href="blog_en_index.html">永續發展</a>
+                <a href="blog_en_index.html">碳中和</a>
             </div>
             <button class="search-popup-close" aria-label="Close Search">
                 <i class="fas fa-times"></i>
@@ -77,20 +83,27 @@
             <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="sidebar-logo-img">
         </div>
         <div class="sidebar-search">
-            <a href="blog_en_index.html" class="search-btn2">
-                <img src="../img/search_icon.png" alt="Search", id="search-icon-img">
+            <a class="search-btn2">
+                <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
             </a>
         </div>
         <nav class="sidebar-menu">
             <ul>
-                <li><a href="top_en_index.html">TOP</a></li>
-                <li><a href="aboutus_en_index.html">ABOUT</a></li>
-                <li><a href="blog_en_index.html">BLOG</a></li>
-                <li><a href="" onclick="sendMail()">CONTACT</a></li>
-                <li><a href="webslink_en_index.html" class="current">LINKS</a></li>
+                <li><a href="top_en_index.html">回首頁</a></li>
+                <li><a href="aboutus_en_index.html" class="current">關於我們</a></li>
+                <li>
+                    <a href="#" class="sidebar-blog-toggle">部落格 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="blog_en_index.html?series=氣候職人誌">氣候職人誌(e)</a></li>
+                        <li><a href="blog_en_index.html?series=與部長有約">與部長有約(e)</a></li>
+                    </ul>
+                </li>
+                <li><a href="" onclick="sendMail()">聯繫我們</a></li>
+                <li><a href="webslink_en_index.html">友站連結</a></li>
             </ul>
         </nav>
     </aside>
+
 
     <!-- 校內友站 -->
     <div class="weblinks-container" id="weblinks-container-1">

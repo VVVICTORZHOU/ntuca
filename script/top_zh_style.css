@@ -976,6 +976,12 @@ body {
     .facebook-iframe {
         width: 100%;
     }
+    .top-dynamic-title {
+        font-size: 24px;
+    }
+    .top-dynamic-subtitle {
+        font-size: 14px;
+    }
 }
 
 

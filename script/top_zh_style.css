@@ -410,13 +410,13 @@ body {
     gap: 5px;
 }
 
-.social-links {
+.footer-container .social-links {
     display: flex;
     gap: 15px;
     margin-top: 5px;
 }
 
-.social-link {
+.footer-container .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -430,27 +430,27 @@ body {
     transition: all 0.3s ease;
 }
 
-.social-link:hover {
+.footer-container .social-link:hover {
     background-color: #83CBEB;
     color: #fff;
     transform: translateY(-2px);
 }
 
-.social-link i {
+.footer-container .social-link i {
     font-size: 16px;
 }
 
 @media (max-width: 768px) {
-    .social-links {
+    .footer-container .social-links {
         margin-top: 3px;
     }
     
-    .social-link {
+    .footer-container .social-link {
         width: 30px;
         height: 30px;
     }
     
-    .social-link i {
+    .footer-container .social-link i {
         font-size: 14px;
     }
 }
@@ -916,5 +916,119 @@ body {
 @media screen and (max-width: 300px) {
     #logo-img {
         content: url("../img/ntuca_logo.png");
+    }
+}
+
+/* 臉書動態板塊 */
+.top-dynamic-container {
+    padding: 30px 0;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.top-dynamic-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* 確保小螢幕時換行 */
+    gap: 20px;
+}
+
+.top-dynamic-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 32px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    background-image: linear-gradient(
+        90deg,
+        #e7e7e7 0%, #e7e7e7 45%,
+        #83cbeb 45%, #83cbeb 55%,
+        #e7e7e7 55%, #e7e7e7 100%
+    );
+    background-size: 50% 5px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin-bottom: 20px;
+}
+
+.top-dynamic-subtitle {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 50px;
+}
+
+.facebook-iframe {
+    width: 100%;  /* 讓 iframe 寬度佔滿父容器 */
+    max-width: 500px; /* 設置最大寬度，保持大螢幕時仍為 500px */
+    height: 800px;
+    border: none;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .facebook-iframe {
+        width: 100%;
+    }
+}
+
+
+/* 調整社交連結按鈕樣式 */
+.top-dynamic-content .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.top-dynamic-content .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.top-dynamic-content .social-link i {
+    margin-right: 8px;
+}
+
+/* Instagram 按鈕樣式 */
+.top-dynamic-content .social-link.instagram {
+    background-color: #e4405f;
+}
+
+.top-dynamic-content .social-link.instagram:hover {
+    background-color: #c13546;
+}
+
+/* Facebook 按鈕樣式 */
+.top-dynamic-content .social-link.facebook {
+    background-color: #3b5998;
+}
+
+.top-dynamic-content .social-link.facebook:hover {
+    background-color: #2d4373;
+}
+
+/* 當螢幕寬度較小時調整佈局 */
+@media (max-width: 768px) {
+    .top-dynamic-content {
+        flex-direction: column;
+    }
+
+    .top-dynamic-content .social-links {
+        flex-direction: row;
+        justify-content: center;
     }
 }

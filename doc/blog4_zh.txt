@@ -38,6 +38,10 @@ N/A
 <範例> 0
 0
 
+<註解> 貼文系列 (氣候職人誌 或 與部長有約)
+<範例> 氣候職人誌
+氣候職人誌
+
 <註解> 貼文內容 (請遵循 html 語法撰寫)
 <範例> <h>第一章 產業洞察</h><br>近年來，全球經濟景氣波動劇烈，新興科技如雨後春筍般快速發展，企業家們必須具備敏銳的<em>產業洞察力</em>，才能在激烈的市場競爭中脫穎而出。<br><br>...
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mauris eros, eleifend et mauris vitae, luctus accumsan neque. Aliquam suscipit hendrerit nunc, eu ornare metus pharetra ac. Phasellus venenatis rhoncus felis, in euismod leo pretium sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus id leo nec nisi molestie hendrerit eu nec diam. Praesent elementum risus elit, vel iaculis purus aliquet eu. Sed a elementum ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non massa at nisl bibendum rutrum. Quisque mauris sapien, interdum a nibh non, blandit pellentesque leo. Cras auctor euismod neque, non maximus orci fermentum vitae.

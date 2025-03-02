@@ -731,3 +731,71 @@ body {
     z-index: 1000;
     display: none;
 }
+
+/* 部落格文章前資訊欄樣式 */
+.post-info {
+    padding: 20px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.post-subtitle {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+.blog-posts-item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.blog-posts-item-tags .tag {
+    font-size: 12px;
+    color: #83CBEB;
+    background-color: rgba(131, 203, 235, 0.1);
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.blog-posts-item-interactions {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+.blog-posts-item-interactions i {
+    color: #83CBEB;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 20px;
+    }
+
+    .post-subtitle {
+        font-size: 14px;
+    }
+
+    .post-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .blog-posts-item-interactions {
+        gap: 10px;
+    }
+}

@@ -213,9 +213,19 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(content => {
                 const lines = content.split(/\r?\n/).filter(line => line.trim() !== '');
+                let nextLineToCapture = false;
                 let currentField = null;
                 let postContentCapture = false;
                 let postContentBuffer = '';
+
+                // 獲取需要的元素
+                const postTitle = document.querySelector('.post-title');
+                const postSubtitle = document.querySelector('.post-subtitle');
+                const postDate = document.querySelector('.post-date span');
+                const postAuthor = document.querySelector('.post-author span');
+                const postTagsContainer = document.querySelector('.blog-posts-item-tags');
+                const postLikes = document.querySelector('.blog-posts-item-likes span');
+                const postPinned = document.querySelector('.blog-posts-item-pinned');
 
                 lines.forEach(line => {
                     if (commentPattern.test(line)) {
@@ -237,6 +247,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             postContentCapture = false;
                         }
                     } else if (examplePattern.test(line)) {
+                        // 跳過範例
+                        nextLineToCapture = true;
+                    } else if (nextLineToCapture  && currentField !== 'postContent') {
+                        nextLineToCapture = false;        
                         // 對其他欄位捕獲一行數據
                         blogData[currentField] = line.trim().replace(/<br>/g, '');
                     } else if (postContentCapture) {
@@ -251,6 +265,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 渲染貼文內容到 .post-content-container
                 document.querySelector('.post-content-container').innerHTML = blogData.postContent;
 
+                // 這些變數來自已解析的 blogData
+                postTitle.textContent = blogData.postTitle;
+                //postSubtitle.textContent = blogData.postSubTitle; 不顯示子標題
+                postDate.textContent = blogData.postDate;
+                postAuthor.textContent = blogData.postAuthor;
+                postLikes.textContent = blogData.postLikes;
+
+                // 釘選狀態
+                if (blogData.postPinned === '1') {
+                    postPinned.style.display = 'inline-flex';
+                } else {
+                    postPinned.style.display = 'none';
+                }
+
+                // 設置標籤（以 # 作為分隔）
+                if (blogData.postTagsZh) {
+                    const tags = blogData.postTagsZh.split('#').filter(tag => tag.trim() !== '');
+                    tags.forEach(tag => {
+                        const tagElement = document.createElement('span');
+                        tagElement.classList.add('tag');
+                        tagElement.textContent = tag.trim();
+                        postTagsContainer.appendChild(tagElement);
+                    });
+                }
+                
             })
             .catch(error => {
                 console.error('Error loading post file:', error);
@@ -262,6 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// 複製當前網站 URL 到剪貼簿
 document.addEventListener('DOMContentLoaded', function() {
     const copyLinkButton = document.querySelector('.copy-link-button');
     const alertPopup = document.querySelector('.alert-popup');

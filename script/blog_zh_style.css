@@ -296,8 +296,8 @@ body {
 
 @media (max-width: 768px) {
     .search-popup {
-        top: -300px;
-        height: 320px;
+        top: -330px;
+        height: 330px;
     }
     .search-popup-content {
         padding: 20px 15px;

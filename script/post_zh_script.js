@@ -227,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const postTagsContainer = document.querySelector('.blog-posts-item-tags');
                 const postLikes = document.querySelector('.blog-posts-item-likes span');
                 const postPinned = document.querySelector('.blog-posts-item-pinned');
+                const postSeries = document.querySelector('.blog-posts-item-series');
 
                 lines.forEach(line => {
                     if (commentPattern.test(line)) {
@@ -273,6 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 postDate.textContent = blogData.postDate;
                 postAuthor.textContent = blogData.postAuthor;
                 postLikes.textContent = blogData.postLikes;
+                postSeries.textContent = blogData.postSeries;
 
                 // 釘選狀態
                 if (blogData.postPinned === '1') {

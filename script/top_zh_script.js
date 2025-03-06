@@ -467,6 +467,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="blog-posts-item-date">${postData.date}</span>
                     <span class="blog-posts-item-likes"><i class="fas fa-heart"></i> ${postData.likes}</span>
                     ${postData.pinned ? '<span class="blog-posts-item-pinned"><i class="fas fa-thumbtack"></i></span>' : ''}
+                    <span class="blog-posts-item-series"><i class="fas fa-paperclip"></i> ${postData.series}</span>
                 </div>
                 <p class="blog-posts-item-text">${postData.subTitle}</p>
             </div>

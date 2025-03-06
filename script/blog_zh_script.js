@@ -314,7 +314,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 獲取DOM元素
     const postsContainer = document.getElementById('posts-container');
     const sortSelect = document.getElementById('sort-select');
-    const seriesSelect = document.getElementById('series-select');
+    const mainseriesSelect = document.getElementById('series-select');
+    const seriesSelect = document.getElementById('search-series-select');
     
     // 創建貼文元素的函數
     function createPostElement(index) {
@@ -363,6 +364,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="blog-posts-item-date">${postData.date}</span>
                     <span class="blog-posts-item-likes"><i class="fas fa-heart"></i> ${postData.likes}</span>
                     ${postData.pinned ? '<span class="blog-posts-item-pinned"><i class="fas fa-thumbtack"></i></span>' : ''}
+                    <span class="blog-posts-item-series"><i class="fas fa-paperclip"></i> ${postData.series}</span>
                 </div>
                 <p class="blog-posts-item-text">${postData.subTitle}</p>
             </div>
@@ -429,9 +431,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const urlParams = new URLSearchParams(window.location.search);
         const seriesParam = urlParams.get('series');
         if (seriesParam) {
+            mainseriesSelect.value = seriesParam;
             seriesSelect.value = seriesParam;
             filterPostsBySeries(seriesParam);
         } else {
+            mainseriesSelect.value = '全部';
             seriesSelect.value = '全部';
             filterPostsBySeries('全部');
         }
@@ -441,7 +445,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 監聽系列選擇變化
-    seriesSelect.addEventListener('change', function() {
+    mainseriesSelect.addEventListener('change', function() {
+        seriesSelect.value = this.value;
         filterPostsBySeries(this.value);
     });
     
@@ -454,39 +459,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 部落格貼文搜索功能
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('執行部落格貼文搜索功能');
+    const filterContent = document.querySelector('.blog-filter-content');
     const searchInput = document.getElementById('search-input');
     const searchSubmit = document.getElementById('search-submit-pop');
+    const seriesSelect = document.getElementById('search-series-select');
+    const mainseriesSelect = document.getElementById('series-select');
     const postsContainer = document.getElementById('posts-container');
-    const filterContent = document.querySelector('.blog-filter-content');
 
-    function filterPosts(keyword) {
+    function filterPosts(keyword, selectedSeries) {
         keyword = keyword.trim().toLowerCase();
         const posts = Array.from(postsContainer.children);
-        let hasResult = 0;
-    
+        let hasResult = false;
+
         posts.forEach(post => {
             const titleElement = post.querySelector('.blog-posts-item-title');
             const subTitleElement = post.querySelector('.blog-posts-item-text');
-            
-            if (!titleElement || !subTitleElement) {
-                return;
-            }
-    
+            const postSeries = post.dataset.series; // 取得貼文系列資料
+
+            if (!titleElement || !subTitleElement) return;
+
             const title = titleElement.textContent.toLowerCase();
             const subTitle = subTitleElement.textContent.toLowerCase();
             const tags = Array.from(post.querySelectorAll('.blog-posts-item-tags .tag'))
-                                .map(tag => tag.textContent.toLowerCase());
-    
-            if (title.includes(keyword) || subTitle.includes(keyword) || tags.some(tag => tag.includes(keyword))) {
+                             .map(tag => tag.textContent.toLowerCase());
+
+            const matchesKeyword = title.includes(keyword) || subTitle.includes(keyword) || tags.some(tag => tag.includes(keyword));
+            const matchesSeries = (selectedSeries === "全部" || postSeries === selectedSeries);
+
+            if (matchesKeyword && matchesSeries) {
                 post.style.display = "block";
-                hasResult++;
+                hasResult = true;
             } else {
                 post.style.display = "none";
             }
         });
-    
+
+        console.log('hasResult:', hasResult);
+
         // 顯示警示彈窗
-        if (hasResult === 0) {
+        if (!hasResult) {
             document.getElementById('alert-keyword').textContent = keyword;
             document.getElementById('alert-popup').style.display = 'block';
             document.getElementById('alert-overlay').style.display = 'block';
@@ -499,32 +511,43 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('alert-overlay').style.display = 'none';
     });
 
-    function showFilterTag(keyword) {
+    function showFilterTag(keyword, selectedSeries) {
         console.log('執行顯示過濾標籤');
-        filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${keyword}</span> 
-                                   <button id="clear-filter">清除篩選</button>`;
+        // if keyword != ''
+        if (keyword===''){
+            filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${selectedSeries}</span>
+            <button id="clear-filter">清除篩選</button>`;
+        } else {
+            filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${selectedSeries}</span> <span class="filter-tag">${keyword}</span> 
+            <button id="clear-filter">清除篩選</button>`;
+        }
 
         document.getElementById('clear-filter').addEventListener('click', function() {
             searchInput.value = ''; // 清空輸入框
-            filterContent.innerHTML = '<span>當前篩選：</span>'; // 恢復篩選欄
+            filterContent.innerHTML = '<span>當前篩選為空</span>'; // 恢復篩選欄
             Array.from(postsContainer.children).forEach(post => post.style.display = "block"); // 顯示所有貼文
             // 如果存在沒有結果的提示，則移除
             const noResultsMessage = document.getElementById('no-results-message');
             if (noResultsMessage) {
                 noResultsMessage.remove();
             }
+            // 將 seriesSelect 重置為全部
+            seriesSelect.value = '全部';
+            mainseriesSelect.value = '全部';
 
         });
     }
-
     // 監聽搜索按鈕
     searchSubmit.addEventListener('click', function() {
-        console.log('搜索關鍵字:', searchInput.value.trim());
         const keyword = searchInput.value.trim();
-        if (keyword) {
-            filterPosts(keyword);
-            showFilterTag(keyword);
-            // 等待 0.1 秒後將搜索框彈窗關閉
+        const selectedSeries = seriesSelect.value;
+        // 如果搜索關鍵字不為空或系列不為全部，則執行篩選
+        if (keyword || selectedSeries !== "全部") {
+            // 將 mainselectSeries 設置為 selectedSeries
+            mainseriesSelect.value = selectedSeries;
+            // 如果搜索關鍵字不為空，則將搜索關鍵字填入搜索框
+            filterPosts(keyword, selectedSeries);
+            showFilterTag(keyword, selectedSeries);
             setTimeout(() => {
                 document.querySelector('.search-popup').classList.remove('active');
                 document.body.style.overflow = '';
@@ -532,14 +555,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 監聽 Enter 鍵
     searchInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
             const keyword = searchInput.value.trim();
-            if (keyword) {
-                filterPosts(keyword);
-                showFilterTag(keyword);
-                // 等待 0.1 秒後將搜索框彈窗關閉
+            const selectedSeries = seriesSelect.value;
+            if (keyword || selectedSeries !== "全部") {
+                filterPosts(keyword, selectedSeries);
+                showFilterTag(keyword, selectedSeries);
                 setTimeout(() => {
                     document.querySelector('.search-popup').classList.remove('active');
                     document.body.style.overflow = '';
@@ -547,15 +569,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     const hotSearchLinks = document.querySelectorAll('.hot-searches a');
     const searchInput = document.getElementById('search-input');
+    console.log('read hot searches',hotSearchLinks);
 
     hotSearchLinks.forEach(link => {
         link.addEventListener('click', function() {
             const keyword = link.getAttribute('data-keyword');
+            console.log(keyword)
             searchInput.value = keyword;  // 將點擊的熱門詞填入搜索框
             searchInput.focus();          // 自動聚焦到輸入框
         });

@@ -58,6 +58,14 @@
     <div class="search-popup">
         <div class="search-popup-content">
             <h2>在部落格中搜索</h2>
+            <div class="search-filter">
+                <label for="search-series-select">選擇貼文系列：<i class="fas fa-paperclip"></i></label>
+                <select id="search-series-select">
+                    <option value="全部">全部</option>
+                    <option value="氣候職人誌">氣候職人誌</option>
+                    <option value="與部長有約">與部長有約</option>
+                </select>
+            </div>
             <div class="search-box">
                 <input type="text" id="search-input" placeholder="輸入關鍵字...">
                 <button type="button" id="search-submit-pop">搜尋</button>
@@ -94,6 +102,7 @@
                 <li>
                     <a href="#" class="sidebar-blog-toggle">部落格 <i class="fas fa-chevron-down"></i></a>
                     <ul class="sidebar-submenu">
+                        <li><a href="blog_zh_index.html?">全部</a></li>
                         <li><a href="blog_zh_index.html?series=氣候職人誌">氣候職人誌</a></li>
                         <li><a href="blog_zh_index.html?series=與部長有約">與部長有約</a></li>
                     </ul>
@@ -118,12 +127,12 @@
             </div>
         </div>
         <div class="blog-filter-content">
-            <span>當前篩選</span>
+            <span>當前篩選為空</span>
         </div>
         <!-- 排序選單 -->
         <div class="blog-sort-content">
             <div class="sort-dropdown">
-                <label for="series-select">選擇貼文主題系列</label>
+                <label for="series-select">選擇貼文系列 <i class="fas fa-paperclip"></i></label>
                 <select id="series-select">
                     <option value="全部">全部</option>
                     <option value="氣候職人誌">氣候職人誌</option>

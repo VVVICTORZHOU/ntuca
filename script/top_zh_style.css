@@ -816,6 +816,15 @@ body {
     margin-bottom: 10px;
 }
 
+.blog-posts-item-series {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 12px;
+    background-color: #999;
+    color: #f6f6f6;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
 .blog-posts-item-date {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 12px;

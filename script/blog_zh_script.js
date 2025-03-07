@@ -500,8 +500,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // 顯示警示彈窗
         if (!hasResult) {
             document.getElementById('alert-keyword').textContent = keyword;
+            document.getElementById('alert-keyword-series').textContent = selectedSeries;
             document.getElementById('alert-popup').style.display = 'block';
             document.getElementById('alert-overlay').style.display = 'block';
+            // 隱藏 <div class="blog-sort-content">
+            document.querySelector('.blog-sort-content').style.display = 'none';
         }
     }
     
@@ -525,6 +528,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('clear-filter').addEventListener('click', function() {
             searchInput.value = ''; // 清空輸入框
             filterContent.innerHTML = '<span>當前篩選為空</span>'; // 恢復篩選欄
+            // 顯示 <div class="blog-sort-content">
+            document.querySelector('.blog-sort-content').style.display = 'flex';
+            // 顯示所有貼文
             Array.from(postsContainer.children).forEach(post => post.style.display = "block"); // 顯示所有貼文
             // 如果存在沒有結果的提示，則移除
             const noResultsMessage = document.getElementById('no-results-message');

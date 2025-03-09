@@ -44,14 +44,49 @@ N/A
 
 <註解> 貼文內容 (請遵循 html 語法撰寫)
 <範例> <h>第一章 產業洞察</h><br>近年來，全球經濟景氣波動劇烈，新興科技如雨後春筍般快速發展，企業家們必須具備敏銳的<em>產業洞察力</em>，才能在激烈的市場競爭中脫穎而出。<br><br>...
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mauris eros, eleifend et mauris vitae, luctus accumsan neque. Aliquam suscipit hendrerit nunc, eu ornare metus pharetra ac. Phasellus venenatis rhoncus felis, in euismod leo pretium sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus id leo nec nisi molestie hendrerit eu nec diam. Praesent elementum risus elit, vel iaculis purus aliquet eu. Sed a elementum ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non massa at nisl bibendum rutrum. Quisque mauris sapien, interdum a nibh non, blandit pellentesque leo. Cras auctor euismod neque, non maximus orci fermentum vitae.
+<h1>2025年全球碳中和進展報告整理</h1>
+<p>隨著各國加強碳中和政策，2025年成為檢視全球減碳成效的關鍵年份。本篇報告將分析目前的進展與挑戰。</p>
 
-Suspendisse tempus odio bibendum luctus iaculis. Suspendisse gravida mauris elit, vitae sollicitudin orci tempor et. Sed in imperdiet leo. Nam maximus luctus erat in vestibulum. Nam sit amet rhoncus lacus. Suspendisse vitae efficitur lacus. Ut odio turpis, lacinia eget pellentesque aliquam, malesuada a tortor. In hac habitasse platea dictumst. Vivamus et rutrum est. Quisque fringilla facilisis neque sed rhoncus. Etiam rutrum mi quis commodo viverra. Phasellus consequat urna eget porta hendrerit. Donec urna ipsum, malesuada id finibus aliquet, dignissim quis tellus. Pellentesque maximus elit dui. Vestibulum tempor enim eros, ut volutpat ipsum feugiat vitae. Morbi tincidunt placerat justo, a blandit eros viverra ac.
+<h2>全球碳排放趨勢</h2>
+<p>根據最新數據，全球碳排放量在2024年達到峰值後，逐漸呈現下降趨勢。各國政府正透過<strong>可再生能源</strong>與<strong>碳捕捉技術</strong>來減少碳排放。</p>
 
-Quisque faucibus purus et pretium tempor. Aliquam in nulla neque. Donec sed nisi non nisi rhoncus dapibus. Pellentesque elit nibh, varius et hendrerit eget, egestas a ex. Etiam mattis, metus id rhoncus maximus, turpis enim tristique enim, at tincidunt sapien quam quis sem. Mauris faucibus risus nisl, at tincidunt risus elementum quis. Mauris finibus metus ac viverra eleifend. Nam laoreet, ex vel faucibus mollis, ligula magna pellentesque ex, vestibulum fermentum justo lacus eu arcu.
+<img src="../img/blog_img1.png" alt="全球碳排放趨勢圖">
 
-Ut sagittis libero vel felis tincidunt finibus. Phasellus eu tincidunt ipsum, at scelerisque odio. Nulla aliquam diam sodales nibh cursus, vitae mollis magna fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec suscipit scelerisque erat, quis rutrum arcu condimentum non. Pellentesque eu hendrerit lectus. Cras quis scelerisque ante. Sed vitae suscipit lacus. Aliquam sed lacus tellus. Quisque varius ipsum nulla. Donec sed semper eros, nec suscipit sapien. Nullam eu justo eleifend, consectetur erat nec, lobortis nulla.
+<h2>主要國家政策</h2>
+<ul>
+    <li>美國：推出「綠色新政」，計畫2035年前實現100%清潔能源發電。</li>
+    <li>歐盟：加速碳關稅機制，推動企業轉向低碳生產模式。</li>
+    <li>中國：承諾在2060年前達成碳中和，並大力投資綠色能源。</li>
+</ul>
 
-Donec aliquam, purus sit amet ornare semper, dolor dui suscipit mi, non bibendum nulla urna ut purus. Etiam id diam tortor. Curabitur non dolor auctor, iaculis lacus sed, posuere ante. Vivamus interdum nisl vitae tellus condimentum efficitur. Proin mollis arcu mattis odio gravida ultrices. Aliquam imperdiet ultricies pretium. Sed ut suscipit eros, vitae mattis mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sit amet vehicula nunc, id bibendum erat. Donec at magna a justo fermentum eleifend. Phasellus tempus faucibus arcu. In accumsan magna turpis, fringilla commodo ex mattis ut. Curabitur quis enim maximus, dignissim justo non, faucibus tortor. Vivamus malesuada mi turpis, in pellentesque leo pellentesque vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<h2>技術創新與突破</h2>
+<p>科學家正開發<strong>新一代電池技術</strong>與<strong>碳封存技術</strong>，以提升綠能儲存與碳去除的效率。相關研究可參考<a href="https://www.example.com">這裡</a>。</p>
 
+<img src="../img/blog_img2.png" alt="技術創新與突破">
 
+<h2>結論</h2>
+<p>儘管仍面臨挑戰，但各國的努力正在發揮作用。碳中和的未來將依賴於<strong>政策執行</strong>與<strong>技術進步</strong>。</p>
+
+<hr>
+
+<h2>HTML 參考範例</h2>
+<pre>
+
+&lt;h1&gt;2025年全球碳中和進展報告整理&lt;/h1&gt;
+&lt;p&gt;隨著各國加強碳中和政策...&lt;/p&gt;
+&lt;h2&gt;全球碳排放趨勢&lt;/h2&gt;
+&lt;p&gt;根據最新數據...&lt;/p&gt;
+&lt;img src="../img/blog_img1.png" alt="全球碳排放趨勢圖"&gt;
+&lt;h2&gt;主要國家政策&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;美國：推出「綠色新政」...&lt;/li&gt;
+    &lt;li&gt;歐盟：加速碳關稅機制...&lt;/li&gt;
+    &lt;li&gt;中國：承諾在2060年前達成碳中和...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;技術創新與突破&lt;/h2&gt;
+&lt;p&gt;科學家正開發... &lt;a href="https://www.example.com"&gt;這裡&lt;/a&gt;。&lt;/p&gt;
+&lt;img src="../img/blog_img2.png" alt="技術創新與突破"&gt;
+&lt;h2&gt;結論&lt;/h2&gt;
+&lt;p&gt;儘管仍面臨挑戰...&lt;/p&gt;
+
+</pre>

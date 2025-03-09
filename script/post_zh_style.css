@@ -629,6 +629,8 @@ body {
 }
 
 /* 頁面貼文區 */
+
+/* 頁面貼文區內文風格定義 */
 .post-content-container {
     display: flex;
     align-items: center;
@@ -637,15 +639,17 @@ body {
     background-color: #fff;
     padding: 60px;
     width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .post-content-container {
         padding: 20px;
+        max-width: 90%;
     }
 }
 
-/* 頁面貼文區內文風格定義 */
 .post-content-container h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -667,10 +671,12 @@ body {
     line-height: 1.6;
     color: #555;
     margin-bottom: 15px;
+    max-width: 70%;
+    text-align: justify;
 }
 
 .post-content-container a {
-    color: #83CBEB;
+    color: #0073e6;
     text-decoration: none;
     font-weight: bold;
 }
@@ -679,31 +685,36 @@ body {
     text-decoration: underline;
 }
 
-.post-content-container ul {
+.post-content-container ul,
+.post-content-container ol {
+    max-width: 70%;
     padding-left: 20px;
-    list-style-type: disc;
     margin-bottom: 15px;
+}
+
+.post-content-container ul {
+    list-style-type: disc;
 }
 
 .post-content-container ol {
-    padding-left: 20px;
     list-style-type: decimal;
-    margin-bottom: 15px;
 }
 
 .post-content-container img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     border-radius: 8px;
     margin: 20px 0;
+    display: block;
 }
 
 .post-content-container blockquote {
     font-style: italic;
     color: #666;
-    border-left: 4px solid #83CBEB;
+    border-left: 4px solid #0073e6;
     padding-left: 15px;
     margin: 20px 0;
+    max-width: 70%;
 }
 
 .post-content-container pre {
@@ -713,8 +724,10 @@ body {
     overflow-x: auto;
     font-family: monospace;
     color: #333;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 70%;
 }
-
 
 /* 警示彈窗樣式 */
 .alert-popup {

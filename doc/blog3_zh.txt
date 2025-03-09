@@ -72,20 +72,26 @@ N/A
 <h2>HTML 參考範例</h2>
 <pre>
 
-&lt;h1&gt;2025年全球碳中和進展報告整理&lt;/h1&gt;
+&lt;h1&gt;2025年全球碳中和進展報告&lt;/h1&gt;
 &lt;p&gt;隨著各國加強碳中和政策...&lt;/p&gt;
+
 &lt;h2&gt;全球碳排放趨勢&lt;/h2&gt;
 &lt;p&gt;根據最新數據...&lt;/p&gt;
+
 &lt;img src="../img/blog_img1.png" alt="全球碳排放趨勢圖"&gt;
+
 &lt;h2&gt;主要國家政策&lt;/h2&gt;
 &lt;ul&gt;
     &lt;li&gt;美國：推出「綠色新政」...&lt;/li&gt;
     &lt;li&gt;歐盟：加速碳關稅機制...&lt;/li&gt;
     &lt;li&gt;中國：承諾在2060年前達成碳中和...&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2&gt;技術創新與突破&lt;/h2&gt;
 &lt;p&gt;科學家正開發... &lt;a href="https://www.example.com"&gt;這裡&lt;/a&gt;。&lt;/p&gt;
+
 &lt;img src="../img/blog_img2.png" alt="技術創新與突破"&gt;
+
 &lt;h2&gt;結論&lt;/h2&gt;
 &lt;p&gt;儘管仍面臨挑戰...&lt;/p&gt;
 

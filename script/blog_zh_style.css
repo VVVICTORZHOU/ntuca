@@ -296,8 +296,8 @@ body {
 
 @media (max-width: 768px) {
     .search-popup {
-        top: -330px;
-        height: 330px;
+        top: -350px;
+        height: 350px;
     }
     .search-popup-content {
         padding: 20px 15px;
@@ -1052,4 +1052,64 @@ body {
 /* 當展開時改變箭頭方向 */
 .sidebar-blog-toggle.active i {
     transform: rotate(180deg);
+}
+
+/* 頁尾連結區 */
+.wishpool-link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wishpool-link-container a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 240px;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #fff;
+    border: #83CBEB 2px solid;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+.wishpool-link-container .disabled-button {
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 240px;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #f6f6f6;
+    border: #666 2px solid;
+    color: #666;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+.wishpool-link-container a:hover {
+    background-color: #83CBEB;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.wishpool-link-container a::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(45deg);
+}
+
+.wishpool-link-container a:hover::after {
+    border-color: #fff;
+    transition: border-color 0.3s ease;
 }

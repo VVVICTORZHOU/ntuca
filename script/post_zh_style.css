@@ -646,7 +646,7 @@ body {
 @media (max-width: 768px) {
     .post-content-container {
         padding: 20px;
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 

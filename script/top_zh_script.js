@@ -590,11 +590,11 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             container.appendChild(barItem);
 
-            barItem.dataset.width = barWidthPercentage; // 將寬度數據存儲在 dataset 中
+            //barItem.dataset.width = barWidthPercentage; // 將寬度數據存儲在 dataset 中
             // Animate bar fill after rendering
-            //setTimeout(() => {
-            //    barItem.querySelector('.bar-fill').style.width = `${barWidthPercentage}%`;
-            //}, 100);  // Delay for smoother animation
+            setTimeout(() => {
+                barItem.querySelector('.bar-fill').style.width = `${barWidthPercentage}%`;
+            }, 500);  // Delay for smoother animation
         });
     }
 });
@@ -643,27 +643,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    // 創建觀察者
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // 當目標元素進入可視範圍時，觸發動畫
-                const bars = entry.target.querySelectorAll('.bar-fill');
-                bars.forEach(bar => {
-                    const targetWidth = bar.parentElement.dataset.width;
-                    bar.style.width = `${targetWidth}%`;
-                });
-                // 一旦觸發動畫，可以取消觀察
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });  // 當元素 10% 進入可視範圍時觸發
-
-    // 對長條圖容器進行監測
-    const barChartContainer = document.getElementById('bar-chart-container');
-    observer.observe(barChartContainer);
-});
 
 
 

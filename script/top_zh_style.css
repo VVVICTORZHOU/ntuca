@@ -1098,6 +1098,9 @@ body {
     .toggle-btn {
         padding: 8px 15px;
     }
+    .top-sdgs-title-container h2 {
+        font-size: 24px;
+    }
 }
 /* 首頁 SDGs 區 */
 .top-sdgs-container {

@@ -323,12 +323,13 @@ document.addEventListener('DOMContentLoaded', function() {
         postPinned: [],
         postLikes: [],
         postFormat: [],
+        postSDGs: [],
         postSeries: [],
         postContent: []
     };
 
     // Predefine a list of possible files (from blog1_zh.txt to blog99_zh.txt)
-    const files = Array.from({ length: 9 }, (_, i) => `blog${i + 1}_zh.txt`);
+    const files = Array.from({ length: 5 }, (_, i) => `blog${i + 1}_zh.txt`);
 
     // Define patterns for comments and examples
     const commentPattern = /^<註解>/;
@@ -369,6 +370,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (line.includes('貼文點讚數')) currentField = 'postLikes';
                     if (line.includes('貼文格式')) currentField = 'postFormat';
                     if (line.includes('貼文系列')) currentField = 'postSeries';
+                    if (line.includes('永續發展目標')) {
+                        // 本變數也是單行字串，例如 13,17，請以逗號,作為分隔，將各個檔案的 SDGs 皆以子陣列形式存放入此變數
+                        currentField = 'postSDGs';
+                        //blogData.postSDGs.push(line.split(',').map(sdg => sdg.trim()));
+                    }
                     if (line.includes('貼文內容')) {
                         currentField = 'postContent';
                         postContentCapture = true;
@@ -409,11 +415,33 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(blogData.postPinned);
         console.log(blogData.postLikes);
         console.log(blogData.postFormat);
+        console.log(blogData.postSDGs);
         console.log(blogData.postSeries);
         console.log(blogData.postContent);
 
         // 初始載入貼文
         loadPosts();
+
+
+        // 主題排序
+        const postSDGs = blogData.postSDGs;  // Array for SDG data (e.g., ["13,17"])
+        const postTagsZh = blogData.postTagsZh;  // Array for tags (e.g., ["#碳中和#氣候變遷"])
+
+        console.log('Rank SDGs',postSDGs);
+        console.log('Rank Tags',postTagsZh);
+
+
+        const sdgCounts = {};
+        const tagCounts = {};
+
+
+        // Count SDGs and Tags
+        countOccurrences(postSDGs, sdgCounts, ',');
+        countOccurrences(postTagsZh, tagCounts, '#');
+
+
+        // Initial chart load
+        createBarChart(tagCounts, 'bar-chart-container');
     }).catch(error => {
         console.error('Error fetching files:', error);
     });
@@ -526,8 +554,59 @@ document.addEventListener('DOMContentLoaded', function() {
         const posts = Array.from(postsContainer.children);
         posts.slice(3).forEach(post => post.style.display = 'none');
     }
+
+    // Helper function to count occurrences
+    function countOccurrences(array, countObj, separator) {
+        array.forEach(item => {
+            const elements = item.split(separator).filter(Boolean);
+            elements.forEach(el => {
+                const trimmedEl = el.trim();
+                countObj[trimmedEl] = (countObj[trimmedEl] || 0) + 1;
+            });
+        });
+    }
+
+    // Create bar chart for SDG or Tag data
+    function createBarChart(data, containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';  // Clear previous content
+
+        const sortedData = Object.entries(data).sort((a, b) => b[1] - a[1]).slice(0, 10);  // Top 10 items
+
+        // 找出最大數量，將其用作 100% 參考點
+        const maxCount = sortedData[0][1];
+        
+        sortedData.forEach(([key, count]) => {
+            const barItem = document.createElement('div');
+            barItem.classList.add('bar-item');
+
+            // 設置長條的比例寬度，最大數據為 100%，其他按比例調整
+            const barWidthPercentage = (count / maxCount) * 100;
+            
+            // 創建長條元素
+            barItem.innerHTML = `
+                <span class="bar-label">${key}</span>
+                <div class="bar-fill" style="width: 0;"><span class="bar-count">${count}</span></div>
+            `;
+            container.appendChild(barItem);
+
+            barItem.dataset.width = barWidthPercentage; // 將寬度數據存儲在 dataset 中
+            // Animate bar fill after rendering
+            //setTimeout(() => {
+            //    barItem.querySelector('.bar-fill').style.width = `${barWidthPercentage}%`;
+            //}, 100);  // Delay for smoother animation
+        });
+    }
 });
 
+// 點擊 .bar-item 跳轉道 blog_zh_index.html?tag=xxx
+document.addEventListener('click', function(e) {
+    const barItem = e.target.closest('.bar-item');
+    if (!barItem) return;
+
+    const tag = barItem.querySelector('.bar-label').textContent;
+    window.location.href = `blog_zh_index.html?tag=${encodeURIComponent(tag)}`;
+});
 
 // 點擊貼文跳轉到貼文頁面
 const postsContainer = document.getElementById('posts-container');
@@ -562,3 +641,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // 創建觀察者
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // 當目標元素進入可視範圍時，觸發動畫
+                const bars = entry.target.querySelectorAll('.bar-fill');
+                bars.forEach(bar => {
+                    const targetWidth = bar.parentElement.dataset.width;
+                    bar.style.width = `${targetWidth}%`;
+                });
+                // 一旦觸發動畫，可以取消觀察
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });  // 當元素 10% 進入可視範圍時觸發
+
+    // 對長條圖容器進行監測
+    const barChartContainer = document.getElementById('bar-chart-container');
+    observer.observe(barChartContainer);
+});
+
+
+

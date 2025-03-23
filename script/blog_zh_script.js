@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = 'hidden';
     }
 
+    // 如果查詢參數中包含 tag=xxx，則彈出搜索框、並將該標籤填入搜索框
+    const searchTag = urlParams.get('tag');
+    if (searchTag) {
+        searchPopup.classList.add('active');
+        searchInput.value = searchTag;
+        searchInput.focus();
+        document.body.style.overflow = 'hidden';
+    }
 });
 
 // 彈窗側邊菜單
@@ -217,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
         postPinned: [],
         postLikes: [],
         postFormat: [],
+        postSDGs: [],
         postSeries: [],
         postContent: [],
     };
@@ -261,6 +270,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (line.includes('貼文強制釘選')) currentField = 'postPinned';
                     if (line.includes('貼文點讚數')) currentField = 'postLikes';
                     if (line.includes('貼文格式')) currentField = 'postFormat';
+                    if (line.includes('永續發展目標')) {
+                        // 本變數也是單行字串，例如 13,17，請以逗號,作為分隔，將各個檔案的 SDGs 皆以子陣列形式存放入此變數
+                        currentField = 'postSDGs';
+                        blogData.postSDGs.push(line.split(',').map(sdg => sdg.trim()));
+                    }
                     if (line.includes('貼文系列')) currentField = 'postSeries';
                     if (line.includes('貼文內容')) {
                         currentField = 'postContent';
@@ -302,6 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(blogData.postPinned);
         console.log(blogData.postLikes);
         console.log(blogData.postFormat);
+        console.log(blogData.postSDGs);
         console.log(blogData.postSeries);
         console.log(blogData.postContent);
 

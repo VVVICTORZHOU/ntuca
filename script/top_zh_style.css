@@ -1099,7 +1099,7 @@ body {
         padding: 8px 15px;
     }
     .top-sdgs-title-container h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 /* 首頁 SDGs 區 */
@@ -1119,7 +1119,7 @@ body {
 
 .top-sdgs-title-container h2 {
     font-family: 'HarmonyOS Sans TC Black', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     padding-bottom: 20px;
     width: 100%;
     text-align: center;

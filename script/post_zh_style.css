@@ -932,12 +932,29 @@ margin-bottom: 0.5rem;
 }
 
 .post-content-container blockquote {
-    margin: 20px 0;
-    padding-left: 1.5rem;
-    border-left: 4px solid #83CBEB;  /* 使用設計色 #83CBEB */
-    font-size: 1.2rem;
-    color: #666;            /* 使用深灰色顯示引用 */
-    font-style: italic;     /* 使用斜體字 */
+    margin: 20px 40px;
+    padding: 15px 20px;
+    background-color: #f1f3f5;  /* 淺藍色背景 */
+    border-left: 4px solid #999;  /* 保留原有的藍色邊框 */
+    font-size: 1.05rem;          /* 稍微放大字體 */
+    color: #444;                /* 深灰色而非原本的 #666 */
+    font-style: italic;         /* 保留斜體 */
+    border-radius: 0 8px 8px 0; /* 右側圓角 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 輕微陰影效果 */
+    position: relative;
+    line-height: 1.6;
+}
+
+/* 添加引號裝飾 */
+.post-content-container blockquote:before {
+    content: '"';
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    position: absolute;
+    left: 8px;
+    top: -10px;
+    color: #999;
+    opacity: 0.6;
 }
 
 .post-content-container pre {

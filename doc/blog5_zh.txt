@@ -12,7 +12,7 @@
 
 <註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
 <範例> interview_with_wang_da_ming.png
-blog_img2.png
+blogs/post5_face.jpg
 
 <註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
 <範例> #企業家#訪談#王大明#永續

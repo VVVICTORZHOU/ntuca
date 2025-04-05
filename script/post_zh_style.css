@@ -628,106 +628,6 @@ body {
     }
 }
 
-/* 頁面貼文區 */
-
-/* 頁面貼文區內文風格定義 */
-.post-content-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 60px;
-    width: 100%;
-    max-width: 70%;
-    margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .post-content-container {
-        padding: 20px;
-        max-width: 100%;
-    }
-}
-
-.post-content-container h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.post-content-container h2 {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #444;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.post-content-container p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 15px;
-    max-width: 70%;
-    text-align: justify;
-}
-
-.post-content-container a {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.post-content-container a:hover {
-    text-decoration: underline;
-}
-
-.post-content-container ul,
-.post-content-container ol {
-    max-width: 70%;
-    padding-left: 20px;
-    margin-bottom: 15px;
-}
-
-.post-content-container ul {
-    list-style-type: disc;
-}
-
-.post-content-container ol {
-    list-style-type: decimal;
-}
-
-.post-content-container img {
-    max-width: 70%;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-    display: block;
-}
-
-.post-content-container blockquote {
-    font-style: italic;
-    color: #666;
-    border-left: 4px solid #0073e6;
-    padding-left: 15px;
-    margin: 20px 0;
-    max-width: 70%;
-}
-
-.post-content-container pre {
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-    font-family: monospace;
-    color: #333;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    max-width: 70%;
-}
 
 /* 警示彈窗樣式 */
 .alert-popup {
@@ -776,15 +676,24 @@ body {
 }
 
 /* 部落格文章前資訊欄樣式 */
+.post-info-container {
+    display: block;
+    background-color: #fff;
+    padding: 60px 60px 0 60px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px; /* 或 70ch、50rem 等固定內容寬度 */
+}
+
 .post-info {
-    padding: 20px 50px;
+    padding: 20px 25px;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
 }
 
 .post-title {
     font-family: 'HarmonyOS Sans TC Black', sans-serif;
-    font-size: 24px;
+    font-size: 1.8rem;
     color: #333;
     margin-bottom: 5px;
 }
@@ -798,7 +707,7 @@ body {
 
 .blog-posts-item-series {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
-    font-size: 12px;
+    font-size: 1rem;
     background-color: #999;
     color: #f6f6f6;
     padding: 3px 8px;
@@ -824,7 +733,7 @@ body {
 .blog-posts-item-interactions {
     display: flex;
     gap: 15px;
-    font-size: 12px;
+    font-size: 1rem;
     color: #666;
 }
 
@@ -835,11 +744,11 @@ body {
 
 @media (max-width: 768px) {
     .post-title {
-        font-size: 20px;
+        font-size: 1.5rem;
     }
 
     .post-subtitle {
-        font-size: 14px;
+        font-size: 1.2rem;
     }
 
     .post-meta {
@@ -849,8 +758,16 @@ body {
 
     .blog-posts-item-interactions {
         gap: 10px;
+        font-size: 0.8rem;
     }
 }
+
+
+
+
+
+
+
 
 
 /* 桌面版子菜單 */
@@ -932,3 +849,138 @@ body {
 .sidebar-blog-toggle.active i {
     transform: rotate(180deg);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 頁面貼文區 */
+
+/* 頁面貼文區內文風格定義 */
+.post-content-container {
+    display: block;
+    background-color: #fff;
+    padding: 20px 60px 60px 60px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px; /* 或 70ch、50rem 等固定內容寬度 */
+    line-height: 1.8;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+}
+
+.post-content-container h2 {
+font-family: 'HarmonyOS Sans TC Black';
+font-size: 1.8rem;
+margin-bottom: 1.2rem;
+color: #222;
+}
+
+.post-content-container h3 {
+font-family: 'HarmonyOS Sans TC Medium';
+font-size: 1.4rem;
+margin-top: 2rem;
+margin-bottom: 1rem;
+border-left: 4px solid #83CBEB;
+padding-left: 0.6rem;
+color: #333;
+}
+
+.post-content-container p {
+margin-bottom: 1rem;
+font-size: 1rem;
+}
+
+.post-content-container strong {
+font-family: 'HarmonyOS Sans TC Medium';
+color: #000;
+}
+
+.post-content-container ul {
+margin-left: 1.5rem;
+padding-left: 0.5rem;
+list-style-type: disc;
+}
+
+.post-content-container li {
+margin-bottom: 0.5rem;
+}
+
+.post-content-container img {
+    max-width: 100%;         /* 確保圖片不超出容器寬度 */
+    height: auto;           /* 保持高度自適應 */
+    display: block;         /* 去除圖片下方的空隙 */
+    margin: 20px 0;         /* 增加上下間距 */
+    max-height: 500px;      /* 設置最大高度（根據實際需求調整） */
+    object-fit: contain;    /* 保持圖片比例，防止圖片被拉伸 */
+}
+
+.post-content-container blockquote {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 4px solid #83CBEB;  /* 使用設計色 #83CBEB */
+    font-size: 1.2rem;
+    color: #666;            /* 使用深灰色顯示引用 */
+    font-style: italic;     /* 使用斜體字 */
+}
+
+.post-content-container pre {
+    background-color: #f0f0f0; /* 稍微灰色背景 */
+    padding: 20px;
+    border-radius: 4px;
+    overflow-x: auto;       /* 允許水平方向滾動 */
+    font-family: 'Courier New', monospace;
+    color: #333;            /* 深灰色字體 */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.post-content-container a {
+    color: #83CBEB;         /* 使用設計色 #83CBEB */
+    text-decoration: none;  /* 取消下劃線 */
+    font-weight: bold;      /* 加粗文字 */
+}
+
+.post-content-container a:hover {
+    color: #333;            /* 懸停時變為深灰色 */
+    text-decoration: underline; /* 懸停時添加下劃線 */
+}
+
+
+@media (max-width: 768px) {
+    .post-info-container {
+      padding: 10px 10px 0 10px; /* 上下 20px，左右 20px */
+    }
+    .post-content-container {
+      padding: 20px 36px; /* 上下 20px，左右 28px */
+      max-width: 100%;
+    }
+    .post-content-container h2 {
+        font-size: 1.5rem;       /* 原為 1.8rem，略縮小 */
+        margin-bottom: 1rem;
+    }
+    
+    .post-content-container h3 {
+        font-size: 1.2rem;       /* 原為 1.4rem */
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+        padding-left: 0.5rem;    /* 稍微縮窄左邊框與內距 */
+    }
+  }
+

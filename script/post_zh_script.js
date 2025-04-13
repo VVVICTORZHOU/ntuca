@@ -268,6 +268,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 渲染貼文內容到 .post-content-container
                 document.querySelector('.post-content-container').innerHTML = blogData.postContent;
 
+                // ✅ 重綁事件
+                bindCollapsibleEvents();
+
                 // 打印所有捕獲的數據
                 console.log('Captured blog data:', blogData);
 
@@ -310,7 +313,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// ✅ 重新綁定可展開區域的事件
+function bindCollapsibleEvents() {
+    const collapsibles = document.querySelectorAll('.collapsible-container');
+    console.log('重新綁定 collapsible containers:', collapsibles);
 
+    collapsibles.forEach(function(container) {
+        const header = container.querySelector('.collapsible-header');
+        if (!header) return;
+
+        header.addEventListener('click', function() {
+            container.classList.toggle('active');
+        });
+    });
+
+    // 錨點處理
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        const targetSection = document.getElementById(hash);
+        if (targetSection) {
+            const parentCollapsible = targetSection.closest('.collapsible-container');
+            if (parentCollapsible) {
+                parentCollapsible.classList.add('active');
+                setTimeout(() => {
+                    targetSection.scrollIntoView({behavior: 'smooth'});
+                }, 300);
+            }
+        }
+    }
+}
 
 // 複製當前網站 URL 到剪貼簿
 document.addEventListener('DOMContentLoaded', function() {
@@ -375,34 +406,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// 頁面載入完成後執行
-document.addEventListener('DOMContentLoaded', function() {
-    // 獲取所有收起展開容器
-    const collapsibles = document.querySelectorAll('.collapsible-container');
-    
-    // 為每個容器添加點擊事件
-    collapsibles.forEach(function(container) {
-        const header = container.querySelector('.collapsible-header');
-        
-        header.addEventListener('click', function() {
-            // 切換active類
-            container.classList.toggle('active');
-        });
-    });
-    
-    // 檢查URL中是否有特定的錨點，如果有則自動展開對應的區塊
-    const hash = window.location.hash.substring(1);
-    if (hash) {
-        const targetSection = document.getElementById(hash);
-        if (targetSection) {
-            const parentCollapsible = targetSection.closest('.collapsible-container');
-            if (parentCollapsible) {
-                parentCollapsible.classList.add('active');
-                // 滾動到目標位置
-                setTimeout(() => {
-                    targetSection.scrollIntoView({behavior: 'smooth'});
-                }, 300);
-            }
-        }
-    }
-});

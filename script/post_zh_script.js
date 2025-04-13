@@ -268,6 +268,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 渲染貼文內容到 .post-content-container
                 document.querySelector('.post-content-container').innerHTML = blogData.postContent;
 
+                // 打印所有捕獲的數據
+                console.log('Captured blog data:', blogData);
+
+
+
                 // 這些變數來自已解析的 blogData
                 postTitle.textContent = blogData.postTitle;
                 //postSubtitle.textContent = blogData.postSubTitle; 不顯示子標題

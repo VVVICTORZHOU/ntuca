@@ -369,3 +369,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// 頁面載入完成後執行
+document.addEventListener('DOMContentLoaded', function() {
+    // 獲取所有收起展開容器
+    const collapsibles = document.querySelectorAll('.collapsible-container');
+    
+    // 為每個容器添加點擊事件
+    collapsibles.forEach(function(container) {
+        const header = container.querySelector('.collapsible-header');
+        
+        header.addEventListener('click', function() {
+            // 切換active類
+            container.classList.toggle('active');
+        });
+    });
+    
+    // 檢查URL中是否有特定的錨點，如果有則自動展開對應的區塊
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        const targetSection = document.getElementById(hash);
+        if (targetSection) {
+            const parentCollapsible = targetSection.closest('.collapsible-container');
+            if (parentCollapsible) {
+                parentCollapsible.classList.add('active');
+                // 滾動到目標位置
+                setTimeout(() => {
+                    targetSection.scrollIntoView({behavior: 'smooth'});
+                }, 300);
+            }
+        }
+    }
+});

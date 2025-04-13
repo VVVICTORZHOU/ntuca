@@ -979,7 +979,96 @@ margin-bottom: 0.5rem;
     text-decoration: underline; /* 懸停時添加下劃線 */
 }
 
+/* 收起展開容器樣式 */
+.collapsible-container {
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 
+.collapsible-header {
+    background-color: #f6f6f6;
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    color: #333;
+}
+
+.collapsible-header:hover {
+    background-color: #edf5f9;
+}
+
+.collapsible-title {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.collapsible-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+    color: #83CBEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapsible-icon::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #83CBEB;
+    border-bottom: 2px solid #83CBEB;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    position: relative;
+    top: -2px;
+}
+
+.collapsible-container.active .collapsible-icon::after {
+    transform: rotate(-135deg);
+    top: 2px;
+}
+
+.collapsible-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.collapsible-container.active .collapsible-content {
+    padding: 15px;
+    max-height: 2000px; /* 足夠大的高度以容納內容 */
+    transition: max-height 0.5s ease-in, padding 0.3s ease;
+}
+
+/* 確保收起展開容器內的元素遵循原樣式 */
+.collapsible-content h3,
+.collapsible-content p,
+.collapsible-content ul,
+.collapsible-content blockquote,
+.collapsible-content img,
+.collapsible-content a {
+    /* 保留原有樣式，不需要重複定義 */
+    margin-bottom: 1rem;
+}
+
+.collapsible-content h3:last-child,
+.collapsible-content p:last-child,
+.collapsible-content ul:last-child,
+.collapsible-content blockquote:last-child {
+    margin-bottom: 0;
+}
+
+/* 移動端適配 */
 @media (max-width: 768px) {
     .post-info-container {
       padding: 10px 10px 0 10px; /* 上下 20px，左右 20px */
@@ -1001,6 +1090,17 @@ margin-bottom: 0.5rem;
     }
     .post-content-container blockquote {
         margin: 20px 10px; /* 上下 20px，左右 40px */
+    }
+    .collapsible-header {
+        padding: 10px 12px;
+    }
+    
+    .collapsible-title {
+        font-size: 0.9rem;
+    }
+    
+    .collapsible-container.active .collapsible-content {
+        padding: 12px;
     }
   }
 

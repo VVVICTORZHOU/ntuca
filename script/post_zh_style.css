@@ -1046,7 +1046,7 @@ margin-bottom: 0.5rem;
 
 .collapsible-container.active .collapsible-content {
     padding: 15px;
-    max-height: 2000px; /* 足夠大的高度以容納內容 */
+    max-height: 20000px; /* 足夠大的高度以容納內容 */
     transition: max-height 0.5s ease-in, padding 0.3s ease;
 }
 
@@ -1067,6 +1067,7 @@ margin-bottom: 0.5rem;
 .collapsible-content blockquote:last-child {
     margin-bottom: 0;
 }
+
 
 /* 移動端適配 */
 @media (max-width: 768px) {

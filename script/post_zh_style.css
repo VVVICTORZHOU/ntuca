@@ -707,7 +707,7 @@ body {
 
 .blog-posts-item-series {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     background-color: #999;
     color: #f6f6f6;
     padding: 3px 8px;
@@ -969,14 +969,19 @@ margin-bottom: 0.5rem;
 }
 
 .post-content-container a {
-    color: #83CBEB;         /* 使用設計色 #83CBEB */
+    color: #fff;            /* 白色文字 */
+    background-color: #83CBEB;         /* 使用設計色 #83CBEB */
     text-decoration: none;  /* 取消下劃線 */
-    font-weight: bold;      /* 加粗文字 */
+    
+    border-radius: 5px; /* 圓角邊框 */
+    padding: 2px 6px; /* 上下 5px，左右 10px */
+    margin: 0 2px; /* 上下 0px，左右 2px */
 }
 
 .post-content-container a:hover {
-    color: #333;            /* 懸停時變為深灰色 */
-    text-decoration: underline; /* 懸停時添加下劃線 */
+    color: #fff;            /* 懸停時變為白色文字 */
+    background-color: #333;            /* 懸停時變為深灰色 */
+    text-decoration: none; /* 懸停時添加下劃線 */
 }
 
 /* 收起展開容器樣式 */
@@ -1066,6 +1071,37 @@ margin-bottom: 0.5rem;
 .collapsible-content ul:last-child,
 .collapsible-content blockquote:last-child {
     margin-bottom: 0;
+}
+
+/* 提示字樣式 */
+.keyword {
+    position: relative;
+    cursor: help;
+    color: #0066cc;
+    text-decoration: underline dotted;
+}
+
+.keyword:hover {
+    color: #83CBEB;
+    text-decoration: underline solid;
+}
+
+.tooltip {
+position: absolute;
+background: #f5fcff;
+color: #333;
+border: 1px solid #83CBEB;
+padding: 8px 10px;
+border-radius: 6px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+white-space: pre-wrap;
+max-width: 250px;
+z-index: 100;
+display: none;
+}
+
+.tooltip.visible {
+display: block;
 }
 
 

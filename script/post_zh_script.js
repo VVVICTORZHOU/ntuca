@@ -268,17 +268,53 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 渲染貼文內容到 .post-content-container
                 document.querySelector('.post-content-container').innerHTML = blogData.postContent;
 
+                
+                // 關鍵字方框彈出
+                const tooltip = document.getElementById('tooltip');
+                const keywords = document.querySelectorAll('.keyword');
+
+                // 桌面端 hover 效果
+                keywords.forEach(kw => {
+                kw.addEventListener('mouseenter', (e) => {
+                    const text = kw.dataset.tooltip;
+                    tooltip.textContent = text;
+                    tooltip.classList.add('visible');
+                    positionTooltip(e, kw);
+                });
+
+                kw.addEventListener('mouseleave', () => {
+                    tooltip.classList.remove('visible');
+                });
+
+                // 手機點擊顯示／隱藏提示
+                kw.addEventListener('click', (e) => {
+                    e.stopPropagation(); // 防止事件冒泡
+                    const isVisible = tooltip.classList.contains('visible');
+                    if (!isVisible || tooltip.textContent !== kw.dataset.tooltip) {
+                    tooltip.textContent = kw.dataset.tooltip;
+                    tooltip.classList.add('visible');
+                    positionTooltip(e, kw);
+                    } else {
+                    tooltip.classList.remove('visible');
+                    }
+                });
+                });
+
+                // 點空白處時關閉提示
+                document.addEventListener('click', () => {
+                tooltip.classList.remove('visible');
+                });
+
+
                 // ✅ 重綁事件
                 bindCollapsibleEvents();
 
                 // 打印所有捕獲的數據
                 console.log('Captured blog data:', blogData);
 
-
-
                 // 這些變數來自已解析的 blogData
                 postTitle.textContent = blogData.postTitle;
-                //postSubtitle.textContent = blogData.postSubTitle; 不顯示子標題
+                //postSubtitle.textContent = blogData.postSubTitle; //不顯示子標題
                 postDate.textContent = blogData.postDate;
                 postAuthor.textContent = blogData.postAuthor;
                 postLikes.textContent = blogData.postLikes;
@@ -303,6 +339,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         postTagsContainer.appendChild(tagElement);
                     });
                 }
+
+
                 
             })
             .catch(error => {
@@ -343,6 +381,37 @@ function bindCollapsibleEvents() {
     }
 }
 
+
+
+
+
+// 提示框定位（避免超出邊界）
+function positionTooltip(event, element) {
+    const rect = element.getBoundingClientRect();
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    const scrollX = window.scrollX || document.documentElement.scrollLeft;
+
+    const tooltipWidth = tooltip.offsetWidth;
+    const tooltipHeight = tooltip.offsetHeight;
+
+    let top = rect.top + scrollY - tooltipHeight - 8;
+    let left = rect.left + scrollX;
+
+    // 如果上方空間不足，顯示在下方
+    if (top < scrollY) {
+        top = rect.bottom + scrollY + 8;
+    }
+
+    // 如果右側超出畫面，向左縮排
+    if (left + tooltipWidth > scrollX + window.innerWidth) {
+        left = scrollX + window.innerWidth - tooltipWidth - 10;
+    }
+
+    tooltip.style.top = `${top}px`;
+    tooltip.style.left = `${left}px`;
+}
+
+
 // 複製當前網站 URL 到剪貼簿
 document.addEventListener('DOMContentLoaded', function() {
     const copyLinkButton = document.querySelector('.copy-link-button');
@@ -380,7 +449,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
 
 
 // 寄送電子郵件

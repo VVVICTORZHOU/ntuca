@@ -20,20 +20,27 @@
             <div class="menu-container">
                 <nav class="desktop-menu">
                     <ul>
+
                         <li><a href="top_en_index.html" class="current-page"><span>回首頁</span>TOP</a></li>
                         <li><a href="aboutus_en_index.html"><span>關於我們</span>ABOUT</a></li>
-                        <li><a href="blog_en_index.html"><span>部落格</span>BLOG</a></li>
+                        <li class="blog-menu">
+                            <a href="blog_en_index.html"><span>部落格</span>BLOG</a>
+                            <ul class="submenu">
+                                <li><a href="blog_en_index.html?series=氣候職人誌">Climate Professionals</a></li>
+                                <li><a href="blog_en_index.html?series=與部長有約">Talk with the Minister</a></li>
+                            </ul>
+                        </li>
                         <li><a href="" onclick="sendMail()"><span>聯繫我們</span>CONTACT</a></li>
                         <li><a href="webslink_en_index.html"><span>友站連結</span>LINKS</a></li>
                     </ul>
                 </nav>
                 
                 <div class="right-controls">
-                    <a href="blog_en_index.html" class="search-btn1">
-                        <img src="../img/search_icon.png" alt="Search", id="search-icon-img">
+                    <a class="search-btn1">
+                        <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
                     </a>
                     <a href="top_zh_index.html" class="lang-switch">
-                        <img src="../img/lang_zh_icon.png" alt="中文", id="lang-icon-img">
+                        <img src="../img/lang_zh_icon.png" alt="ZH", id="lang-icon-img"> <!-- post 的語言切換涉及將當前貼文檔名傳遞給英文版頁面的步驟 -->
                     </a>
                 </div>
                 
@@ -42,7 +49,7 @@
                         <i class="fas fa-bars"></i>
                     </button>
                     <a href="top_zh_index.html" class="lang-switch mobile-lang">
-                        <img src="../img/lang_zh_icon.png" alt="中文", id="lang-icon-img">
+                        <img src="../img/lang_zh_icon.png" alt="ZH", id="lang-icon-img">
                     </a>
                 </div>
             </div>
@@ -51,13 +58,13 @@
 
     <div class="search-popup">
         <div class="search-popup-content">
-            <h2>Search for blog</h2>
+            <h2>Search in Blog</h2>
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="Keywords...">
+                <input type="text" id="search-input" placeholder="Enter keywords...">
                 <button type="button" id="search-submit">Search</button>
             </div>
             <div class="hot-searches">
-                <span>Hot search：</span>
+                <span>Hot Searches:</span>
                 <a href="blog_en_index.html">Climate Change</a>
                 <a href="blog_en_index.html">Sustainable Development</a>
                 <a href="blog_en_index.html">Carbon Neutrality</a>
@@ -77,114 +84,152 @@
             <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="sidebar-logo-img">
         </div>
         <div class="sidebar-search">
-            <a href="blog_en_index.html" class="search-btn2">
-                <img src="../img/search_icon.png" alt="Search", id="search-icon-img">
+            <a class="search-btn2">
+                <img src="../img/search_icon.png" alt="Search" id="search-icon-img">
             </a>
         </div>
         <nav class="sidebar-menu">
             <ul>
-                <li><a href="top_en_index.html" class="current">TOP</a></li>
-                <li><a href="aboutus_en_index.html">ABOUT</a></li>
-                <li><a href="blog_en_index.html">BLOG</a></li>
-                <li><a href="" onclick="sendMail()">CONTACT</a></li>
-                <li><a href="webslink_en_index.html">LINKS</a></li>
+                <li><a href="top_en_index.html">Home</a></li>
+                <li><a href="aboutus_en_index.html" class="current">About Us</a></li>
+                <li>
+                    <a href="#" class="sidebar-blog-toggle">Blog <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="blog_en_index.html?">All</a></li>
+                        <li><a href="blog_en_index.html?series=Climate Career Journal">Climate Career Journal</a></li>
+                        <li><a href="blog_en_index.html?series=Meeting with the Minister">Meeting with the Minister</a></li>
+                    </ul>
+                </li>
+                <li><a href="" onclick="sendMail()">Contact Us</a></li>
+                <li><a href="webslink_en_index.html">Partner Links</a></li>
             </ul>
         </nav>
     </aside>
-
+    
     <!-- Carousel Container -->
     <div class="carousel-container">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
+        </div>
+        <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
-              <img src="../img/slider_img1.png" class="d-block w-100" alt="Slide 1">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Carousel Page 1</h5>
-                <p>Placeholder for some brief introduction, please be short.</p>
-              </div>
+                <img src="../img/slider_img1.png" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide One</h5>
+                    <p>A brief introduction related to this slide.</p>
+                </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="../img/slider_img2.png" class="d-block w-100" alt="Slide 2">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Carousel Page 2</h5>
-                <p>Placeholder for some brief introduction, don't be too long.</p>
-              </div>
+                <img src="../img/slider_img2.png" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide Two</h5>
+                    <p>Another brief description related to this slide.</p>
+                </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="../img/slider_img3.png" class="d-block w-100" alt="Slide 3">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Carousel Page 3</h5>
-                <p>Placeholder for some brief introduction, short is fine.</p>
-              </div>
+                <img src="../img/slider_img3.png" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide Three</h5>
+                    <p>A simple brief description for this slide as well.</p>
+                </div>
             </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden"></span>
-          </button>
-
+        </button>
     </div>
-
+    
     <!-- Top Blog -->
     <div class="top-blog-container">
         <div class="top-blog-title-container">
-            <h2 class="top-blog-title">New Posts</h2>
+            <h2 class="top-blog-title">Latest Articles</h2>
         </div>
-        <div class="top-blog-items-container">
-            <div class="top-blog-item">
-                <img src="../img/blog_img1.png" alt="Blog Image 1" class="top-blog-item-img">
-                <div class="top-blog-item-content">
-                    <h3 class="top-blog-item-title">Title</h3>
-                    <h5 class="top-blog-item-date">2025/02/29</h5>
-                    <p class="top-blog-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+        <div class="blog-posts-items-container" id="posts-container">
+            <div class="blog-posts-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="blog-posts-item-img zoomable-image">
+                <div class="blog-posts-item-content">
+                    <h3 class="blog-posts-item-title">Article Title</h3>
+                    <h5 class="blog-posts-item-date">2025/02/29</h5>
+                    <p class="blog-posts-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
                 </div>
             </div>
-            <div class="top-blog-item">
-                <img src="../img/blog_img1.png" alt="Blog Image 1" class="top-blog-item-img">
-                <div class="top-blog-item-content">
-                    <h3 class="top-blog-item-title">Title</h3>
-                    <h5 class="top-blog-item-date">2025/02/29</h5>
-                    <p class="top-blog-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+            <div class="blog-posts-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="blog-posts-item-img zoomable-image">
+                <div class="blog-posts-item-content">
+                    <h3 class="blog-posts-item-title">Article Title</h3>
+                    <h5 class="blog-posts-item-date">2025/02/29</h5>
+                    <p class="blog-posts-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
                 </div>
             </div>
-            <div class="top-blog-item">
-                <img src="../img/blog_img1.png" alt="Blog Image 1" class="top-blog-item-img">
-                <div class="top-blog-item-content">
-                    <h3 class="top-blog-item-title">Title</h3>
-                    <h5 class="top-blog-item-date">2025/02/29</h5>
-                    <p class="top-blog-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+            <div class="blog-posts-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="blog-posts-item-img zoomable-image">
+                <div class="blog-posts-item-content">
+                    <h3 class="blog-posts-item-title">Article Title</h3>
+                    <h5 class="blog-posts-item-date">2025/02/29</h5>
+                    <p class="blog-posts-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
                 </div>
             </div>
-
         </div>
         <div class="top-blog-readmore-container">
-            <a href="blog_en_index.html" class="top-blog-readmore-button">Read more</a>
+            <a href="blog_en_index.html" class="top-blog-readmore-button">Read More</a>
         </div>
     </div>
-
+    
     <!-- Top SDGs -->
     <div class="top-sdgs-container">
         <div class="top-sdgs-title-container">
-            <h2 class="top-sdgs-title">Sustainable Development Goals</h2>
+            <h2 class="top-sdgs-title">Top Trending Tags</h2>
         </div>
-        <div class="top-sdgs-content-container">
-            <div class="top-sdgs-logo-container">
-                <img src="../img/sdgs_simplified_logo_img.png" alt="SDGs Logo" class="top-sdgs-logo-img">
-            </div>
-            <div class="top-sdgs-text-container">
-                <p>This section is currently planned to count the number of tags in blog articles and to navigate the current article tags in another form. After the content is enriched, you can consider whether to present it in other classification ways (climate change science, mitigation, adaptation), etc.</p>
-                <p>The United Nations Sustainable Development Goals (SDGs) are a global consensus aimed at solving global challenges and achieving global sustainable development. The SDGs have a total of 17 goals, including poverty eradication, zero hunger, health and well-being, gender equality, clean water and sanitation, responsible production and consumption, climate action, life on land, peace and justice, partnership, etc.</p>
-            </div>
+        <div class="top-sdgs-text-container">
+            <p>This section displays statistics of trending tags used in blog posts. Click a tag to add it to your search automatically.</p>
         </div>
     </div>
+    <div id="bar-chart-container" class="bar-chart-container">
+        <!-- The chart will be dynamically inserted here -->
+    </div>
+    
+    <!-- Top Dynamic -->
+    <div class="top-dynamic-container">
+        <h2 class="top-dynamic-title">Latest Updates</h2>
+        <p class="top-dynamic-subtitle">NTU Climate Action Club is active on social media such as Facebook and Instagram. Follow us to stay up to date with our latest news!</p>
+        <div class="top-dynamic-content">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNTUClimateAction&tabs=timeline&width=370&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=590956299844535" width="370" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
+    
+    <!-- Pop-up Disclaimer -->
+    <div id="disclaimer-popup" style="position: fixed; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid #ccc; padding: 20px; z-index: 9999; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+        <div style="flex: 1; font-size: 16px; color: #333;">
+            ⚠️ This English version of the website is currently under construction. If you encounter layout issues or content errors, we kindly ask for your understanding.
+        </div>
+        <button id="disclaimer-confirm" style="margin-left: 20px; padding: 8px 16px; background-color: #83cbeb; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            OK
+        </button>
+    </div>
+    <script>
+        // Show the popup only once per session
+        window.addEventListener('DOMContentLoaded', function () {
+          const popup = document.getElementById('disclaimer-popup');
+          const confirmBtn = document.getElementById('disclaimer-confirm');
+      
+          // Optional: only show once per session using sessionStorage
+          if (!sessionStorage.getItem('disclaimerAcknowledged')) {
+            popup.style.display = 'flex';
+          }
+      
+          confirmBtn.addEventListener('click', function () {
+            popup.style.display = 'none';
+            sessionStorage.setItem('disclaimerAcknowledged', 'true');
+          });
+        });
+    </script>
 
     <!-- Footer -->
     <footer id="main-footer">

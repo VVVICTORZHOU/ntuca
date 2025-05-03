@@ -1,3 +1,29 @@
+// 處理從別處跳轉到部落格頁面時的搜索框彈窗
+document.addEventListener('DOMContentLoaded', function() {
+    const searchPopup = document.querySelector('.search-popup');
+    const searchInput = document.getElementById('search-input');
+
+    // 解析 URL 查詢參數
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchOpen = urlParams.get('search');
+
+    // 如果查詢參數中包含 search=open，則彈出搜索框
+    if (searchOpen === 'open') {
+        searchPopup.classList.add('active');
+        searchInput.focus();
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 如果查詢參數中包含 tag=xxx，則彈出搜索框、並將該標籤填入搜索框
+    const searchTag = urlParams.get('tag');
+    if (searchTag) {
+        searchPopup.classList.add('active');
+        searchInput.value = searchTag;
+        searchInput.focus();
+        document.body.style.overflow = 'hidden';
+    }
+});
+
 // 彈窗側邊菜單
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -33,134 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
     handleResize();
 });
 
-// 輪播
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carousel-container');
-    const carouselInner = carousel.querySelector('.carousel-inner');
-    const items = carousel.querySelectorAll('.carousel-item');
-    const indicators = carousel.querySelectorAll('.carousel-indicators button');
-    const prevButton = carousel.querySelector('.carousel-control-prev');
-    const nextButton = carousel.querySelector('.carousel-control-next');
-    
-    let currentIndex = 0;
-    let intervalId = null;
-    const interval = 3000; // 輪播間隔時間（毫秒）
-    
-    // 初始化輪播
-    function initCarousel() {
-        updateSlidePosition();
-        startAutoPlay();
-    }
-    
-    // 更新輪播位置
-    function updateSlidePosition() {
-        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-        updateIndicators();
-    }
-    
-    // 更新指示器狀態
-    function updateIndicators() {
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentIndex);
-        });
-    }
-    
-    // 切換到指定的輪播項目
-    function goToSlide(index) {
-        currentIndex = index;
-        
-        // 處理循環
-        if (currentIndex >= items.length) {
-            currentIndex = 0;
-        } else if (currentIndex < 0) {
-            currentIndex = items.length - 1;
-        }
-        
-        updateSlidePosition();
-    }
-    
-    // 下一張幻燈片
-    function nextSlide() {
-        goToSlide(currentIndex + 1);
-    }
-    
-    // 上一張幻燈片
-    function prevSlide() {
-        goToSlide(currentIndex - 1);
-    }
-    
-    // 開始自動播放
-    function startAutoPlay() {
-        if (intervalId) clearInterval(intervalId);
-        intervalId = setInterval(nextSlide, interval);
-    }
-    
-    // 停止自動播放
-    function stopAutoPlay() {
-        if (intervalId) {
-            clearInterval(intervalId);
-            intervalId = null;
-        }
-    }
-    
-    // 事件監聽器
-    prevButton.addEventListener('click', () => {
-        prevSlide();
-        stopAutoPlay();
-        startAutoPlay();
-    });
-    
-    nextButton.addEventListener('click', () => {
-        nextSlide();
-        stopAutoPlay();
-        startAutoPlay();
-    });
-    
-    // 為每個指示器添加點擊事件
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            goToSlide(index);
-            stopAutoPlay();
-            startAutoPlay();
-        });
-    });
-    
-    // 滑鼠懸停時暫停自動播放
-    carousel.addEventListener('mouseenter', stopAutoPlay);
-    carousel.addEventListener('mouseleave', startAutoPlay);
-    
-    // 觸摸事件處理
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    carousel.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        stopAutoPlay();
-    });
-    
-    carousel.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        
-        const difference = touchStartX - touchEndX;
-        if (Math.abs(difference) > 50) { // 最小滑動距離
-            if (difference > 0) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
-        }
-        
-        startAutoPlay();
-    });
-    
-    // 防止拖動圖片
-    carousel.addEventListener('dragstart', (e) => {
-        e.preventDefault();
-    });
-    
-    // 初始化輪播
-    initCarousel();
-});
 
 
 // 彈窗搜索框
@@ -170,10 +68,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchClose = document.querySelector('.search-popup-close');
     const searchInput = document.getElementById('search-input');
     const searchSubmit = document.getElementById('search-submit');
+    const blogSearchBtn = document.getElementById('search-submit-main');
     const body = document.body;
     
     // 打開搜索彈窗
     searchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 如果側邊欄已打開，則關閉側邊欄
+        if (body.classList.contains('sidebar-open')) {
+            body.classList.remove('sidebar-open');
+            // 給側邊欄一點時間關閉後再打開搜索彈窗
+            setTimeout(() => {
+                searchPopup.classList.add('active');
+                searchInput.focus();
+                document.body.style.overflow = 'hidden';
+            }, 300); // 等待側邊欄關閉動畫完成
+        } else {
+            searchPopup.classList.add('active');
+            searchInput.focus();
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    blogSearchBtn.addEventListener('click', function(e) {
         e.preventDefault();
         
         // 如果側邊欄已打開，則關閉側邊欄
@@ -290,25 +208,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const searchBtn1 = document.querySelector('.search-btn1');
 
-    searchBtn1.addEventListener('click', function() {
-        // 跳轉到 blog_zh_index.html，並傳遞查詢參數來打開搜索彈窗
-        window.location.href = 'blog_zh_index.html?search=open';
-    });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    const searchBtn2 = document.querySelector('.search-btn2');
-
-    searchBtn2.addEventListener('click', function() {
-        // 跳轉到 blog_zh_index.html，並傳遞查詢參數來打開搜索彈窗
-        window.location.href = 'blog_zh_index.html?search=open';
-    });
-});
-
-// 首頁部落格貼文動態載入和排序功能
+// 部落格貼文動態載入和排序功能
 document.addEventListener('DOMContentLoaded', function() {
     // 讀取 doc 目錄下的所有 txt 檔案作為貼文數據
     let blogData = {
@@ -325,11 +227,11 @@ document.addEventListener('DOMContentLoaded', function() {
         postFormat: [],
         postSDGs: [],
         postSeries: [],
-        postContent: []
+        postContent: [],
     };
 
     // Predefine a list of possible files (from blog1_zh.txt to blog99_zh.txt)
-    const files = Array.from({ length: 5 }, (_, i) => `blog${i + 1}_zh.txt`);
+    const files = Array.from({ length: 9 }, (_, i) => `blog${i + 1}_zh.txt`);
 
     // Define patterns for comments and examples
     const commentPattern = /^<註解>/;
@@ -346,7 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }))
     ).then(contents => {
-        console.log('Files fetched:', contents);
         contents.forEach((content, fileIndex) => {
             if (!content) return;  // Skip processing if the file wasn't found
 
@@ -369,12 +270,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (line.includes('貼文強制釘選')) currentField = 'postPinned';
                     if (line.includes('貼文點讚數')) currentField = 'postLikes';
                     if (line.includes('貼文格式')) currentField = 'postFormat';
-                    if (line.includes('貼文系列')) currentField = 'postSeries';
                     if (line.includes('永續發展目標')) {
                         // 本變數也是單行字串，例如 13,17，請以逗號,作為分隔，將各個檔案的 SDGs 皆以子陣列形式存放入此變數
                         currentField = 'postSDGs';
-                        //blogData.postSDGs.push(line.split(',').map(sdg => sdg.trim()));
+                        blogData.postSDGs.push(line.split(',').map(sdg => sdg.trim()));
                     }
+                    if (line.includes('貼文系列')) currentField = 'postSeries';
                     if (line.includes('貼文內容')) {
                         currentField = 'postContent';
                         postContentCapture = true;
@@ -421,33 +322,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 初始載入貼文
         loadPosts();
-
-
-        // 主題排序
-        const postSDGs = blogData.postSDGs;  // Array for SDG data (e.g., ["13,17"])
-        const postTagsZh = blogData.postTagsZh;  // Array for tags (e.g., ["#碳中和#氣候變遷"])
-
-        console.log('Rank SDGs',postSDGs);
-        console.log('Rank Tags',postTagsZh);
-
-
-        const sdgCounts = {};
-        const tagCounts = {};
-
-
-        // Count SDGs and Tags
-        countOccurrences(postSDGs, sdgCounts, ',');
-        countOccurrences(postTagsZh, tagCounts, '#');
-
-
-        // Initial chart load
-        createBarChart(tagCounts, 'bar-chart-container');
     }).catch(error => {
         console.error('Error fetching files:', error);
     });
 
     // 獲取DOM元素
     const postsContainer = document.getElementById('posts-container');
+    const sortSelect = document.getElementById('sort-select');
+    const mainseriesSelect = document.getElementById('series-select');
+    const seriesSelect = document.getElementById('search-series-select');
     
     // 創建貼文元素的函數
     function createPostElement(index) {
@@ -461,6 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
             author: blogData.postAuthor[index],
             pinned: blogData.postPinned[index] === '1',
             likes: blogData.postLikes[index],
+            format: blogData.postFormat[index],
             series: blogData.postSeries[index],
             content: blogData.postContent[index]
         };
@@ -528,7 +412,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     return b.dataset.date - a.dataset.date;
                 });
                 break;
-
         }
         
         // 清空容器並按新順序添加貼文
@@ -536,6 +419,18 @@ document.addEventListener('DOMContentLoaded', function() {
         posts.forEach(post => postsContainer.appendChild(post));
     }
     
+    // 篩選貼文系列的函數
+    filterPostsBySeries = function(series) {
+        const posts = Array.from(postsContainer.children);
+        posts.forEach(post => {
+            if (series === '全部' || post.dataset.series === series) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+    }
+
     // 初始載入所有貼文
     function loadPosts() {
         postsContainer.innerHTML = ''; // 清空容器
@@ -547,65 +442,170 @@ document.addEventListener('DOMContentLoaded', function() {
             postsContainer.appendChild(postElement);
         }
         
+        // 讀取 url 查詢參數是否有 ?series=氣候職人誌 還是 ?series=與部長有約
+        const urlParams = new URLSearchParams(window.location.search);
+        const seriesParam = urlParams.get('series');
+        if (seriesParam) {
+            mainseriesSelect.value = seriesParam;
+            seriesSelect.value = seriesParam;
+            filterPostsBySeries(seriesParam);
+        } else {
+            mainseriesSelect.value = '全部';
+            seriesSelect.value = '全部';
+            filterPostsBySeries('全部');
+        }
+
         // 應用默認排序
         sortPosts('default');
-
-        // 僅取前 3 篇貼文，其餘隱藏
-        const posts = Array.from(postsContainer.children);
-        posts.slice(3).forEach(post => post.style.display = 'none');
     }
 
-    // Helper function to count occurrences
-    function countOccurrences(array, countObj, separator) {
-        array.forEach(item => {
-            const elements = item.split(separator).filter(Boolean);
-            elements.forEach(el => {
-                const trimmedEl = el.trim();
-                countObj[trimmedEl] = (countObj[trimmedEl] || 0) + 1;
-            });
-        });
-    }
-
-    // Create bar chart for SDG or Tag data
-    function createBarChart(data, containerId) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = '';  // Clear previous content
-
-        const sortedData = Object.entries(data).sort((a, b) => b[1] - a[1]).slice(0, 10);  // Top 10 items
-
-        // 找出最大數量，將其用作 100% 參考點
-        const maxCount = sortedData[0][1];
-        
-        sortedData.forEach(([key, count]) => {
-            const barItem = document.createElement('div');
-            barItem.classList.add('bar-item');
-
-            // 設置長條的比例寬度，最大數據為 100%，其他按比例調整
-            const barWidthPercentage = (count / maxCount) * 100;
-            
-            // 創建長條元素
-            barItem.innerHTML = `
-                <span class="bar-label">${key}</span>
-                <div class="bar-fill" style="width: 0;"><span class="bar-count">${count}</span></div>
-            `;
-            container.appendChild(barItem);
-
-            //barItem.dataset.width = barWidthPercentage; // 將寬度數據存儲在 dataset 中
-            // Animate bar fill after rendering
-            setTimeout(() => {
-                barItem.querySelector('.bar-fill').style.width = `${barWidthPercentage}%`;
-            }, 500);  // Delay for smoother animation
-        });
-    }
+    // 監聽系列選擇變化
+    mainseriesSelect.addEventListener('change', function() {
+        seriesSelect.value = this.value;
+        filterPostsBySeries(this.value);
+    });
+    
+    // 監聽排序選擇變化
+    sortSelect.addEventListener('change', function() {
+        sortPosts(this.value);
+    });
 });
 
-// 點擊 .bar-item 跳轉道 blog_zh_index.html?tag=xxx
-document.addEventListener('click', function(e) {
-    const barItem = e.target.closest('.bar-item');
-    if (!barItem) return;
 
-    const tag = barItem.querySelector('.bar-label').textContent;
-    window.location.href = `blog_zh_index.html?tag=${encodeURIComponent(tag)}`;
+// 部落格貼文搜索功能
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('執行部落格貼文搜索功能');
+    const filterContent = document.querySelector('.blog-filter-content');
+    const searchInput = document.getElementById('search-input');
+    const searchSubmit = document.getElementById('search-submit-pop');
+    const seriesSelect = document.getElementById('search-series-select');
+    const mainseriesSelect = document.getElementById('series-select');
+    const postsContainer = document.getElementById('posts-container');
+
+    function filterPosts(keyword, selectedSeries) {
+        keyword = keyword.trim().toLowerCase();
+        const posts = Array.from(postsContainer.children);
+        let hasResult = false;
+
+        posts.forEach(post => {
+            const titleElement = post.querySelector('.blog-posts-item-title');
+            const subTitleElement = post.querySelector('.blog-posts-item-text');
+            const postSeries = post.dataset.series; // 取得貼文系列資料
+
+            if (!titleElement || !subTitleElement) return;
+
+            const title = titleElement.textContent.toLowerCase();
+            const subTitle = subTitleElement.textContent.toLowerCase();
+            const tags = Array.from(post.querySelectorAll('.blog-posts-item-tags .tag'))
+                             .map(tag => tag.textContent.toLowerCase());
+
+            const matchesKeyword = title.includes(keyword) || subTitle.includes(keyword) || tags.some(tag => tag.includes(keyword));
+            const matchesSeries = (selectedSeries === "全部" || postSeries === selectedSeries);
+
+            if (matchesKeyword && matchesSeries) {
+                post.style.display = "block";
+                hasResult = true;
+            } else {
+                post.style.display = "none";
+            }
+        });
+
+        console.log('hasResult:', hasResult);
+
+        // 顯示警示彈窗
+        if (!hasResult) {
+            document.getElementById('alert-keyword').textContent = keyword;
+            document.getElementById('alert-keyword-series').textContent = selectedSeries;
+            document.getElementById('alert-popup').style.display = 'block';
+            document.getElementById('alert-overlay').style.display = 'block';
+            // 隱藏 <div class="blog-sort-content">
+            document.querySelector('.blog-sort-content').style.display = 'none';
+        }
+    }
+    
+    // 監聽確認按鈕，關閉彈窗
+    document.getElementById('alert-confirm-btn').addEventListener('click', function() {
+        document.getElementById('alert-popup').style.display = 'none';
+        document.getElementById('alert-overlay').style.display = 'none';
+    });
+
+    function showFilterTag(keyword, selectedSeries) {
+        console.log('執行顯示過濾標籤');
+        // if keyword != ''
+        if (keyword===''){
+            filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${selectedSeries}</span>
+            <button id="clear-filter">清除篩選</button>`;
+        } else {
+            filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${selectedSeries}</span> <span class="filter-tag">${keyword}</span> 
+            <button id="clear-filter">清除篩選</button>`;
+        }
+
+        document.getElementById('clear-filter').addEventListener('click', function() {
+            searchInput.value = ''; // 清空輸入框
+            filterContent.innerHTML = '<span>當前篩選為空</span>'; // 恢復篩選欄
+            // 顯示 <div class="blog-sort-content">
+            document.querySelector('.blog-sort-content').style.display = 'flex';
+            // 顯示所有貼文
+            Array.from(postsContainer.children).forEach(post => post.style.display = "block"); // 顯示所有貼文
+            // 如果存在沒有結果的提示，則移除
+            const noResultsMessage = document.getElementById('no-results-message');
+            if (noResultsMessage) {
+                noResultsMessage.remove();
+            }
+            // 將 seriesSelect 重置為全部
+            seriesSelect.value = '全部';
+            mainseriesSelect.value = '全部';
+
+        });
+    }
+    // 監聽搜索按鈕
+    searchSubmit.addEventListener('click', function() {
+        const keyword = searchInput.value.trim();
+        const selectedSeries = seriesSelect.value;
+        // 如果搜索關鍵字不為空或系列不為全部，則執行篩選
+        if (keyword || selectedSeries !== "全部") {
+            // 將 mainselectSeries 設置為 selectedSeries
+            mainseriesSelect.value = selectedSeries;
+            // 如果搜索關鍵字不為空，則將搜索關鍵字填入搜索框
+            filterPosts(keyword, selectedSeries);
+            showFilterTag(keyword, selectedSeries);
+            setTimeout(() => {
+                document.querySelector('.search-popup').classList.remove('active');
+                document.body.style.overflow = '';
+            }, 100);
+        }
+    });
+
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const keyword = searchInput.value.trim();
+            const selectedSeries = seriesSelect.value;
+            if (keyword || selectedSeries !== "全部") {
+                filterPosts(keyword, selectedSeries);
+                showFilterTag(keyword, selectedSeries);
+                setTimeout(() => {
+                    document.querySelector('.search-popup').classList.remove('active');
+                    document.body.style.overflow = '';
+                }, 100);
+            }
+        }
+    });
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hotSearchLinks = document.querySelectorAll('.hot-searches a');
+    const searchInput = document.getElementById('search-input');
+    console.log('read hot searches',hotSearchLinks);
+
+    hotSearchLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const keyword = link.getAttribute('data-keyword');
+            console.log(keyword)
+            searchInput.value = keyword;  // 將點擊的熱門詞填入搜索框
+            searchInput.focus();          // 自動聚焦到輸入框
+        });
+    });
 });
 
 // 點擊貼文跳轉到貼文頁面
@@ -626,7 +626,6 @@ function sendMail() {
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-
 // 部落格子選單展開/收合
 document.addEventListener('DOMContentLoaded', function () {
     // 行動版：控制部落格子選單展開/收合
@@ -641,8 +640,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-
-
-
-

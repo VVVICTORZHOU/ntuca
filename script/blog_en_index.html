@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTUCA Blog | BLOG</title>
+    <link rel="stylesheet" href="blog_en_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/ntuca_favicon.ico">
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="top_en_index.html">
+                    <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="logo-img">
+                </a>
+            </div>
+            
+            <div class="menu-container">
+                <nav class="desktop-menu">
+                    <ul>
+                        <li><a href="top_en_index.html"><span>回首頁</span>TOP</a></li>
+                        <li><a href="aboutus_en_index.html"><span>關於我們</span>ABOUT</a></li>
+                        <li class="blog-menu">
+                            <a href="blog_en_index.html" class="current-page"><span>部落格</span>BLOG</a>
+                            <ul class="submenu">
+                                <li><a href="blog_en_index.html?series=氣候職人誌">Climate Professionals</a></li>
+                                <li><a href="blog_en_index.html?series=與部長有約">Talk with the Minister</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="" onclick="sendMail()"><span>聯繫我們</span>CONTACT</a></li>
+                        <li><a href="webslink_en_index.html"><span>友站連結</span>LINKS</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="right-controls">
+                    <a class="search-btn1">
+                        <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
+                    </a>
+                    <a href="blog_zh_index.html" class="lang-switch">
+                        <img src="../img/lang_zh_icon.png" alt="ZH", id="lang-icon-img"> <!-- post 的語言切換涉及將當前貼文檔名傳遞給英文版頁面的步驟 -->
+                    </a>
+                </div>
+                
+                <div class="mobile-controls">
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="blog_zh_index.html" class="lang-switch mobile-lang">
+                        <img src="../img/lang_zh_icon.png" alt="ZH", id="lang-icon-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-popup">
+        <div class="search-popup-content">
+            <h2>Search in Blog</h2>
+            <div class="search-filter">
+                <label for="search-series-select">Select Series: <i class="fas fa-paperclip"></i></label>
+                <select id="search-series-select">
+                    <option value="全部">All</option>
+                    <option value="氣候職人誌">Climate Professionals</option>
+                    <option value="與部長有約">Talk with the Minister</option>
+                </select>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Enter keywords...">
+                <button type="button" id="search-submit-pop">Search</button>
+            </div>
+            <div class="hot-searches">
+                <span>Hot Searches:</span>
+                <a data-keyword="氣候變遷">Climate Change</a>
+                <a data-keyword="永續發展">Sustainable Development</a>
+                <a data-keyword="碳中和">Carbon Neutrality</a>
+            </div>
+            <button class="search-popup-close" aria-label="Close Search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="sidebar-title">
+            <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="sidebar-logo-img">
+        </div>
+        <div class="sidebar-search">
+            <a class="search-btn2">
+                <img src="../img/search_icon.png" alt="Search", id="search-icon-img">
+            </a>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="top_zh_index.html">TOP</a></li>
+                <li><a href="aboutus_zh_index.html" class="current">ABOUT</a></li>
+                <li>
+                    <a href="#" class="sidebar-blog-toggle">BLOG <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="blog_zh_index.html?">All</a></li>
+                        <li><a href="blog_zh_index.html?series=氣候職人誌">Climate Professionals</a></li>
+                        <li><a href="blog_zh_index.html?series=與部長有約">Talk with the Minister</a></li>
+                    </ul>
+                </li>
+                <li><a href="" onclick="sendMail()">CONTACT</a></li>
+                <li><a href="webslink_zh_index.html">LINKS</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Blog Section -->
+    <div class="blog-container">
+        <div class="blog-search-content">
+            <h2>NTUCA Blog</h2>
+            <h3>NTU Climate Action Club - Sustainability Interview Series</h3>
+            <div class="blog-search-box">
+                <button type="button" class="search-submit" id="search-submit-main">Keyword Search</button>
+            </div>
+            <div class="hot-searches"></div>
+        </div>
+        <div class="blog-filter-content">
+            <span>No active filters</span>
+        </div>
+        <!-- Sorting Menu -->
+        <div class="blog-sort-content">
+            <div class="sort-dropdown">
+                <label for="series-select">Select Series <i class="fas fa-paperclip"></i></label>
+                <select id="series-select">
+                    <option value="全部">All</option>
+                    <option value="氣候職人誌">Climate Professionals</option>
+                    <option value="與部長有約">Talk with the Minister</option>
+                </select>
+            </div>
+            <div class="sort-dropdown">
+                <label for="sort-select">Sort Posts By</label>
+                <select id="sort-select">
+                    <option value="default">Default</option>
+                    <option value="date-desc">Newest to Oldest</option>
+                    <option value="date-asc">Oldest to Newest</option>
+                    <option value="likes">Most Likes</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Blog Posts -->
+        <div class="blog-posts-items-container" id="posts-container">
+            <div class="blog-posts-item">
+                <img src="../img/blog_img1.png" alt="Blog Image 1" class="blog-posts-item-img">
+                <div class="blog-posts-item-content">
+                    <h3 class="blog-posts-item-title">Post Title</h3>
+                    <h5 class="blog-posts-item-date">2025/02/29</h5>
+                    <p class="blog-posts-item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, consectetur eveniet culpa possimus, itaque, necessitatibus nam doloribus iure architecto aliquam ipsam nihil voluptas nobis saepe debitis placeat labore harum explicabo.</p>
+                </div>
+            </div>
+            <!-- Additional post blocks remain unchanged -->
+        </div>
+    </div>
+
+    <!-- Alert Popup -->
+    <div class="alert-popup" id="alert-popup">
+        <div class="alert-content">
+            <p>No posts related to "<strong id="alert-keyword"></strong>" found in "<strong id="alert-keyword-series"></strong>".</p>
+            <button id="alert-confirm-btn">OK</button>
+        </div>
+    </div>
+    <div class="alert-overlay" id="alert-overlay"></div>
+
+    <!-- Wish Pool Button -->
+    <div class="wishpool-link-container">
+        <a href="https://forms.gle/yPLkSHVgctevdUJi9" class="wishpool-link-button">Wish Pool</a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-container">
+            <p>© 2025 National Taiwan University Climate Action Club. All rights reserved.</p>
+            <p>8F., No. 85, Sec. 4, Roosevelt Rd., Da'an Dist., Taipei City 106319, Taiwan (R.O.C.)</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/climateaction_ntu" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/NTUClimateAction" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="blog_en_script.js"></script>
+</body>
+</html>

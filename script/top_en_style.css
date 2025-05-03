@@ -410,13 +410,13 @@ body {
     gap: 5px;
 }
 
-.social-links {
+.footer-container .social-links {
     display: flex;
     gap: 15px;
     margin-top: 5px;
 }
 
-.social-link {
+.footer-container .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -430,27 +430,27 @@ body {
     transition: all 0.3s ease;
 }
 
-.social-link:hover {
+.footer-container .social-link:hover {
     background-color: #83CBEB;
     color: #fff;
     transform: translateY(-2px);
 }
 
-.social-link i {
+.footer-container .social-link i {
     font-size: 16px;
 }
 
 @media (max-width: 768px) {
-    .social-links {
+    .footer-container .social-links {
         margin-top: 3px;
     }
     
-    .social-link {
+    .footer-container .social-link {
         width: 30px;
         height: 30px;
     }
     
-    .social-link i {
+    .footer-container .social-link i {
         font-size: 14px;
     }
 }
@@ -591,10 +591,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .top-blog-title-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .top-blog-title-container h2 {
@@ -615,8 +617,7 @@ body {
     background-position: center bottom;
 }
 
-
-.top-blog-items-container {
+.blog-posts-items-container {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -624,7 +625,7 @@ body {
     flex-wrap: wrap;
 }
 
-.top-blog-items-container .top-blog-item {
+.blog-posts-items-container .blog-posts-item {
     width: 300px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -633,29 +634,29 @@ body {
     cursor: pointer;
 }
 
-.top-blog-items-container .top-blog-item:hover {
+.blog-posts-items-container .blog-posts-item:hover {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
 }
 
-.top-blog-items-container .top-blog-item img {
+.blog-posts-items-container .blog-posts-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.top-blog-items-container .top-blog-item .top-blog-item-content {
+.blog-posts-items-container .blog-posts-item .blog-posts-item-content {
     padding: 20px;
 }
 
-.top-blog-items-container .top-blog-item .top-blog-item-content h3 {
+.blog-posts-items-container .blog-posts-item .blog-posts-item-content h3 {
     font-family: 'HarmonyOS Sans TC Medium', sans-serif;
     font-size: 20px;
     color: #333;
     margin-bottom: 8px;
 }
 
-.top-blog-items-container .top-blog-item .top-blog-item-content h5 {
+.blog-posts-items-container .blog-posts-item .blog-posts-item-content h5 {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 10px;
     color: #83cbeb;
@@ -663,7 +664,7 @@ body {
     margin-bottom: 10px;
 }
 
-.top-blog-items-container .top-blog-item .top-blog-item-content p {
+.blog-posts-items-container .blog-posts-item .blog-posts-item-content p {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 14px;
     color: #666;
@@ -711,84 +712,74 @@ body {
     transition: border-color 0.3s ease;
 }
 
-/* 首頁 SDGs 區 */
-.top-sdgs-container {
-    padding: 30px 0;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-}
 
-.top-sdgs-title-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
 
-.top-sdgs-title-container h2 {
-    font-family: 'HarmonyOS Sans TC Black', sans-serif;
-    font-size: 32px;
-    padding-bottom: 20px;
-    width: 100%;
-    text-align: center;
-    color: #333;
-    background-image: linear-gradient(
-        90deg,
-        #e7e7e7 0%, #e7e7e7 45%,
-        #83cbeb 45%, #83cbeb 55%,
-        #e7e7e7 55%, #e7e7e7 100%
-    );
-    background-size: 50% 5px;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-}
-
-.top-sdgs-content-container {
+/* 貼文標籤樣式 */
+.blog-posts-item-tags {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
     flex-wrap: wrap;
-}
-
-.top-sdgs-content-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.top-sdgs-content-container .top-sdgs-logo-container {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.top-sdgs-content-container .top-sdgs-logo-container img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-}
-
-.top-sdgs-content-container .top-sdgs-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    background-color: #fff;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-.top-sdgs-content-container .top-sdgs-text-container p {
-    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
-    font-size: 16px;
-    color: #333;
+    gap: 5px;
     margin-bottom: 10px;
 }
+
+.blog-posts-item-tags .tag {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 12px;
+    color: #83CBEB;
+    background-color: rgba(131, 203, 235, 0.1);
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+/* 貼文互動元素樣式 */
+.blog-posts-item-interactions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.blog-posts-item-series {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 12px;
+    background-color: #999;
+    color: #f6f6f6;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.blog-posts-item-date {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 12px;
+    color: #83CBEB;
+}
+
+.blog-posts-item-likes, .blog-posts-item-pinned {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 12px;
+    color: #666;
+}
+
+.blog-posts-item-likes i, .blog-posts-item-pinned i {
+    font-size: 14px;
+    color: #83CBEB;
+}
+
+.blog-posts-items-container .new-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #83CBEB;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 
 /* 響應式調整 */
 @media (max-width: 768px) {
@@ -860,4 +851,315 @@ body {
     }
 }
 
+/* 臉書動態板塊 */
+.top-dynamic-container {
+    padding: 30px 0;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.top-dynamic-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* 確保小螢幕時換行 */
+    gap: 20px;
+}
+
+.top-dynamic-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 32px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    background-image: linear-gradient(
+        90deg,
+        #e7e7e7 0%, #e7e7e7 45%,
+        #83cbeb 45%, #83cbeb 55%,
+        #e7e7e7 55%, #e7e7e7 100%
+    );
+    background-size: 50% 5px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin-bottom: 20px;
+}
+
+.top-dynamic-subtitle {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 50px;
+}
+
+.facebook-iframe {
+    width: 100%;  /* 讓 iframe 寬度佔滿父容器 */
+    max-width: 370px; /* 設置最大寬度，保持大螢幕時仍為 500px */
+    height: 600px;
+    border: none;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .facebook-iframe {
+        width: 100%;
+    }
+    .top-dynamic-title {
+        font-size: 24px;
+    }
+}
+
+
+/* 當螢幕寬度較小時調整佈局 */
+@media (max-width: 768px) {
+    .top-dynamic-content {
+        flex-direction: column;
+    }
+}
+
+/* 桌面版子菜單 */
+.blog-menu {
+    position: relative;
+}
+
+.blog-menu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 160px;
+    padding: 5px 0;
+}
+
+.blog-menu:hover .submenu {
+    display: block;
+}
+
+.blog-menu .submenu li {
+    list-style: none;
+    padding: 8px 15px;
+}
+
+.blog-menu .submenu li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    padding: 5px 10px;
+}
+
+.blog-menu .submenu li a:hover {
+    background: #83CBEB;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* 行動版子菜單 */
+.sidebar-submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.sidebar-submenu li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.sidebar-submenu li a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-blog-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0px 0px;
+}
+
+.sidebar-blog-toggle i {
+    transition: transform 0.3s;
+}
+
+/* 當展開時改變箭頭方向 */
+.sidebar-blog-toggle.active i {
+    transform: rotate(180deg);
+}
+
+/* 貼文主題長條圖 */
+.bar-chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.chart-toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 0px 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    cursor: pointer;
+}
+
+.bar-item:hover {
+    background-color: #e0e0e0;
+}
+
+.bar-label {
+    font-family: 'HarmonyOS Sans TC Regular';
+    font-size: 16px;
+    width: 120px;
+    color: #333;
+}
+
+.bar-fill {
+    background-color: #83CBEB;
+    height: 25px;
+    border-radius: 12.5px;
+    margin-left: 10px;
+    position: relative;
+    transition: width 0.5s ease;
+    text-align: right; /* 將數字放置在右邊 */
+    overflow: hidden;
+    /* 從左到右的擴展效果 */
+    transform-origin: left;
+}
+
+.bar-count {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: 'HarmonyOS Sans TC Medium';
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    font-family: 'HarmonyOS Sans TC Regular';
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+}
+
+.toggle-btn.active {
+    background-color: #83CBEB;
+    color: white;
+}
+
+.toggle-btn:hover {
+    background-color: #6ba8c4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bar-label {
+        font-size: 14px;
+    }
+
+    .bar-fill {
+        height: 20px;
+    }
+
+    .toggle-btn {
+        padding: 8px 15px;
+    }
+}
+/* 首頁 SDGs 區 */
+.top-sdgs-container {
+    padding: 30px 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-sdgs-title-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.top-sdgs-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 32px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    background-image: linear-gradient(
+        90deg,
+        #e7e7e7 0%, #e7e7e7 45%,
+        #83cbeb 45%, #83cbeb 55%,
+        #e7e7e7 55%, #e7e7e7 100%
+    );
+    background-size: 50% 5px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+@media (max-width: 768px) {
+    .facebook-iframe {
+        width: 100%;
+    }
+    .top-dynamic-title {
+        font-size: 24px;
+    }
+    .top-sdgs-title {
+        font-size: 24px;
+    }
+}
+
+.top-sdgs-content-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+.top-sdgs-container .top-sdgs-text-container {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 50px;
+}
 

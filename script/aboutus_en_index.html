@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTUCA Blog | ABOUT</title>
+    <link rel="stylesheet" href="aboutus_en_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/ntuca_favicon.ico">
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="top_en_index.html">
+                    <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="logo-img">
+                </a>
+            </div>
+            
+            <div class="menu-container">
+                <nav class="desktop-menu">
+                    <ul>
+                        <li><a href="top_en_index.html"><span>回首頁</span>TOP</a></li>
+                        <li><a href="aboutus_en_index.html"><span>關於我們</span>ABOUT</a></li>
+                        <li class="blog-menu">
+                            <a href="blog_en_index.html" class="current-page"><span>部落格</span>BLOG</a>
+                            <ul class="submenu">
+                                <li><a href="blog_en_index.html?series=氣候職人誌">Climate Professionals</a></li>
+                                <li><a href="blog_en_index.html?series=與部長有約">Talk with the Minister</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="" onclick="sendMail()"><span>聯繫我們</span>CONTACT</a></li>
+                        <li><a href="webslink_en_index.html"><span>友站連結</span>LINKS</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="right-controls">
+                    <a class="search-btn1">
+                        <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
+                    </a>
+                    <a href="aboutus_zh_index.html" class="lang-switch">
+                        <img src="../img/lang_zh_icon.png" alt="ZH", id="lang-icon-img"> <!-- post 的語言切換涉及將當前貼文檔名傳遞給英文版頁面的步驟 -->
+                    </a>
+                </div>
+                
+                <div class="mobile-controls">
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="aboutus_zh_index.html" class="lang-switch mobile-lang">
+                        <img src="../img/lang_zh_icon.png" alt="ZH", id="lang-icon-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-popup">
+        <div class="search-popup-content">
+            <h2>Search in Blog</h2>
+            <div class="search-filter">
+                <label for="search-series-select">Select Series: <i class="fas fa-paperclip"></i></label>
+                <select id="search-series-select">
+                    <option value="全部">All</option>
+                    <option value="氣候職人誌">Climate Professionals</option>
+                    <option value="與部長有約">Talk with the Minister</option>
+                </select>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Enter keywords...">
+                <button type="button" id="search-submit-pop">Search</button>
+            </div>
+            <div class="hot-searches">
+                <span>Hot Searches:</span>
+                <a data-keyword="氣候變遷">Climate Change</a>
+                <a data-keyword="永續發展">Sustainable Development</a>
+                <a data-keyword="碳中和">Carbon Neutrality</a>
+            </div>
+            <button class="search-popup-close" aria-label="Close Search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="sidebar-title">
+            <img src="../img/ntuca_name_logo.png" alt="NTUCA Logo" id="sidebar-logo-img">
+        </div>
+        <div class="sidebar-search">
+            <a class="search-btn2">
+                <img src="../img/search_icon.png" alt="搜尋", id="search-icon-img">
+            </a>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="top_en_index.html">TOP</a></li>
+                <li><a href="aboutus_en_index.html" class="current">ABOUT</a></li>
+                <li>
+                    <a href="#" class="sidebar-blog-toggle">BLOG <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="blog_en_index.html?">All</a></li>
+                        <li><a href="blog_en_index.html?series=氣候職人誌">Climate Professionals</a></li>
+                        <li><a href="blog_en_index.html?series=與部長有約">Talk with the Minister</a></li>
+                    </ul>
+                </li>
+                <li><a href="" onclick="sendMail()">CONTACT</a></li>
+                <li><a href="webslink_en_index.html">LINKS</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Tabs -->
+    <div class="tabs-container">
+        <div class="tabs-button-container">
+            <div class="activate-tab-button" id="tab-button-1">About Us</div>
+            <div class="deactivate-tab-button" id="tab-button-2">Our Members</div>
+            <div class="deactivate-tab-button" id="tab-button-3">Past Projects</div>
+        </div>
+        <div class="tabs-content-container" id="tabs-content-container-1">
+            <div class="tabs-content-title">About NTUCA</div>
+            <div class="tab-content">
+                <div class="ntuca-about-section">
+                    <img src="../img/ntuca_logo.png" alt="NTUCA Logo" class="ntuca-logo">
+                    
+                    <div class="ntuca-intro">
+                        <p><strong>NTU Climate Action Club (NTUCA)</strong> was founded in 2014 as the first university-based branch of the Taiwan Youth Climate Coalition (TWYCC). We are a student organization committed to raising awareness of climate change on campus and encouraging real action. We firmly believe that <span class="highlight">action is communication</span>.</p>
+                        <img src="../img/slogan_hw_image.png" alt="NTUCA Slogan" class="ntuca-slogan">
+                        <p>Our club logo—a pair of hands—features a gradient from the warm colors of global warming to the green of environmental protection, representing our commitment to bridging climate change and sustainable development.</p>
+                    </div>
+                    
+                    <div class="ntuca-core-values">
+                        <h3 class="tabs-content-title">Core Values</h3>
+                        <ul>
+                            <li class="ntuca-text-subtitle" data-number="01"><span>The Primacy of Sustainability Issues</span></li>
+                            <li>Sustainability is the most critical issue of our time, affecting the very survival of human society. Without sustainability, other issues cannot even be discussed.</li>
+                            <li class="ntuca-text-subtitle" data-number="02"><span>From Narrow to Broad Sustainability</span></li>
+                            <li>Environmental sustainability should also integrate social, economic, and governance aspects (ESG), making sustainability a way of life for everyone.</li>
+                            <li class="ntuca-text-subtitle" data-number="03"><span>Mindset and Values</span></li>
+                            <li>We believe in “System change, not climate change.” Let's reform systems so that everyone becomes part of the solution. “Leave no one behind.” No one should be left behind.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-content-container" id="tabs-content-container-2">
+            <div class="tabs-content-title">NTUCA Members</div>
+            <div class="tab-content">
+                <div class="ntuca-members-section">
+                    <img src="../img/underconstruction_img1.png" alt="Under Construction Image" class="underconstruction-logo">
+                </div>
+            </div>
+        </div>
+        <div class="tabs-content-container" id="tabs-content-container-3">
+            <div class="tabs-content-title">NTUCA Past Projects</div>
+            <div class="tab-content">
+                <div class="ntuca-projects-section">
+                    <div class="timeline-container">
+                        <div class="timeline-wrapper">
+                            <!-- 2014 Club Establishment -->
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="year">2014/09</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Club Founded</h3>
+                                    <h4 class="timeline-en-title">NTU Climate Action Club Establishment</h4>
+                                    <span class="timeline-tag"># Establishment</span>
+                                    <p class="timeline-intro">The first university base of TWYCC</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="year">2014-2017</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Water 100</h3>
+                                    <h4 class="timeline-en-title">Water Conservation Project</h4>
+                                    <span class="timeline-tag"># Ecological Environment</span>
+                                    <p class="timeline-intro">Pond culture, sustainable fisheries, and algal reef conservation</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="year">2016-2020</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Divestment from University Endowment Fund</h3>
+                                    <h4 class="timeline-en-title">University Fund Divestment</h4>
+                                    <span class="timeline-tag"># Green Fund</span>
+                                    <p class="timeline-intro">Asia's first university divestment from high-pollution industries</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="year">2020-2021</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Campus Carbon Footprint</h3>
+                                    <h4 class="timeline-en-title">Campus Carbon Footprint</h4>
+                                    <span class="timeline-tag"># Campus Emission Reduction</span>
+                                    <p class="timeline-intro">Project on calculating and auditing the campus carbon footprint and emissions</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="year">2022-2023</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Green Dorm Energy Clinic</h3>
+                                    <h4 class="timeline-en-title">Green Dorm Energy Clinic</h4>
+                                    <span class="timeline-tag"># Campus Energy Saving</span>
+                                    <p class="timeline-intro">Dormitory energy-saving project for students</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="year">2023-2024</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Campus Climate Adaptation</h3>
+                                    <h4 class="timeline-en-title">Campus Climate Adaptation</h4>
+                                    <span class="timeline-tag"># Campus Adaptation</span>
+                                    <p class="timeline-intro">Proposal for climate adaptation on NTU campus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Buttons -->
+    <div class="about-contact-container">
+        <div class="about-contact-title-container">
+            <h2 class="about-contact-title"></h2>
+        </div>
+        <div class="about-contact-text-container">
+            <p class="about-contact-text">
+                Please contact us through the channels below, or join our movement!
+            </p>
+        </div>
+        <div class="about-contact-link-container">
+            <a href="" onclick="sendMail()" class="about-contact-link-button">Contact Us</a>
+            <a href="" class="about-contact-link-button disabled-button">Join Us</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-container">
+            <p>© 2025 National Taiwan University Climate Action Club. All rights reserved.</p>
+            <p>8F., No. 85, Sec. 4, Roosevelt Rd., Da'an Dist., Taipei City 106319, Taiwan (R.O.C.)</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/climateaction_ntu" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/NTUClimateAction" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="aboutus_en_script.js"></script>
+</body>
+</html>

@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Predefine a list of possible files (from blog1_zh.txt to blog99_zh.txt)
-    const files = Array.from({ length: 5 }, (_, i) => `blog${i + 1}_zh.txt`);
+    const files = Array.from({ length: 5 }, (_, i) => `blog${i + 1}_en.txt`);
 
     // Define patterns for comments and examples
     const commentPattern = /^<註解>/;
@@ -425,10 +425,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 主題排序
         const postSDGs = blogData.postSDGs;  // Array for SDG data (e.g., ["13,17"])
-        const postTagsZh = blogData.postTagsZh;  // Array for tags (e.g., ["#碳中和#氣候變遷"])
+        const postTagsEn = blogData.postTagsEn;  // Array for tags (e.g., ["#碳中和#氣候變遷"])
 
         console.log('Rank SDGs',postSDGs);
-        console.log('Rank Tags',postTagsZh);
+        console.log('Rank Tags',postTagsEn);
 
 
         const sdgCounts = {};
@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Count SDGs and Tags
         countOccurrences(postSDGs, sdgCounts, ',');
-        countOccurrences(postTagsZh, tagCounts, '#');
+        countOccurrences(postTagsEn, tagCounts, '#');
 
 
         // Initial chart load
@@ -457,7 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
             subTitle: blogData.postSubTitle[index],
             date: blogData.postDate[index],
             image: '../img/' + blogData.postImage[index],
-            tags: blogData.postTagsZh[index].split('#').filter(tag => tag !== '').map(tag => tag.trim()),
+            tags: blogData.postTagsEn[index].split('#').filter(tag => tag !== '').map(tag => tag.trim()),
             author: blogData.postAuthor[index],
             pinned: blogData.postPinned[index] === '1',
             likes: blogData.postLikes[index],

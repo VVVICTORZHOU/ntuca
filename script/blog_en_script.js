@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
             console.log('搜索關鍵字:', searchTerm);
-            window.location.href = 'blog_zh_index.html';
+            window.location.href = 'blog_en_index.html';
         }
     });
     
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchTerm = searchInput.value.trim();
             if (searchTerm) {
                 console.log('搜索關鍵字:', searchTerm);
-                window.location.href = 'blog_zh_index.html';
+                window.location.href = 'blog_en_index.html';
             }
         }
     });
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
             console.log('搜索關鍵字:', searchTerm);
-            window.location.href = 'blog_zh_index.html';
+            window.location.href = 'blog_en_index.html';
         }
     });
     
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchTerm = searchInput.value.trim();
             if (searchTerm) {
                 console.log('搜索關鍵字:', searchTerm);
-                window.location.href = 'blog_zh_index.html';
+                window.location.href = 'blog_en_index.html';
             }
         }
     });
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Predefine a list of possible files (from blog1_zh.txt to blog99_zh.txt)
-    const files = Array.from({ length: 9 }, (_, i) => `blog${i + 1}_zh.txt`);
+    const files = Array.from({ length: 9 }, (_, i) => `blog${i + 1}_en.txt`);
 
     // Define patterns for comments and examples
     const commentPattern = /^<註解>/;
@@ -260,8 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
             lines.forEach(line => {
                 if (commentPattern.test(line)) {
                     // Assign the correct field based on the comment
-                    if (line.includes('貼文中文標題')) currentField = 'postTitle';
-                    if (line.includes('貼文中文子標題')) currentField = 'postSubTitle';
+                    if (line.includes('貼文英文標題')) currentField = 'postTitle';
+                    if (line.includes('貼文英文子標題')) currentField = 'postSubTitle';
                     if (line.includes('貼文創建日期')) currentField = 'postDate';
                     if (line.includes('貼文封面圖片名稱')) currentField = 'postImage';
                     if (line.includes('貼文中文標籤')) currentField = 'postTagsZh';
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
             subTitle: blogData.postSubTitle[index],
             date: blogData.postDate[index],
             image: '../img/' + blogData.postImage[index],
-            tags: blogData.postTagsZh[index].split('#').filter(tag => tag !== '').map(tag => tag.trim()),
+            tags: blogData.postTagsEn[index].split('#').filter(tag => tag !== '').map(tag => tag.trim()),
             author: blogData.postAuthor[index],
             pinned: blogData.postPinned[index] === '1',
             likes: blogData.postLikes[index],

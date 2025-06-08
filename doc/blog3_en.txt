@@ -1,0 +1,95 @@
+<註解> 貼文英文標題
+<範例> 訪談偉大的企業家: 王大明
+Niven Huang: Driving Corporate Transformation Through Sustainability Consulting
+
+<註解> 貼文英文子標題 (請以全大寫填寫)
+<範例> 一篇有關於偉大的企業家王大明先生的專訪
+From Chemical Engineering PhD to Sustainability Consultant, General Manager Niven Huang has been deeply engaged in climate change and energy transition issues. He leads companies to face future challenges with values, passion, and legacy, and encourages young people to combine ideals with practical experience to create real impact.
+
+<註解> 貼文創建日期 (格式為 YYYY/MM/DD)
+<範例> 2025/05/01
+2025/05/20
+
+<註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
+<範例> interview_with_wang_da_ming.png
+blogs/post3_face.jpg
+
+<註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #企業家#訪談#王大明#永續
+#永續發展#企業轉型#氣候變遷#能源轉型#永續顧問#系統思考
+
+<註解> 貼文英文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #entrepreneur#interview#wang_da_ming#sustainability
+#Sustainability#BusinessTransformation#ClimateChange#EnergyTransition#SustainabilityConsulting#SystemsThinking#KPMG
+
+<註解> 貼文作者 (暫不追蹤，以 N/A 代替)
+<範例> N/A
+N/A
+
+<註解> 貼文強制釘選 (是: 1 / 否: 0，預設為 0)
+<範例> 0
+0
+
+<註解> 貼文點讚數 (僅限數字，初次請填寫 0，後台會自動更新)
+<範例> 0
+0
+
+<註解> 貼文格式 (預設為 0)
+<範例> 0
+0
+
+<註解> 永續發展目標 (輸入 1-17，若有多個目標，請以逗號分隔，不得有空格)
+<範例> 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+13,17
+
+<註解> 貼文系列 (氣候職人誌 或 與部長有約)
+<範例> 氣候職人誌
+氣候職人誌
+
+<註解> 貼文內容 (請遵循 html 語法撰寫)
+<範例> <h>第一章 產業洞察</h><br>近年來，全球經濟景氣波動劇烈，新興科技如雨後春筍般快速發展，企業家們必須具備敏銳的<em>產業洞察力</em>，才能在激烈的市場競爭中脫穎而出。<br><br>...
+    <div class="post-section">
+        <h3>Part 1: Background Introduction</h3>
+
+        <p><strong>Brief introduction</strong></p>
+        <p>Niven Huang is currently the managing director of KPMG, working on corporate sustainability strategy planning, climate change risk management, and social impact assessment. Through professional consulting services, his team helps companies strengthen their resilience against social and climate-related challenges and generate long-term value during their transitional phase.</p>
+
+        <p><strong>The connection between job and sustainable development</strong></p>
+        <p>Humanity has gone through a quarter of the 21st century, yet the serious global challenges we face persist: climate change, resource depletion, enlarging wealth gap, social inequality, etc. “When all means are exhausted, changes become necessary; once changes have been made, solutions emerge,” he says, quoting a saying from I Ching. Take renewable energies, such as solar power or wind power, for example, though high costs once hindered their expansion, through policy advocacy and scale production, they have recently entered the mainstream. When a technology becomes mainstream, problems turn out easier to solve, as technological advancements are made and systems and methodologies gradually mature. Therefore, the job of a managing director is to help companies undertake systemic reform—from company culture and organizational structure to the business model—in order to embrace such a future.</p>
+
+        <p><strong>Three key words to describe sustainability consulting</strong></p>
+        <p>Dr. Huang chose <a>“value,”</a> <a>“passion,”</a> and <a>“inheritance”</a> as the three key words. “Value” represents the essence of sustainable work, to bring about the long-term positive effect of balancing the environment, society, and the economy. “Passion” stands for the necessary motion pushing for sustainability under these harsh conditions. Especially when most people either lack the resources or the confidence to follow suit, one needs a strong belief and dedication. “Inheritance” symbolizes that sustainability is an intergenerational challenge—if this generation fails to take action, it will only become more difficult for the next. He also mentioned that his 26-year-old son is engaging in sustainable development, but focusing on the social dimension and community revitalization. He emphasized that he values nurturing new talent and passing the torch to future leaders.</p>
+        
+    </div>
+
+    <div class="post-section">
+        <h3>Part 2: Career</h3>
+
+        <p><strong>The starting point of his career in sustainability</strong></p>
+        <p>Dr. Huang’s academic background focused on addressing the issue of waste incineration. After earning a Ph.D. in chemical engineering, he graduated just as the world was undergoing a major shift in climate action—marked by the 1992 United Nations Framework Convention on Climate Change and the 1997 Kyoto Protocol. It was against this backdrop of growing international momentum that he was recruited by a headhunting firm. They wanted people who are at a young age, have relevant experience, and are able to work with international partners. Interestingly, one specific requirement stood out: experience in school newspaper editing. The reason for this is that, at a time when the concept of sustainability was still in its infancy, the ability to communicate persuasively was considered a critical asset.</p>
+        <p>Following his recruitment, he began serving as Secretary General of the Business Council for Sustainable Development (BCSD) - Taiwan, which marked the beginning of his long-term commitment to sustainability. In 2013, he joined KPMG as a partner at its sustainability consulting arm and was appointed Head of ESG, KPMG Asia Pacific in 2021.</p>
+        <p>With years of hands-on experience in advancing sustainable development, he has paid special attention to the challenges of Taiwan’s energy transition. He noted that Taiwan’s historically low prices for oil, electricity, and water have contributed to a lack of awareness among citizens and businesses regarding the true cost of energy. This has, in turn, weakened incentives for energy conservation, carbon reduction, and the development of renewable energy. He emphasized that the first step in driving this transition is phasing out fossil fuel-based systems, and replacing outdated, energy-intensive buildings with low-carbon housing, in order to pave the way for society to move toward its next phase.</p>
+
+        <p><strong>From chemical engineering to sustainability consulting</strong></p>
+        <p>Working at BCSD-Taiwan, he observed that many companies had begun encouraging their senior executives to study sustainability-related topics. This clearly signaled that the world was taking corporate sustainable development seriously. In this context, WBCSD played a huge role in shaping the game rules for low-carbon business practices in the new century. Through this experience, Dr. Huang gained insight into the broader transformation of industries and the shifting perspectives in business management. He realized that beyond technical solutions, successful transition efforts also require talents who can effectively communicate with boards of directors. In addition, many of the challenges were not merely technical, but strategic, focusing on how to employ knowledge about business, strategic management, and corporate governance to solve problems that occur during the transition.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Part 3: Work life</h3>
+
+        <p><strong>A typical day for a managing director</strong></p>
+        <p>Dr. Huang currently holds multiple roles, but still insists on taking his time to read important news concerning sustainability, economy, and politics before bed and in the morning to stay informed of the latest developments. Work during the day usually consists of various kinds of meetings, such as discussing strategies and internal coordination with client companies, and conducting policy communication with governments and international organizations. As the head of the Asia Pacific region, he often engages in international meetings and collaboration. Under time zone differences, it’s not rare to see him having discussions with overseas teams arranged at nighttime.</p>
+
+        <p><strong>Interactions and experiences with different groups of people</strong></p>
+        <p>Dr. Huang interacts with a wide range of people, including business owners, SMEs and startup teams, policymakers, and students. While business owners were once relatively conservative, they have in recent years shown a significant shift, becoming more willing to invest in sustainability. Small and medium-sized enterprises, along with startups, demonstrate strong momentum and creativity, making them partners for collaboration with very high potential. Policymakers tend to be more cautious, and we often need time and concrete evidence to persuade them to take action. Students, on the other hand, bring strong values and passion to the table, but still need support in building more sustainable career plans to ensure long-term development.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Part 4: Advice for Young People</h3>
+
+        <p>Dr. Huang has seen a lot of young people who are passionate about sustainability, with some even obtaining professional certifications in areas such as ESG, carbon management, and greenhouse gas accounting. This is well worth encouraging. However, he offers a reminder: sustainability is not just about surface-level efforts or purely memorizing the rules and regulations. While passion and credentials are important, what matters even more is whether you truly understand how the workplace operates, whether you can turn ideas into action, and whether you have the ability to drive change within an organization. This field requires a well-rounded skill set, including systems thinking, communication and persuasion skills, cross-disciplinary integration, data analysis, and decision-making. Dr. Huang encourages young people to keep learning, stay passionate, and, most importantly, cultivate practical expertise and real-world experience.</p>
+
+    </div>
+    <img src="../img/blogs/黃正忠總經理.jpg" alt="合影" width="100%" height="auto" />

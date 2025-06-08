@@ -463,6 +463,12 @@ document.addEventListener('DOMContentLoaded', function() {
     mainseriesSelect.addEventListener('change', function() {
         seriesSelect.value = this.value;
         filterPostsBySeries(this.value);
+
+        // 如果系列選擇發生改變，調整過濾內容顯示 
+        const filterContent = document.querySelector('.blog-filter-content');
+        
+        filterContent.innerHTML = '<span>當前篩選為空</span>';
+
     });
     
     // 監聽排序選擇變化

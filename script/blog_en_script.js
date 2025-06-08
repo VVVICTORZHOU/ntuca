@@ -460,9 +460,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 監聽系列選擇變化
+    // 監聽系列選擇變化
     mainseriesSelect.addEventListener('change', function() {
         seriesSelect.value = this.value;
         filterPostsBySeries(this.value);
+
+        // 如果系列選擇發生改變，調整過濾內容顯示 
+        const filterContent = document.querySelector('.blog-filter-content');
+        
+        filterContent.innerHTML = '<span>No active filters</span>'; // 恢復篩選欄
+
     });
     
     // 監聽排序選擇變化

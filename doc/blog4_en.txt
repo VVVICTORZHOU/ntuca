@@ -116,5 +116,4 @@ N/A
 
     </div>
 
-
-  <img src="/img/blogs/https://github.com/VVVICTORZHOU/ntuca/blob/main/img/blogs/%E6%A5%8A%E7%9D%BF%E4%B8%AD%E6%95%99%E6%8E%88.JPG" alt="合影" width="100%" height="auto" />
+    <img src="../img/blogs/%E6%9E%97%E5%BF%83%E6%81%AC%E6%95%99%E6%8E%88.jpg" alt="合影" width="100%" height="auto" />

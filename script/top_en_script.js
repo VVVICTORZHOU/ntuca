@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
             console.log('搜索關鍵字:', searchTerm);
-            window.location.href = 'blog_zh_index.html';
+            window.location.href = 'blog_en_index.html';
         }
     });
     
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchTerm = searchInput.value.trim();
             if (searchTerm) {
                 console.log('搜索關鍵字:', searchTerm);
-                window.location.href = 'blog_zh_index.html';
+                window.location.href = 'blog_en_index.html';
             }
         }
     });
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
             console.log('搜索關鍵字:', searchTerm);
-            window.location.href = 'blog_zh_index.html';
+            window.location.href = 'blog_en_index.html';
         }
     });
     
@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchTerm = searchInput.value.trim();
             if (searchTerm) {
                 console.log('搜索關鍵字:', searchTerm);
-                window.location.href = 'blog_zh_index.html';
+                window.location.href = 'blog_en_index.html';
             }
         }
     });
@@ -294,8 +294,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchBtn1 = document.querySelector('.search-btn1');
 
     searchBtn1.addEventListener('click', function() {
-        // 跳轉到 blog_zh_index.html，並傳遞查詢參數來打開搜索彈窗
-        window.location.href = 'blog_zh_index.html?search=open';
+        // 跳轉到 blog_en_index.html，並傳遞查詢參數來打開搜索彈窗
+        window.location.href = 'blog_en_index.html?search=open';
     });
 });
 
@@ -303,8 +303,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchBtn2 = document.querySelector('.search-btn2');
 
     searchBtn2.addEventListener('click', function() {
-        // 跳轉到 blog_zh_index.html，並傳遞查詢參數來打開搜索彈窗
-        window.location.href = 'blog_zh_index.html?search=open';
+        // 跳轉到 blog_en_index.html，並傳遞查詢參數來打開搜索彈窗
+        window.location.href = 'blog_en_index.html?search=open';
     });
 });
 
@@ -599,13 +599,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// 點擊 .bar-item 跳轉道 blog_zh_index.html?tag=xxx
+// 點擊 .bar-item 跳轉道 blog_en_index.html?tag=xxx
 document.addEventListener('click', function(e) {
     const barItem = e.target.closest('.bar-item');
     if (!barItem) return;
 
     const tag = barItem.querySelector('.bar-label').textContent;
-    window.location.href = `blog_zh_index.html?tag=${encodeURIComponent(tag)}`;
+    window.location.href = `blog_en_index.html?tag=${encodeURIComponent(tag)}`;
 });
 
 // 點擊貼文跳轉到貼文頁面
@@ -615,7 +615,7 @@ postsContainer.addEventListener('click', function(e) {
     if (!postElement) return;
 
     const postFileName = postElement.dataset.fileName;
-    window.location.href = `post_zh_index.html?post_file_name=${encodeURIComponent(postFileName)}`;
+    window.location.href = `post_en_index.html?post_file_name=${encodeURIComponent(postFileName)}`;
 });
 
 // 寄送電子郵件

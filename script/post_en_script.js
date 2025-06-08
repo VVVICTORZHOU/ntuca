@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
             console.log('搜索關鍵字:', searchTerm);
-            window.location.href = 'blog_zh_index.html';
+            window.location.href = 'blog_en_index.html';
         }
     });
     
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchTerm = searchInput.value.trim();
             if (searchTerm) {
                 console.log('搜索關鍵字:', searchTerm);
-                window.location.href = 'blog_zh_index.html';
+                window.location.href = 'blog_en_index.html';
             }
         }
     });
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
             console.log('搜索關鍵字:', searchTerm);
-            window.location.href = 'blog_zh_index.html';
+            window.location.href = 'blog_en_index.html';
         }
     });
     
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchTerm = searchInput.value.trim();
             if (searchTerm) {
                 console.log('搜索關鍵字:', searchTerm);
-                window.location.href = 'blog_zh_index.html';
+                window.location.href = 'blog_en_index.html';
             }
         }
     });
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchBtn1.addEventListener('click', function() {
         // 跳轉到 blog_zh_index.html，並傳遞查詢參數來打開搜索彈窗
-        window.location.href = 'blog_zh_index.html?search=open';
+        window.location.href = 'blog_en_index.html?search=open';
     });
 });
 
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchBtn2.addEventListener('click', function() {
         // 跳轉到 blog_zh_index.html，並傳遞查詢參數來打開搜索彈窗
-        window.location.href = 'blog_zh_index.html?search=open';
+        window.location.href = 'blog_en_index.html?search=open';
     });
 });
 
@@ -232,8 +232,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 lines.forEach(line => {
                     if (commentPattern.test(line)) {
                         // 根據註解來判定當前要捕獲的欄位
-                        if (line.includes('貼文中文標題')) currentField = 'postTitle';
-                        if (line.includes('貼文中文子標題')) currentField = 'postSubTitle';
+                        if (line.includes('貼文英文標題')) currentField = 'postTitle';
+                        if (line.includes('貼文英文子標題')) currentField = 'postSubTitle';
                         if (line.includes('貼文創建日期')) currentField = 'postDate';
                         if (line.includes('貼文封面圖片名稱')) currentField = 'postImage';
                         if (line.includes('貼文中文標籤')) currentField = 'postTagsZh';
@@ -328,8 +328,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 // 設置標籤（以 # 作為分隔）
-                if (blogData.postTagsZh) {
-                    const tags = blogData.postTagsZh.split('#').filter(tag => tag.trim() !== '');
+                if (blogData.postTagsEn) {
+                    const tags = blogData.postTagsEn.split('#').filter(tag => tag.trim() !== '');
                     tags.forEach(tag => {
                         // 為每個標籤前添加#
                         tag = '#' + tag.trim();
@@ -488,10 +488,10 @@ document.addEventListener('DOMContentLoaded', function () {
   
         if (currentFile) {
           // 將 blog4_zh.txt 轉為 blog4_en.txt
-          const newFile = currentFile.replace('_zh.txt', '_en.txt');
+          const newFile = currentFile.replace('_en.txt', '_zh.txt');
   
-          // 導向英文版網址並加上新的 post_file_name
-          const newHref = `post_en_index.html?post_file_name=${encodeURIComponent(newFile)}`;
+          // 導向中文版網址並加上新的 post_file_name
+          const newHref = `post_zh_index.html?post_file_name=${encodeURIComponent(newFile)}`;
           window.location.href = newHref;
         } else {
           // 若無 post_file_name，直接跳轉原本的 href

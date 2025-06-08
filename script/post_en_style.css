@@ -1,0 +1,1143 @@
+/* 字體配置 */
+@font-face {
+    font-family: 'HarmonyOS Sans TC Medium';
+    src: url('../font/HarmonyOS_Sans_TC_Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans TC Regular';
+    src: url('../font/HarmonyOS_Sans_TC_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans TC Light';
+    src: url('../font/HarmonyOS_Sans_TC_Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans TC';
+    src: url('../font/HarmonyOS_Sans_TC_Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans TC Black';
+    src: url('../font/HarmonyOS_Sans_TC_Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 基本樣式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    padding-top: 55px; /* 為固定header預留空間 */
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header 樣式 */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#main-header .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.current-page {
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+.current-page:hover {
+    border: none;
+}
+
+/* Logo 樣式 */
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#logo-img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+}
+
+#logo-img:hover {
+    transform: scale(1.1);
+}
+
+/* 桌面選單樣式 */
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.desktop-menu li a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.desktop-menu li a span {
+    color: #83CBEB;
+    font-size: 10px;
+}
+
+.right-controls a, .sidebar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.desktop-menu a:hover, .right-controls a:hover, .sidebar-menu a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* 右側控制項 */
+.right-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#search-icon-img, #lang-icon-img {
+    height: 25px;
+    width: auto;
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+}
+
+.search-btn:hover, .lang-switch:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* 行動控制項 - 默認隱藏 */
+.mobile-controls {
+    display: none;
+    align-items: center;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 15px;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.mobile-lang {
+    position: absolute;
+    right: 20px;
+}
+
+/* 搜尋框樣式 */
+.search-popup {
+    position: fixed;
+    top: -250px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    transition: top 0.3s ease-in-out;
+}
+
+.search-popup.active {
+    top: 0;
+}
+
+.search-popup-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.search-popup h2 {
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 20px;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    border: 2px solid #e7e7e7;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #83CBEB;
+}
+
+.search-box button {
+    padding: 12px 30px;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #83CBEB;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #6ba8c4;
+}
+
+.hot-searches {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hot-searches span {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.hot-searches a {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 15px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hot-searches a:hover {
+    background-color: #e7e7e7;
+    cursor: pointer;
+}
+
+.search-popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-popup-close:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .search-popup {
+        top: -300px;
+        height: 300px;
+    }
+    .search-popup-content {
+        padding: 20px 15px;
+    }
+    
+    .search-popup h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-box button {
+        width: 100%;
+    }
+    
+    .hot-searches {
+        gap: 10px;
+    }
+}
+
+/* Sidebar 樣式 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1100;
+    transition: left 0.3s ease;
+    padding: 60px 0 20px;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-close:hover {
+    transform: scale(1.1);
+}
+
+.sidebar-title img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.sidebar-search {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: none;
+}
+
+
+/* Footer 樣式 */
+#main-footer {
+    position: relative;
+    /*top: calc(40vw + 1020px);  輪播容器下方1000px */
+    margin-top: 50px;
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#main-footer p {
+    font-family: 'HarmonyOS Sans TC Light', sans-serif;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+#main-footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 2px solid #83CBEB;
+    border-radius: 50%;
+    color: #83CBEB;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #83CBEB;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.social-link i {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        margin-top: 3px;
+    }
+    
+    .social-link {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-link i {
+        font-size: 14px;
+    }
+}
+
+
+/* 頁尾聯繫按鈕區 */
+.exit-post-container {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.exit-post-title-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.exit-post-title-container h2 {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 32px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    background-image: linear-gradient(
+        90deg,
+        #e7e7e7 0%, #e7e7e7 45%,
+        #83cbeb 45%, #83cbeb 55%,
+        #e7e7e7 55%, #e7e7e7 100%
+    );
+    background-size: 50% 5px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+
+.exit-post-text-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.exit-post-text-container p {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    color: #666;
+    padding: 0px;
+}
+
+.exit-post-link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.exit-post-link-container a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 220px;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #fff;
+    border: #83CBEB 2px solid;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+.exit-post-link-container .disabled-button {
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 180px;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #f6f6f6;
+    border: #666 2px solid;
+    color: #666;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+.exit-post-link-container a:hover {
+    background-color: #83CBEB;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.exit-post-link-container a::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(45deg);
+}
+
+.exit-post-link-container a:hover::after {
+    border-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+
+/* 響應式布局 */
+@media (max-width: 768px) {
+    .desktop-menu, .right-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: flex;
+    }
+    
+    .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    body.sidebar-open .sidebar {
+        left: 0;
+    }
+    
+    body.sidebar-open .sidebar-overlay {
+        display: block;
+    }
+
+    .exit-post-title-container h2 {
+        font-size: 24px;
+    }
+
+    .exit-post-text-container {
+        margin-bottom: 20px;
+    }
+
+    .exit-post-text-container p {
+        font-size: 14px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .exit-post-link-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .exit-post-link-container a {
+        width: 150px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .exit-post-link-container .disabled-button {
+        width: 150px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    #logo-img {
+        content: url("../img/ntuca_logo.png");
+    }
+}
+
+
+/* 警示彈窗樣式 */
+.alert-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1001;
+    display: none;
+}
+
+.alert-popup p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.alert-popup button {
+    padding: 10px 20px;
+    background-color: #83CBEB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert-popup button:hover {
+    background-color: #6ba8c4;
+}
+
+/* 遮罩樣式 */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+/* 部落格文章前資訊欄樣式 */
+.post-info-container {
+    display: block;
+    background-color: #fff;
+    padding: 60px 60px 0 60px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px; /* 或 70ch、50rem 等固定內容寬度 */
+}
+
+.post-info {
+    padding: 20px 25px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-title {
+    font-family: 'HarmonyOS Sans TC Black', sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.post-subtitle {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.blog-posts-item-series {
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    font-size: 0.8rem;
+    background-color: #999;
+    color: #f6f6f6;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+
+.blog-posts-item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.blog-posts-item-tags .tag {
+    font-size: 12px;
+    color: #83CBEB;
+    background-color: rgba(131, 203, 235, 0.1);
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.blog-posts-item-interactions {
+    display: flex;
+    gap: 15px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.blog-posts-item-interactions i {
+    color: #83CBEB;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 1.5rem;
+    }
+
+    .post-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .post-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .blog-posts-item-interactions {
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* 桌面版子菜單 */
+.blog-menu {
+    position: relative;
+}
+
+.blog-menu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 160px;
+    padding: 5px 0;
+}
+
+.blog-menu:hover .submenu {
+    display: block;
+}
+
+.blog-menu .submenu li {
+    list-style: none;
+    padding: 8px 15px;
+}
+
+.blog-menu .submenu li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+    padding: 5px 10px;
+}
+
+.blog-menu .submenu li a:hover {
+    background: #83CBEB;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* 行動版子菜單 */
+.sidebar-submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.sidebar-submenu li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.sidebar-submenu li a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-blog-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0px 0px;
+}
+
+.sidebar-blog-toggle i {
+    transition: transform 0.3s;
+}
+
+/* 當展開時改變箭頭方向 */
+.sidebar-blog-toggle.active i {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 頁面貼文區 */
+
+/* 頁面貼文區內文風格定義 */
+.post-content-container {
+    display: block;
+    background-color: #fff;
+    padding: 20px 60px 60px 60px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px; /* 或 70ch、50rem 等固定內容寬度 */
+    line-height: 1.8;
+    font-family: 'HarmonyOS Sans TC Regular', sans-serif;
+}
+
+.post-content-container h2 {
+font-family: 'HarmonyOS Sans TC Black';
+font-size: 1.8rem;
+margin-bottom: 1.2rem;
+color: #222;
+}
+
+.post-content-container h3 {
+font-family: 'HarmonyOS Sans TC Medium';
+font-size: 1.4rem;
+margin-top: 2rem;
+margin-bottom: 1rem;
+border-left: 4px solid #83CBEB;
+padding-left: 0.6rem;
+color: #333;
+}
+
+.post-content-container p {
+margin-bottom: 1rem;
+font-size: 1rem;
+}
+
+.post-content-container strong {
+font-family: 'HarmonyOS Sans TC Medium';
+color: #000;
+}
+
+.post-content-container ul {
+margin-left: 1.5rem;
+padding-left: 0.5rem;
+list-style-type: disc;
+}
+
+.post-content-container li {
+margin-bottom: 0.5rem;
+}
+
+.post-content-container img {
+    max-width: 100%;         /* 確保圖片不超出容器寬度 */
+    height: auto;           /* 保持高度自適應 */
+    display: block;         /* 去除圖片下方的空隙 */
+    margin: 20px 0;         /* 增加上下間距 */
+    max-height: 500px;      /* 設置最大高度（根據實際需求調整） */
+    object-fit: contain;    /* 保持圖片比例，防止圖片被拉伸 */
+}
+
+.post-content-container blockquote {
+    margin: 20px 25px;
+    padding: 15px 20px;
+    background-color: #f1f3f5;  /* 淺藍色背景 */
+    border-left: 4px solid #999;  /* 保留原有的藍色邊框 */
+    font-size: 1.05rem;          /* 稍微放大字體 */
+    color: #444;                /* 深灰色而非原本的 #666 */
+    font-style: italic;         /* 保留斜體 */
+    border-radius: 0 8px 8px 0; /* 右側圓角 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 輕微陰影效果 */
+    position: relative;
+    line-height: 1.6;
+}
+
+/* 添加引號裝飾 */
+.post-content-container blockquote:before {
+    content: '"';
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    position: absolute;
+    left: 8px;
+    top: -10px;
+    color: #999;
+    opacity: 0.6;
+}
+
+.post-content-container pre {
+    background-color: #f0f0f0; /* 稍微灰色背景 */
+    padding: 20px;
+    border-radius: 4px;
+    overflow-x: auto;       /* 允許水平方向滾動 */
+    font-family: 'Courier New', monospace;
+    color: #333;            /* 深灰色字體 */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.post-content-container a {
+    color: #fff;            /* 白色文字 */
+    background-color: #83CBEB;         /* 使用設計色 #83CBEB */
+    text-decoration: none;  /* 取消下劃線 */
+    
+    border-radius: 5px; /* 圓角邊框 */
+    padding: 2px 6px; /* 上下 5px，左右 10px */
+    margin: 0 2px; /* 上下 0px，左右 2px */
+}
+
+.post-content-container a:hover {
+    color: #fff;            /* 懸停時變為白色文字 */
+    background-color: #333;            /* 懸停時變為深灰色 */
+    text-decoration: none; /* 懸停時添加下劃線 */
+}
+
+/* 收起展開容器樣式 */
+.collapsible-container {
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.collapsible-header {
+    background-color: #f6f6f6;
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    font-family: 'HarmonyOS Sans TC Medium', sans-serif;
+    color: #333;
+}
+
+.collapsible-header:hover {
+    background-color: #edf5f9;
+}
+
+.collapsible-title {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.collapsible-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+    color: #83CBEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapsible-icon::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #83CBEB;
+    border-bottom: 2px solid #83CBEB;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    position: relative;
+    top: -2px;
+}
+
+.collapsible-container.active .collapsible-icon::after {
+    transform: rotate(-135deg);
+    top: 2px;
+}
+
+.collapsible-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.collapsible-container.active .collapsible-content {
+    padding: 15px;
+    max-height: 20000px; /* 足夠大的高度以容納內容 */
+    transition: max-height 0.5s ease-in, padding 0.3s ease;
+}
+
+/* 確保收起展開容器內的元素遵循原樣式 */
+.collapsible-content h3,
+.collapsible-content p,
+.collapsible-content ul,
+.collapsible-content blockquote,
+.collapsible-content img,
+.collapsible-content a {
+    /* 保留原有樣式，不需要重複定義 */
+    margin-bottom: 1rem;
+}
+
+.collapsible-content h3:last-child,
+.collapsible-content p:last-child,
+.collapsible-content ul:last-child,
+.collapsible-content blockquote:last-child {
+    margin-bottom: 0;
+}
+
+/* 提示字樣式 */
+.keyword {
+    position: relative;
+    cursor: help;
+    color: #0066cc;
+    text-decoration: underline dotted;
+}
+
+.keyword:hover {
+    color: #83CBEB;
+    text-decoration: underline solid;
+}
+
+.tooltip {
+position: absolute;
+background: #f5fcff;
+color: #333;
+border: 1px solid #83CBEB;
+padding: 8px 10px;
+border-radius: 6px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+white-space: pre-wrap;
+max-width: 250px;
+z-index: 100;
+display: none;
+}
+
+.tooltip.visible {
+display: block;
+}
+
+
+/* 移動端適配 */
+@media (max-width: 768px) {
+    .post-info-container {
+      padding: 10px 10px 0 10px; /* 上下 20px，左右 20px */
+    }
+    .post-content-container {
+      padding: 20px 36px; /* 上下 20px，左右 28px */
+      max-width: 100%;
+    }
+    .post-content-container h2 {
+        font-size: 1.5rem;       /* 原為 1.8rem，略縮小 */
+        margin-bottom: 1rem;
+    }
+    
+    .post-content-container h3 {
+        font-size: 1.2rem;       /* 原為 1.4rem */
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+        padding-left: 0.5rem;    /* 稍微縮窄左邊框與內距 */
+    }
+    .post-content-container blockquote {
+        margin: 20px 10px; /* 上下 20px，左右 40px */
+    }
+    .collapsible-header {
+        padding: 10px 12px;
+    }
+    
+    .collapsible-title {
+        font-size: 0.9rem;
+    }
+    
+    .collapsible-container.active .collapsible-content {
+        padding: 12px;
+    }
+  }
+

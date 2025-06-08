@@ -615,7 +615,7 @@ postsContainer.addEventListener('click', function(e) {
     if (!postElement) return;
 
     const postFileName = postElement.dataset.fileName;
-    window.location.href = `post_zh_index.html?post_file_name=${encodeURIComponent(postFileName)}`;
+    window.location.href = `post_en_index.html?post_file_name=${encodeURIComponent(postFileName)}`;
 });
 
 // 寄送電子郵件

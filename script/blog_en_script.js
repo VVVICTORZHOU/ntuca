@@ -533,16 +533,16 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('執行顯示過濾標籤');
         // if keyword != ''
         if (keyword===''){
-            filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${selectedSeries}</span>
-            <button id="clear-filter">清除篩選</button>`;
+            filterContent.innerHTML = `<span>Current Filters：</span> <span class="filter-tag">${selectedSeries}</span>
+            <button id="clear-filter">Clear</button>`;
         } else {
-            filterContent.innerHTML = `<span>當前篩選：</span> <span class="filter-tag">${selectedSeries}</span> <span class="filter-tag">${keyword}</span> 
-            <button id="clear-filter">清除篩選</button>`;
+            filterContent.innerHTML = `<span>Current Filters：</span> <span class="filter-tag">${selectedSeries}</span> <span class="filter-tag">${keyword}</span> 
+            <button id="clear-filter">Clear</button>`;
         }
 
         document.getElementById('clear-filter').addEventListener('click', function() {
             searchInput.value = ''; // 清空輸入框
-            filterContent.innerHTML = '<span>當前篩選為空</span>'; // 恢復篩選欄
+            filterContent.innerHTML = '<span>No active filters</span>'; // 恢復篩選欄
             // 顯示 <div class="blog-sort-content">
             document.querySelector('.blog-sort-content').style.display = 'flex';
             // 顯示所有貼文

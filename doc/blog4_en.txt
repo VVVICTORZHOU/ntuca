@@ -1,0 +1,120 @@
+<註解> 貼文英文標題
+<範例> 訪談偉大的企業家: 王大明
+The Perfect Combination of Machinery and Sustainability: Associate Professor Lin Xin-Tian’s Career and Outlook
+
+<註解> 貼文英文子標題 (請以全大寫填寫)
+<範例> 一篇有關於偉大的企業家王大明先生的專訪
+From Mechanical Engineering to Sustainability Expert, NTU Associate Professor Shares How to Utilize Life Cycle Assessment to Promote Circular Economy, and Offers Career Advice for Young People Across Disciplines.
+
+<註解> 貼文創建日期 (格式為 YYYY/MM/DD)
+<範例> 2025/05/01
+2025/04/01
+
+<註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
+<範例> interview_with_wang_da_ming.png
+blogs/post4_face.jpg
+
+<註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #企業家#訪談#王大明#永續
+#永續發展#碳足跡#生命週期評估#循環經濟#綠色設計#產學合作#工程創新
+
+<註解> 貼文英文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #entrepreneur#interview#wang_da_ming#sustainability
+#Sustainability#CarbonFootprint#LCA#CircularEconomy#GreenDesign#Academia#Engineering#LifeCycleAssessment#IndustryCollaboration#SustainableDevelopment#NTU
+
+<註解> 貼文作者 (暫不追蹤，以 N/A 代替)
+<範例> N/A
+N/A
+
+<註解> 貼文強制釘選 (是: 1 / 否: 0，預設為 0)
+<範例> 0
+1
+
+<註解> 貼文點讚數 (僅限數字，初次請填寫 0，後台會自動更新)
+<範例> 0
+0
+
+<註解> 貼文格式 (預設為 0)
+<範例> 0
+0
+
+<註解> 永續發展目標 (輸入 1-17，若有多個目標，請以逗號分隔，不得有空格)
+<範例> 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+13,17
+
+<註解> 貼文系列 (氣候職人誌 或 與部長有約)
+<範例> 氣候職人誌
+氣候職人誌
+
+<註解> 貼文內容 (請遵循 html 語法撰寫)
+<範例> <h>第一章 產業洞察</h><br>近年來，全球經濟景氣波動劇烈，新興科技如雨後春筍般快速發展，企業家們必須具備敏銳的<em>產業洞察力</em>，才能在激烈的市場競爭中脫穎而出。<br><br>...
+    <div class="post-section">
+        <h3>Part 1: Background Introduction</h3>
+
+        <p><strong>Could you introduce yourself and your current work responsibilities?</strong></p>
+        <p>I am an associate professor in the Department of Mechanical Engineering at National Taiwan University. My work encompasses three aspects: teaching, researching, and supervising students. In teaching, I am responsible for both required and optional professional courses. In researching, I execute national scientific research projects and collaborate with businesses to solve industry problems. Additionally, I supervise graduate and doctoral students, guiding them in their thesis work and research projects.</p>
+
+        <p><strong>How does your work connect with sustainable development? Can you provide some specific examples?</strong></p>
+        <p>My research expertise is in <a>“Life Cycle Assessment (LCA)”</a>, which is primarily used to calculate the carbon footprint and environmental impact of products or systems throughout their entire life cycle. Through this technology, we can help businesses identify pollution hotspots and implement green design to reduce environmental burden. I have collaborated with two major delivery platforms in Taiwan to design packaging that reduces plastic use, and worked with electric scooter and network communication companies to analyze product environmental impacts, helping them incorporate sustainability considerations into new product designs.</p>
+
+        <p><strong>If you were to describe your work with three keywords, what would they be?</strong></p>
+        <p>I will choose #Circular #LCA #GreenDesign.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Part 2: Career Journey</h3>
+
+        <p><strong>Could you share your career development journey from graduation until now?</strong></p>
+        <p>After graduating from NTU's Mechanical Engineering Department, I continued my studies and completed my master's degree in the same department. At that time, I wasn't clear about my career orientation and wasn't familiar with sustainability issues. After graduation, I entered the industry as a mechanical engineer, responsible for designing industrial computers. This work experience made me aware of the large amount of waste generated in the product manufacturing process, and helped me realize that the engineering field could have a greater impact on environmental issues. This sparked my decision to pursue a doctorate, driven by a desire to explore the environmental impact of product manufacturing and how its waste could be recycled.</p>
+        <p>During my doctoral studies at Kyoto University's Graduate School of Energy Science, I joined the research lab of a professor with an engineering background who focused on environmental and social analysis. During this time, I encountered the concepts of life cycle assessment and circular economy, and discovered that environmental impacts could actually be analyzed through data quantification. Although the doctoral path wasn't easy, my interest in this topic kept me going.</p>
+        <p>Initially, I hadn't planned to pursue an academic career, but as I was approaching graduation, a friend encouraged me to consider teaching, believing that my personality was well-suited for it—I enjoy sharing ideas and don't like monotonous routines, and being a professor would allow me to freely explore topics that interest me. I also discussed this with my advisor, who encouraged me to apply. Later, I began teaching at National Cheng Kung University's Department of Environmental Engineering. This experience confirmed that I enjoyed the work pattern of teaching and research, and gave me opportunities to collaborate with businesses, addressing my initial desire to solve environmental problems. I cherish this career development, which allows me to combine research, teaching, and industrial applications, making sustainability not just an academic discussion but a solution that can be implemented in reality.</p>
+
+        <p><strong>What prompted you to engage in sustainability-related work?</strong></p>
+        <p>During my doctoral studies, I encountered the concepts of life cycle assessment and circular economy, and my experience in the Environmental Engineering Department allowed me to delve deeper into environmental fields. Beyond academic research, I also collaborated with businesses, attempting to solve actual environmental problems they face.</p>
+    
+        <p><strong>What differences did you find between your initial expectations and the actual work?</strong></p>
+        <p>Initially, I thought sustainability issues were mainly related to natural sciences, such as ecological conservation and geology, with little connection to engineering. However, in reality, engineering plays a crucial role in sustainability, such as using technological innovation to reduce carbon emissions and develop more environmentally friendly products. The essence of engineering is to solve problems and meet needs, and as society's needs change, the direction of technological development adjusts accordingly.</p>
+        <p>For example, my undergraduate advisor once researched how to achieve complete fuel combustion to improve energy efficiency, but now people are more concerned about reducing carbon emissions. This made me deeply understand that while technology itself doesn't change, what changes are our values and goals. Therefore, engineering isn't just a cause of environmental problems but can also be part of the solution.</p>
+
+        <p><strong>What has been your biggest workplace challenge, and how did you overcome it?</strong></p>
+        <p>If we count from the doctoral program as the start of my career, I consider the doctoral phase to be a significant challenge. Doctoral research demands breakthrough knowledge, requiring “independent study and development of problem-solving methods”, which is inherently challenging.</p>
+        <p>As a researcher, different stages present different challenges. For example, when first becoming a teacher or independently managing projects, the biggest challenge is how to stand on your own and find resources to solve problems. As your career develops, the challenges shift toward “how to build research teams, guide students, and even engage in interdisciplinary collaboration”—whether working with other professors or different stakeholders, each stage has its own challenges to overcome.</p>
+    </div>
+
+    <div class="post-section">
+        <h3>Part 3: Daily Work Life</h3>
+
+        <p><strong>Could you describe how you spend your day? What are your main work activities from morning to evening?</strong></p>
+        <p>My daytime work mainly involves teaching, meeting with students to discuss research progress, and participating in various meetings, including government projects, industry-academia collaboration, and research projects. Research-related work also takes up a considerable portion, such as reading papers, data analysis, and writing research findings. Additionally, I handle some academic services, like peer-reviewing papers.</p>
+        <p>I usually finish work on time, but if there are urgent tasks, I'll handle them between nine and eleven in the evening. Whenever possible, I completely disconnect from work on weekends and schedule leisure or exercise time.</p>
+
+        <p><strong>On a scale of 1-10, how would you rate your work-life balance? Why?</strong></p>
+        <p>I’d rate my work-life balance around 8 or 9. I strive to maintain boundaries between weekdays and weekends, trying not to let work occupy my personal time. To ensure I can rest well on weekends, I work hard to complete tasks during weekdays. My friends joke that I'm "strongly committed to play" because no matter how busy I am, I always schedule relaxing activities for weekends.</p>
+        <p>However, I've noticed that in my regular rush to meet deadlines, I often work under high pressure and sometimes worry too early about work that hasn't even started. Unlike typical workplace positions, being a professor doesn't have clear performance standards—the standard for "doing well" is self-imposed, and sometimes I accidentally set my expectations too high, leading to excessive pressure. This is an aspect I'm currently trying to balance and improve.</p>
+
+        <p><strong>Who do you most frequently interact or collaborate with in your work? What notable experiences have you had in these interactions?</strong></p>
+        <p>I most frequently interact with students, which is the essence of teaching. Interestingly, while I continue to age, students remain between 18 and 24 years old, and though the age gap only widens, I enjoy these interactions. They always bring perspectives and thinking from their generation, constantly exposing me to fresh ideas and stimulation. As times rapidly change, students are the ones who best reflect contemporary trends, especially in learning and applying new technologies, AI, or digital tools. They respond more quickly, which pushes me to continue learning and growing.</p>
+    </div>
+
+    <div class="post-section">
+        <h3>Part 4: Advice for Young People</h3>
+
+        <p><strong>What kind of personalities do you think are better suited for this career (as a scholar)? What professional skills are required?</strong></p>
+        <p>Being a professor is actually quite diverse, requiring a balance between teaching, research, and service. Different aspects require different characteristics. For research, the most important thing is maintaining an attitude of continuous learning and persistence. You often encounter bottlenecks and setbacks in the process, requiring constant trial and independent thinking to find solutions. Although there is teamwork, many key breakthroughs still rely on individual in-depth exploration. Researchers tend to be introverted, as such people can better focus and delve deeply into problems; however, the key to suitability lies in <a>“whether one can focus and enjoy long periods of thinking”</a>,  rather than personality type itself.</p>
+        <p>In terms of teaching, one needs to enjoy interacting with people and be willing to share and guide students. Many people think being a professor requires "passion," but I believe more important is self-discipline and understanding what kind of lifestyle you want. While professors have flexible working hours, this requires stronger self-management skills. If you're not interested in student interaction and only want to do research, you might find this job very stressful.</p>
+        <p>Ultimately, suitability depends on personal characteristics and value choices. I hope information about this profession can become more transparent, allowing interested individuals to make clearer career decisions.</p>
+
+        <p><strong>Based on your observations, what are the future trends in this field?</strong></p>
+        <p>Currently, carbon footprint and carbon reduction-related fields are very popular, with almost all companies beginning to pay attention to their carbon emissions. However, knowledge in this area is still not widespread, and many people find calculating carbon footprints challenging and difficult to apply.</p>
+        <p>This field actually sits between engineering and social sciences, with many gray areas. Therefore, the future focus will be on finding a balance between "applicability" and "precision." I personally hope that in the future, carbon footprints can become like "nutrition labels"—information that everyone can understand and easily calculate. When this knowledge becomes intuitive and easy to understand, more people can implement carbon reduction in their daily lives, making it more likely to promote overall social behavioral change.</p>
+
+        <p><strong>Finally, what specific advice and encouragement would you give to young people wanting to enter this field?</strong></p>
+        <p>I would advise everyone to first ask themselves: "What exactly is the sustainability field for you? What is its core knowledge?" Sustainability itself is an interdisciplinary issue, so regardless of whether your background is in science and engineering, humanities, or business management, it is an advantage to be able to apply your professional skills to the sustainability field.</p>
+        <p>Taking myself as an example, my mechanical engineering background gives me a deeper understanding when analyzing product design, processes, and materials, which is very helpful in promoting green design. Sustainability requires broad knowledge, but having a clear specialty within it will make it easier to create value and impact.</p>
+        <p>I encourage students interested in sustainability to not only explore related knowledge broadly but also remember to cultivate their professional depth. In the future, when you can combine your expertise with sustainability, you will find your own position and place to shine in this field.</p>
+
+    </div>
+
+
+  <img src="/img/blogs/https://github.com/VVVICTORZHOU/ntuca/blob/main/img/blogs/%E6%A5%8A%E7%9D%BF%E4%B8%AD%E6%95%99%E6%8E%88.JPG" alt="合影" width="100%" height="auto" />

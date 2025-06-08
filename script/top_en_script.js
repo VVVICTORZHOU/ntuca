@@ -359,8 +359,8 @@ document.addEventListener('DOMContentLoaded', function() {
             lines.forEach(line => {
                 if (commentPattern.test(line)) {
                     // Assign the correct field based on the comment
-                    if (line.includes('貼文中文標題')) currentField = 'postTitle';
-                    if (line.includes('貼文中文子標題')) currentField = 'postSubTitle';
+                    if (line.includes('貼文英文標題')) currentField = 'postTitle';
+                    if (line.includes('貼文英文子標題')) currentField = 'postSubTitle';
                     if (line.includes('貼文創建日期')) currentField = 'postDate';
                     if (line.includes('貼文封面圖片名稱')) currentField = 'postImage';
                     if (line.includes('貼文中文標籤')) currentField = 'postTagsZh';

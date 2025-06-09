@@ -105,13 +105,13 @@ Photo by Hsin-Lu Yeh / Text by Hsin-Lu Yeh, Huei-Yu Yen, Jui-Lung Chang
 
     </div>
 
-    <span class="keyword" data-tooltip="IEA (International Energy Agency): An intergovernmental organization that provides policy advice, data, and analysis to promote secure, affordable, and sustainable energy worldwide.">IEA (International Energy Agency)</span>
+    
 
     <div class="post-section">
         <h3>Advice for Young People</h3>
 
         <p><strong>What trends do you see in this field?</strong></p>
-        <p>There’s a noticeable gender gap in the justis transition process. While Taiwan has made progress in gender equality, much more needs to be done in the energy transition space. According to the IEA (International Energy Agency), the global shift to net-zero will create 30 million green jobs. Yet LinkedIn data shows that men are currently over three times more likely than women to possess green skills.</p>
+        <p>There’s a noticeable gender gap in the justis transition process. While Taiwan has made progress in gender equality, much more needs to be done in the energy transition space. According to the <span class="keyword" data-tooltip="IEA (International Energy Agency): An intergovernmental organization that provides policy advice, data, and analysis to promote secure, affordable, and sustainable energy worldwide.">IEA (International Energy Agency)</span>, the global shift to net-zero will create 30 million green jobs. Yet LinkedIn data shows that men are currently over three times more likely than women to possess green skills.</p>
         <p>To help close this gap, we’re creating opportunities for women to build green expertise—such as through our training programs for female energy auditors. The goal is to ensure that women aren’t left behind in the green transition.</p>
         
         <p><strong>What qualities and skills are needed for this work?</strong></p>

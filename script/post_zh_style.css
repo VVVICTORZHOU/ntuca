@@ -735,6 +735,7 @@ body {
     gap: 15px;
     font-size: 1rem;
     color: #666;
+    margin-top: 5px;
 }
 
 .blog-posts-item-interactions i {

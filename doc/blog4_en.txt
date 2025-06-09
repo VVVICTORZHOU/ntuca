@@ -1,6 +1,6 @@
 <註解> 貼文英文標題
 <範例> 訪談偉大的企業家: 王大明
-The Perfect Combination of Machinery and Sustainability: Associate Professor Lin Xin-Tian’s Career and Outlook
+The Perfect Combination of Machinery and Sustainability: Associate Professor Lin Hsin-Tien’s Career and Outlook
 
 <註解> 貼文英文子標題 (請以全大寫填寫)
 <範例> 一篇有關於偉大的企業家王大明先生的專訪
@@ -12,7 +12,7 @@ From Mechanical Engineering to Sustainability Expert, NTU Associate Professor Sh
 
 <註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
 <範例> interview_with_wang_da_ming.png
-blogs/post4_face.jpg
+blogs/post4_en_face.jpg
 
 <註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
 <範例> #企業家#訪談#王大明#永續

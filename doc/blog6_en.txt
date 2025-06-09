@@ -1,0 +1,121 @@
+<註解> 貼文英文標題
+<範例> 訪談偉大的企業家: 王大明
+Professor Yu-Shu Kuo — Bridging Academia and Industry in Offshore Wind Energy
+
+<註解> 貼文英文子標題 (請以全大寫填寫)
+<範例> 一篇有關於偉大的企業家王大明先生的專訪
+During his time in Germany doing research, Kuo realized that all his contributions would remain abroad. Determined to make a difference at home, he returned to Taiwan to dedicate himself to the development of the nation’s offshore wind industry.
+
+<註解> 貼文創建日期 (格式為 YYYY/MM/DD)
+<範例> 2025/05/01
+2025/06/02
+
+<註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
+<範例> interview_with_wang_da_ming.png
+blogs/post6_face.jpg
+
+<註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #企業家#訪談#王大明#永續
+#永續發展#離岸風電#再生能源#水下工程#海域大地工程#產學合作#海洋工程
+
+<註解> 貼文英文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #entrepreneur#interview#wang_da_ming#sustainability
+#SustainableDevelopment#OffshoreWind#RenewableEnergy#SubseaEngineering#MarineGeotechnics#IndustryAcademiaCollaboration#OceanEngineering
+
+<註解> 貼文作者 (暫不追蹤，以 N/A 代替)
+<範例> N/A
+Photo by Huei-Yu Yen / Text by Huei-Yu Yen, Yen-Ting Chou, and Hsiang-Chien Tseng
+
+<註解> 貼文強制釘選 (是: 1 / 否: 0，預設為 0)
+<範例> 0
+0
+
+<註解> 貼文點讚數 (僅限數字，初次請填寫 0，後台會自動更新)
+<範例> 0
+0
+
+<註解> 貼文格式 (預設為 0)
+<範例> 0
+0
+
+<註解> 永續發展目標 (輸入 1-17，若有多個目標，請以逗號分隔，不得有空格)
+<範例> 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+13,17
+
+<註解> 貼文系列 (氣候職人誌 或 與部長有約)
+<範例> 氣候職人誌
+氣候職人誌
+
+<註解> 貼文內容 (請遵循 html 語法撰寫)
+<範例> <h>第一章 產業洞察</h><br>近年來，全球經濟景氣波動劇烈，新興科技如雨後春筍般快速發展，企業家們必須具備敏銳的<em>產業洞察力</em>，才能在激烈的市場競爭中脫穎而出。<br><br>...
+
+    <div class="post-section">
+        <h3>Background Introduction</h3>
+
+        <p><strong>Could you please introduce yourself and your current work?</strong></p>
+        <p>Professor Yu-Shu Kuo is currently a faculty member in the Department of Hydraulic and Ocean Engineering at National Cheng Kung University (NCKU). His primary research and teaching focus on the design, construction, maintenance, and decommissioning of offshore wind turbine foundations, with particular emphasis on foundation construction and lifecycle management in areas with high liquefaction potential.</p>
+
+        <p><strong>How is your work connected to sustainable development? Can you give some practical examples?</strong></p>
+        <p>Offshore wind power is a key component of renewable energy. Environmentally friendly and removable underwater foundation designs—such as <span class="keyword" data-tooltip="A type of large anchoring system used underwater or in weak soil layers, commonly employed in the construction of bridges, docks, and offshore installations. They rely on pressure differentials to gradually embed the caisson (or “bucket”) into the seabed to the required depth.">suction caissons</span>—help reduce construction noise, protect marine ecosystems, and support the goal of sustainable energy. Since starting his offshore wind foundation research in Germany in 2004, Professor Kuo has accumulated over 20 years of experience in sustainable energy engineering. In addition to wind power, he has also contributed to underwater engineering projects such as wave energy and floating solar anchoring systems. Moreover, he has been involved in disaster prevention studies after Typhoon Morakot and the Meinong earthquake, applying his expertise in soil liquefaction, landslides, and barrier lake analysis to the field of natural disaster mitigation.</p>
+
+        <p><strong>If you had to choose three keywords to describe your work, what would they be and why?</strong></p>
+        <p>Professor Kuo chose the following three: <span class="keyword" data-tooltip="The investigation, analysis, and design of soil and rock conditions in marine or underwater environments to support offshore structures such as dykes, bridge piers, ports, wind turbine foundations, oil platforms, and more.">Marine Geotechnical Engineering</span>, Offshore Wind Turbine）, Natural Disaster Prevention」.</p>
+        <p>He explained that the essence of his work lies in combining civil and geological engineering in offshore environments. His projects span from foundation design to disaster response, reflecting his career journey from land-based engineering to offshore energy development.</p>
+        
+    </div>
+
+    <div class="post-section">
+        <h3>Career Journey</h3>
+
+        <p><strong>Could you share with us your career journey from graduation to where you are today?</strong></p>
+        <p>With a background in civil engineering, Professor Kuo began his career as a second lieutenant in logistics after earning his master’s degree. He then worked at NCKU’s Disaster Prevention Research Center, focusing on post-disaster reconstruction and debris flow prevention. In 2004, he moved to Germany and joined the IGBE Research Center at Leibniz University Hannover as a research assistant, where he also completed his PhD. Despite facing challenges such as language barriers and limited funding, he gradually developed independent research skills and hands-on experience in offshore wind power foundations. He noted that he didn’t go to Germany with romanticized expectations, but rather with a desire to gain a new perspective and reexamine the connection between personal goals and work experiences.</p>
+
+        <p><strong> What inspired you to enter the field of sustainability?</strong></p>
+        <p>During his time in Germany, Professor Kuo realized that his technical expertise was largely applicable only within Germany’s well-established renewable energy infrastructure. In contrast, Taiwan was still lacking in offshore wind engineering capabilities. This gap motivated him to proactively reach out to Taipower’s Renewable Energy Office in 2007 to give a lecture on offshore wind, which marked the beginning of his involvement in Taiwan’s offshore wind development.</p>
+        <pHe returned to Taiwan in 2009 and officially joined the Department of Hydraulic and Ocean Engineering at NCKU in 2010, where he founded the Laboratory of Offshore Geomechanics and Energy (LOGE). Since then, he has been deeply engaged in both the engineering and educational aspects of renewable energy in Taiwan.></p>
+
+        <p><strong>How did the reality of the job differ from what you initially imagined?</strong></p>
+        <p>Professor Kuo said that, as a public university professor, he initially expected to focus solely on teaching and research. However, promoting offshore wind energy required him to also manage administrative duties, industry-academia collaboration, industrial communication, and the acquisition of specialized equipment.</p>
+        <p>At that time, Taiwan’s offshore wind industry was still in its infancy, with unclear divisions of labor and very few established resources. He had to navigate and understand the entire value chain—quite different from the mature and structured systems in Germany or the EU.</p>
+
+        <p><strong>What has been the biggest challenge in your career, and how did you overcome it?</strong></p>
+        <p>Reflecting on the first decade of his offshore wind efforts (2009–2018), Professor Kuo noted that limited funding and insufficient manpower made it extremely difficult to manage both research and the operation of his lab.</p>
+        <p>In the early stages, most equipment and software had to be imported from Germany. To sustain the lab, he had to actively pursue industry partnerships. On top of that, it was difficult to retain skilled personnel, and most graduate students had little prior knowledge of offshore wind, making it hard to maintain continuity in the lab’s expertise.</p>
+        <p>The year 2014 was particularly challenging—LOGE experienced project rejections, staff turnover, and a general decline in resources.</p>
+        <p>However, through external collaborations, strategic shifts in funding applications, better protection of research output, and more efficient use of existing resources, the lab began to recover. Between 2015 and 2019, LOGE saw steady growth in funding, equipment, and research personnel.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Daily Work Life</h3>
+
+        <p><strong>Could you describe what a typical day looks like for you?</strong></p>
+        <p>Professor Kuo shared that his daily schedule varies greatly depending on meetings, teaching, and research progress. He teaches two days a week, and on other days, he frequently travels between Kaohsiung, Tainan, Taipei, and Taichung for industry-related meetings. Since the pandemic, online meetings have become more common, and collaboration with both domestic and international developers has intensified—sometimes even requiring late-night calls, making the workload extremely demanding.</p>
+        <p>He usually arrives at work between 8 and 9 a.m. In the mornings, he meets with developers or students; lunch is often a working meal with his research team. Afternoons are spent on practical tasks, administrative work, or research. In the evening, he returns to Kaohsiung and continues working. His average workday stretches to 17 hours, totaling around 99 hours per week—about 2.47 times the average workweek of a typical employee.</p>
+
+        <p><strong>On a scale of 1 to 10, how would you rate your work-life balance? Why?</strong></p>
+        <p>Professor Kuo candidly rated it a "2," admitting that his work-life balance is heavily skewed. Although he is passionate about advancing Taiwan’s renewable energy localization, the early-stage nature of the industry—with unclear roles and intense resource competition—forces him to juggle both academic and practical responsibilities. Despite the heavy workload and significantly lower pay compared to international peers, he feels unable to shed his responsibilities due to a strong sense of mission.</p>
+        <p>He also noted that because offshore wind energy is highly commercialized, staying closely connected to the industry is essential. However, academic resources are limited, and strict non-disclosure agreements make it difficult to publish papers or meet requirements for academic promotion.</p>
+
+        <p><strong>Who do you collaborate with most in your work? Any memorable impressions from working with them?</strong></p>
+        <p>Professor Kuo mainly works with stakeholders in the offshore wind industry, including developers, consultants, engineering firms, certification bodies, research institutions, equipment suppliers, banks, and insurers. He has relatively few collaborations with government agencies or fellow professors.</p>
+        <p>He emphasized that his lab maintains a strong focus on technical fundamentals—specifically underwater infrastructure—rather than branching into interdisciplinary topics like environmental assessments, fisheries compensation, or community engagement.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Advice for Young People</h3>
+
+        <p><strong>What kind of personal qualities are suited for this line of work (being a scholar)? What professional skills are necessary?</strong></p>
+        <p>According to Professor Kuo, those entering academia or the offshore wind sector should possess several key traits:</p>
+        <p>A deep sense of passion and mission is essential in the sustainability field. For instance, motivations may include protecting the endangered Indo-Pacific humpback dolphin or preserving marine ecosystems by promoting environmentally friendly underwater foundation engineering over traditional pile driving.</p>
+        <p>Strong communication and language skills are also crucial. Given the complex network of stakeholders in the renewable energy industry, the ability to coordinate and negotiate with various parties is vital. Thus, beyond enthusiasm and perseverance, language proficiency and negotiation skills can greatly aid integration into this field.</p>
+
+        <p><strong>Based on your observations, what are the future trends in this field?</strong></p>
+        <p>Professor Kuo pointed out that green energy development is an irreversible global trend. Offshore wind power, in particular, offers strategic advantages in energy efficiency and national autonomy, and is expected to continue expanding—creating a large number of job opportunities. He sees it as a high-potential and long-lasting industry.</p>
+
+        <p><strong>Lastly, do you have any concrete advice or words of encouragement for young people who wish to enter this field?</strong></p>
+        <p>He encourages young people to begin cultivating the following capabilities early: a solid foundation in engineering, literacy in law and business, international communication and language skills, hands-on experience, and industry insight. Other competencies must be honed through direct involvement in the offshore wind or renewable energy sectors.</p>
+        <p>Professor Kuo also reminds students that a gap often exists between academia and real-world practice. Rather than insisting on pursuing only self-chosen topics, young scholars should learn to align with industry needs. Through internships and academic–industry collaboration, even student assistants can demonstrate their value in practice—and eventually be recognized and recruited by the industry.</p>
+
+    </div>

@@ -118,3 +118,4 @@ blogs/post8_en_face.jpg
             <li><strong>Passion is about finding yourself</strong>：mission is about losing yourself in something bigger than you: Real change comes not just from excitement, but from a long-term commitment and collective effort.</li>
         </ul>
     </div>
+    <img src="../img/blogs/黃業堂.jpg" alt="合影" width="100%" height="auto" />

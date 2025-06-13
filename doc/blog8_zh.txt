@@ -113,3 +113,4 @@ blogs/post8_face.jpg
             <li><strong>熱情會讓你找到自己，但使命會讓你在更高的維度裡失去自己</strong>：真正推動改變的，不只是激情，而是長期的信念與集體的力量。</li>
         </ul>
     </div>
+    <img src="../img/blogs/黃業堂.jpg" alt="合影" width="100%" height="auto" />

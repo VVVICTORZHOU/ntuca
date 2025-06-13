@@ -119,3 +119,4 @@ Photo by Huei-Yu Yen / Text by Huei-Yu Yen, Yen-Ting Chou, and Hsiang-Chien Tsen
         <p>Professor Kuo also reminds students that a gap often exists between academia and real-world practice. Rather than insisting on pursuing only self-chosen topics, young scholars should learn to align with industry needs. Through internships and academic–industry collaboration, even student assistants can demonstrate their value in practice—and eventually be recognized and recruited by the industry.</p>
 
     </div>
+    <img src="../img/blogs/郭玉樹教授.png" alt="合影" width="100%" height="auto" />

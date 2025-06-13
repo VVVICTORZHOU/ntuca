@@ -1,0 +1,137 @@
+<註解> 貼文英文標題
+<範例> 訪談偉大的企業家: 王大明
+Deputy Secretary-General Han-Wei Chang — Embarking on the Path of a Just Transition
+
+<註解> 貼文英文子標題 (請以全大寫填寫)
+<範例> 一篇有關於偉大的企業家王大明先生的專訪
+From engineer to net-zero advocate, Han-Wei Chang has connected businesses and marginalized groups through “Green Energy for Charity” promoted a just transition, and guided interdisciplinary youth toward sustainable careers.
+
+<註解> 貼文創建日期 (格式為 YYYY/MM/DD)
+<範例> 2025/05/01
+2025/06/01
+
+<註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
+<範例> interview_with_wang_da_ming.png
+blogs/post1_en_face.jpg
+
+<註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #企業家#訪談#王大明#永續
+#永續發展#公正轉型#綠能公益#青年#非營利組織#社會共好
+
+<註解> 貼文英文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #entrepreneur#interview#wang_da_ming#sustainability
+#Sustainability#CarbonFootprint#LCA#CircularEconomy#GreenDesign#Academia#Engineering#LifeCycleAssessment#IndustryCollaboration#SustainableDevelopment#NTU
+
+<註解> 貼文作者 (暫不追蹤，以 N/A 代替)
+<範例> N/A
+Illustration – / Text – Shin-Ru Luo, Chun-yen Wei
+
+<註解> 貼文強制釘選 (是: 1 / 否: 0，預設為 0)
+<範例> 0
+0
+
+<註解> 貼文點讚數 (僅限數字，初次請填寫 0，後台會自動更新)
+<範例> 0
+0
+
+<註解> 貼文格式 (預設為 0)
+<範例> 0
+0
+
+<註解> 永續發展目標 (輸入 1-17，若有多個目標，請以逗號分隔，不得有空格)
+<範例> 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+13,17
+
+<註解> 貼文系列 (氣候職人誌 或 與部長有約)
+<範例> 氣候職人誌
+氣候職人誌
+
+<註解> 貼文內容 (請遵循 html 語法撰寫)
+<範例> <h>第一章 產業洞察</h><br>近年來，全球經濟景氣波動劇烈，新興科技如雨後春筍般快速發展，企業家們必須具備敏銳的<em>產業洞察力</em>，才能在激烈的市場競爭中脫穎而出。<br><br>...
+
+    <div class="post-section">
+        <h3>Background Introduction</h3>
+        <p>張寒瑋 (Han-Wei Chang) is a passionate advocate for climate action and sustainable development, accumulating over 9 years of experience in NGOs focused on climate empowerment and social innovation. Chang joined Taiwan Youth Climate Coalition (台灣青年氣候聯盟, TWYCC) as a volunteer in 2018 and served as an Director of TWYCC from July 2020 to July 2023. Chang currently holds the position of Deputy Secretary-General at the Taiwan Green Energy for Charity Association (台灣綠能公益發展協會, TGECA) and serves as the Executive Director of TWYCC. Owing to the close links these roles (especially the position of Director of TWYCC) have with both central and local governments, the responsibilities involve extensive coordination and communication. Chang had also served as a member of Taiwan's Executive Yuan Youth Advisory Committee (4th term) by 2024, and currently contributes as a climate change committee member in New Taipei City and Taoyuan City Governments and  advises platforms such as the Taipei City Youth Bureau.</p>
+
+
+        <p><strong>Job Description</strong></p>
+        <p>Chang's current work as the Deputy Secretary-General at Taiwan Green Energy for Charity Association (TGECA) spans promoting energy transition, just and equitable net-zero transition, and adaptation issues. Taiwan Green Energy for Charity Association (TGECA) is a non-profit organization established in 2018, dedicated to promoting sustainable energy access for all. This association connects the entire net‑zero transition ecosystem, making sure that disadvantaged groups are not left behind in the shift to sustainable energy.</p>
+        <p>Chang, as the deputy secretary‑general, helped drive the projects by shaping strategy and planning, presenting proposals and engaging stakeholders within corporations, while also liaising with social‑welfare organizations and cultural venues. Acting as an intermediary for resource redistribution, the association as a role strengthens the resilience of disadvantaged groups.</p>
+
+        <!-- 這裡放置需要收起/展開的內容 -->
+        <div class="collapsible-container">
+            <div class="collapsible-header">
+                <div class="collapsible-title">What does the association (Taiwan Green Energy for Charity Association) do?</div>
+                <div class="collapsible-icon"></div>
+            </div>
+            <div class="collapsible-content">
+                <p><strong>Supporting a just transition:</strong></p>
+                <p>The association helped ensure a fair energy transition. It connected donations from corporations and the general public to buy solar panels, and the money made from selling the electricity was given to social welfare groups for at least 20 years. This helped these groups support vulnerable people affected by climate change.</p>
+
+                
+                <p><strong>Carbon reduction for Charity:</strong></p>
+                <p>The association assists social welfare organizations with energy audits, carbon inventories, and improving electricity efficiency. They not only help these organizations conduct energy audits, replace energy-consuming equipment to enhance electricity efficiency, but also support them in carrying out carbon inventories and applying for voluntary reduction projects. This enables social welfare organizations to gain resources from voluntary carbon reduction credits, which is also part of a just transition.</p>
+
+                <p><strong>Other areas of involvement:</strong></p>
+                <p>The Association’s involvement and initiatives go beyond supporting vulnerable groups affected by net-zero transition policies. They also encompass strategic efforts to influence policy implementation. Examples include the energy efficiency retrofit project at the Lanyang Museum (蘭陽博物館) and the promotion of the ecological surveys on whales and dolphins in Wushi Harbor (烏石港).</p>
+                <p>The association also takes part in the “Just Net-Zero Transition” committee led by the National Development Council, attending meetings to discuss how policies impact various stakeholders.</p>
+                <p>Prior to the 28th UN Climate Change Conference (COP28), the association established “Taiwan Net-Zero Gender Network” and, under this identity, participated in Women and Gender Constituency (婦女與性別社群, WGC), and  brought back the advocacy messages and discussions from WGC at COP28 to Taiwan.</p>
+                
+            </div>
+        </div>
+
+        <p><strong>Describe your work in three keywords!</strong></p>
+        <p>Chang described her work using three keywords: "sustainability", "mutual benefit", and "choice" as these words align with her core values and define the essence of her profession. Chang emphasized that in promoting sustainable development, it is necessary to balance all aspects so that businesses, society, and the planet can all benefit, and to guide stakeholders to make choices that support sustainability. (In response to the United Nations' current call for the One Health concept.)</p>
+        
+    </div>
+
+    <div class="post-section">
+        <h3>Career</h3>
+
+        <p><strong>職涯發展與轉折</strong></p>
+        <p>Chang majored in biomedical sciences (Department of Life Science) at university; then, she pursued a master's degree at the Institute of Molecular Medicine ,but she did not pursue a career in the biomedical field. Chang's first job was as an engineer at TSMC, yet she soon realized that earning a good salary alone could not satisfy her deeper aspirations. Eager to explore new possibilities and to align with her values, she gravitated toward issues that had long fascinated her—ecosystems, climate change, and sustainable development.</p>
+        <p>As a former earthquake survivor, she witnessed firsthand the fragility of life and showed her how profoundly disasters shape lives. This profound experience inspires her commitment to addressing the impacts of climate change on vulnerable communities and ecosystems. Those lessons also convinced her that, unlike sudden quakes, the climate crisis offers a longer warning window—time we can use to prepare and build resilience. For her, sustainability is not a sacrifice but a conscious choice for a better life.</p>
+        <p>Determined to act quickly, she left the corporate track and began volunteering with the Taiwan Youth Climate Coalition (TWYCC), steadily expanding her perspective and dedicating herself to connecting people, ideas, and resources to create innovative solutions for an equity and sustainable future.</p>
+
+        <p><strong>If I could turn back the clock, the advice I would give to my 20-year-old self is...</strong></p>
+        <p>Chang refrains from judging her past self, respects her own freedom to explore, and prefers to make decisions only after she has personally tried and felt things out. </p>
+        
+        <p><strong>Interpersonal Communication and Challenges</strong></p>
+        <p>Challenges inevitably arise in any work, but Chang emphasized that effective communication didn't rely on pressure or confrontation. Instead, she persuades others by presenting more sustainable alternatives. If a business isn’t ready to embrace these changes yet, it might just be that the timing isn't right. She believes it's worthwhile to focus on those who are more open and willing to change.</p>
+        <p>Chang also pointed out that in the field of sustainability, progress could sometimes be slow, but the world won't fall apart, and there's no need for panic. Over time, she have noticed that many large corporations are placing greater importance on sustainability and are willing to take action. Even among small and medium enterprises, there are individuals striving to contribute.</p>
+        <p>In terms of social welfare organizations, Chang emphasizes the need to understand and respect their accustomed ways of collaboration, making them feel that small adjustments can lead to meaningful environmental and social benefits.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Work Life</h3>
+
+        <p><strong>Work-Life Balance</strong></p>
+        <p>Chang arranged her work schedule flexibly on a weekly basis. Besides reserving fixed times for the association's weekly meetings, she often had many ad hoc appointments. When there were no meetings scheduled, she dedicated time herself to information processing, project management, and data preparation, along with handling some miscellaneous administrative tasks.</p>
+        <p>Although Chang doesn't have a regular work schedule—she might be working at any time, or she might be doing her own thing at any time, she believes she maintains a good work-life balance because her job offers high autonomy and location flexibility. She doesn't need to be in the office every day and only needs to manage the urgency of tasks when coordinating with others.</p>
+
+        <p><strong>Primary Stakeholders Engaged and Notable Aspects of Field Experience</strong></p>
+        <p>As part of her work, Chang frequently engaged and collaborated with a range of stakeholders, including businesses, several non-governmental organizations (NGOs), and government agencies—particularly the Ministry of Environment, Ministry of Education, Ministry of Foreign Affairs, and the National Development Council (國家發展委員會). She shared that during her time as a member of the Youth Advisory Committee, communication with government departments was approached in a constructive and empathetic manner, offering a youth perspective to support policy adjustments. With these experiences, she placed greater emphasis on building constructive and flexible relationships with government bodies.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Advice for young people</h3>
+
+        <p><strong>Qualities Suited for This Job</strong></p>
+        <ul>
+            <li><strong>Given a Youth Advisory Committee Member</strong>：Whether serving at the central or local level, Han-Wei Chang emphasized the importance of being able to interpret public policy and understand the roles of different government ministries. Even when facing uncertainty, one should make the effort to do their own research in advance and come to meetings well-prepared in order to make the most of the valuable time. She also highlighted the need for patience and empathy, as well as soft communication skills, since policy implementation often encounters obstacles and usually takes time to roll out.</li>
+            <li><strong>Given a Nonprofit Organization Worker</strong>：Chang noted that working in a nonprofit meant prioritizing social and environmental values above all. Those who are primarily focused on financial returns or have urgent economic needs may find a better fit in the corporate world. Additionally, it often requires a deep passion for a specific issue—just like something you can't stop thinking about. Similar to being a youth advisor, being a change-maker in the nonprofit space, one must also have the patience to wait for long-term impact to materialize.</li>
+        </ul>
+
+        <p><strong>Future Trends and Skill Requirements</strong></p>
+        <p>Chang believed that the sustainability industry is extremely broad and cannot be generalized, as trends vary across different sectors. For example, those aiming to work in the sustainability departments of large corporations may need to focus on developments in various financial risk disclosure frameworks such as <a>TCFD</a> (Task Force on Climate-related Financial Disclosures), <a>TNFD</a> (Task Force on Nature-related Financial Disclosures), and the upcoming <a>TISFD</a> (Task Force on Inequality and Social-related Financial Disclosures).</p>
+        <p>On the other hand, Chang also specifically discussed the development of artificial intelligence (AI). She noted that advancements in AI technology are going to replace more mechanical and quantifiable tasks, while things that AI cannot handle will gradually become more valuable. In the past, natural environments were easier to quantify, which is why frameworks like TCFD and TNFD were implemented first. The upcoming TISFD, which focuses on issues of humanities and inequality, involves data that AI finds more difficult to capture for analysis and evaluation.</p>
+        <p>Therefore, when discussing skills needed in sustainability work, the important ones are those that AI can’t do. AI can handle many knowledge-based tasks, so people need skills like face-to-face communication, which AI can’t replace. Another key skill is working across different fields. This is because, unless you’re an expert in one area, AI might replace you. Also, most social and environmental problems require knowledge from many areas, not just one, so being able to work across disciplines is very important.</p>
+
+        <p><strong>In Conclusion: A Message to Young People</strong></p>
+        <p>Think clearly about your ideal life. If you already know what it is, start listing the things you need to do at each stage. If you don’t, then go find it quickly! (No matter which field you enter, this will be very helpful.)</p>
+        <p>Once you find it, consider how climate change might affect your ideal life and the thing that you're good at. And eventually, you’ll be able to make meaningful choices based on that.</p>
+
+    </div>
+    <img src="../img/blogs/張寒瑋執行長.png" alt="合影" width="100%" height="auto" />

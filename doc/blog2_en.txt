@@ -1,10 +1,10 @@
 <註解> 貼文英文標題
 <範例> 訪談偉大的企業家: 王大明
-Champion of Green Energy and a Just Transition: Chairperson Chen’s Journey in Sustainability and Social Innovation
+Will Chia: From Corporate Consultant to Entrepreneur in the Corporate Sustainability Field
 
 <註解> 貼文英文子標題 (請以全大寫填寫)
 <範例> 一篇有關於偉大的企業家王大明先生的專訪
-From earning a Ph.D. in sociology to founding the Taiwan Green Energy Public Welfare Development Association, Chairperson Chen has pioneered an innovative model integrating green energy, public welfare, and ESG. She is committed to advancing energy equity and empowering women, transforming sustainable ideals into real-world action.
+While ESG implementation is often associated with large corporations, alumnus Will Chia focuses on helping SMEs navigate their own transformation journeys. He shared with us his experience as a sustainability consultant, detailing the nature of his work, the practical aspects of ESG, and how he offers concrete support to businesses in need.
 
 <註解> 貼文創建日期 (格式為 YYYY/MM/DD)
 <範例> 2025/05/01
@@ -12,19 +12,19 @@ From earning a Ph.D. in sociology to founding the Taiwan Green Energy Public Wel
 
 <註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
 <範例> interview_with_wang_da_ming.png
-blogs/post7_en_face.jpg
+blogs/post2_en_face.jpg
 
 <註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
 <範例> #企業家#訪談#王大明#永續
-#綠能公益#ESG#女性永續力#社會創新#能源轉型#SDGs#公正轉型
+#永續發展#CSR#ESG#中小企業#顧問#系統改革#氣候變遷#企業永續
 
 <註解> 貼文英文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
 <範例> #entrepreneur#interview#wang_da_ming#sustainability
-#GreenEnergyForGood#ESG#WomenInSustainability#SocialInnovation#EnergyTransition#SDGs#JustTransition
+#SustainableDevelopment#CSR#ESG#SMEs#Consulting#SystemReform#ClimateChange#CorporateSustainability
 
 <註解> 貼文作者 (暫不追蹤，以 N/A 代替)
 <範例> N/A
-Photo by Hsin-Lu Yeh / Text by Hsin-Lu Yeh, Huei-Yu Yen, Jui-Lung Chang
+Photo by Hsin-Lu Yeh / Text by Hsin-Lu Yeh, Hsiang-Chien Tseng, Jui-Lung Chang
 
 <註解> 貼文強制釘選 (是: 1 / 否: 0，預設為 0)
 <範例> 0

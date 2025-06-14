@@ -1,10 +1,10 @@
 <註解> 貼文中文標題
 <範例> 訪談偉大的企業家: 王大明
-綠能與公正轉型的推動者：陳惠萍創會理事長的永續行動與社會創新旅程
+謝敬輝：從企業轉型顧問公司一員到自行創業的歷程
 
 <註解> 貼文中文子標題 (請以全大寫填寫)
 <範例> 一篇有關於偉大的企業家王大明先生的專訪
-從社會學博士到創辦台灣綠能公益發展協會，目前亦為「永續女子天團」團長。陳創會理事長推動結合綠能、公益與 ESG 的創新模式，致力於能源平權、性別培力，以行動實踐永續願景。
+雖然一般認知落實ESG幾乎都是大型企業，但謝敬輝學長主要在幫助中小企業轉型。他和我們分享擔任顧問的工作內容和歷程，以及ESG實務上的內涵和具體協助方向。
 
 <註解> 貼文創建日期 (格式為 YYYY/MM/DD)
 <範例> 2025/05/01
@@ -12,19 +12,19 @@
 
 <註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
 <範例> interview_with_wang_da_ming.png
-blogs/post7_face.jpg
+blogs/post2_face.jpg
 
 <註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
 <範例> #企業家#訪談#王大明#永續
-#綠能公益#ESG#女性永續力#社會創新#能源轉型#SDGs#公正轉型
+#永續發展#CSR#ESG#中小企業#顧問#系統改革#氣候變遷#企業永續
 
 <註解> 貼文英文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
 <範例> #entrepreneur#interview#wang_da_ming#sustainability
-#SustainableDevelopment#OffshoreWind#RenewableEnergy#SubseaEngineering#MarineGeotechnics#IndustryAcademiaCollaboration#OceanEngineering
+#SustainableDevelopment #CSR #ESG #SMEs #Consulting #SystemReform #ClimateChange #CorporateSustainability
 
 <註解> 貼文作者 (暫不追蹤，以 N/A 代替)
 <範例> N/A
-圖: 葉欣綠/ 文: 葉欣綠、顏卉瑀、張睿隆
+圖: 葉欣綠/ 文: 葉欣綠、曾向謙、張睿隆
 
 <註解> 貼文強制釘選 (是: 1 / 否: 0，預設為 0)
 <範例> 0

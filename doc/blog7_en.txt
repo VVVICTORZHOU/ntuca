@@ -8,7 +8,7 @@ From earning a Ph.D. in sociology to founding the Taiwan Green Energy Public Wel
 
 <註解> 貼文創建日期 (格式為 YYYY/MM/DD)
 <範例> 2025/05/01
-2025/06/14
+2025/06/09
 
 <註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
 <範例> interview_with_wang_da_ming.png
@@ -50,108 +50,76 @@ Photo by Hsin-Lu Yeh / Text by Hsin-Lu Yeh, Huei-Yu Yen, Jui-Lung Chang
 <範例> <h>第一章 產業洞察</h><br>近年來，全球經濟景氣波動劇烈，新興科技如雨後春筍般快速發展，企業家們必須具備敏銳的<em>產業洞察力</em>，才能在激烈的市場競爭中脫穎而出。<br><br>...
 
     <div class="post-section">
-        <h3>Background Introduction</h3>
+        <h3>Background and Current Role</h3>
 
-        <p><strong>Could you briefly tell us about yourself and your current job?</strong></p>
-        <p>I am Will Chia, but people call me Will. I recently started a consulting company called “Will You Minimize,” which focuses on guiding SMEs (Small and medium-sized enterprises) through the transition to sustainable development from financial, digital, and ESG (Environmental, Social, and Governance) aspects. Our slogan is “Will You Minimize Waste and Maximize Your Value,” which reflects the core of what we are doing here.</p>
+        <p><strong>Could you introduce yourself and your current work?</strong></p>
+        <p>I am the founding president of the Taiwan Green Energy for Charity Association, TGECA. The association was established to promote innovative models that combine green energy and carbon reduction with social good. By collaborating with various stakeholders, we aim to bring sustainable energy to underserved communities, schools, and remote areas, ultimately addressing energy inequality. Every day, I play the role of a connector—seeking resources, finding partners, and sharing our vision.</p>
 
-        <p><strong>How many years since you started your own company?</strong></p>
-        <p>Actually, I just started it this year. I had some ESG-related work experience before. One was when I was in charge of ESG projects at the Department of Budget Management, and the other was a job about impact investing at a family office.</p>
+        <p><strong>How does your work relate to sustainable development? Can you provide some specific examples?</strong></p>
+        <p>Our work is closely aligned with Sustainable Development Goal (SDG) 7: Affordable and Clean Energy. We approach this through three main models—green energy for public welfare, green electricity for public welfare, and carbon reduction for public welfare—focusing on energy efficiency, accessibility, generation, and conservation.</p>
+        <p>We respond to different SDGs through diverse actions and tailor collaborations based on companies’ ESG priorities. For example, if a company values education (SDG 4), we donate solar panels to educational non-profit organizations to support their outreach and empowerment programs with sustainable energy. If a company focuses on marine conservation or biodiversity, we channel green electricity revenue to support research on whales and dolphins. Although our core mission is to promote sustainable energy, we aim to illuminate all 16 other SDGs through this technology. Our ultimate goal aligns with the spirit of sustainability—ensuring no one is left behind on the path to a better future.</p>
 
-        <p><strong>What are the main areas of focus for your company?</strong></p>
-        <p>Our job is centered around sustainable development. However, we are different from traditional ESG consulting firms. We don’t just help companies write <span class="keyword" data-tooltip="A global non-profit that helps companies, cities, and regions report their environmental impact. By promoting transparency and risk management, CDP encourages action toward a more sustainable economy.">CDP (Carbon Disclosure Project)</span> reports and <span class="keyword" data-tooltip="A global partnership that helps companies set science-based emissions reduction targets aligned with the Paris Agreement, aiming to limit global warming to 1.5°C and achieve net-zero by 2050.">SBTi (Science Based Targets Initiative)</span> surveys. We also focus on second-generation successors of small and medium-sized enterprises (SMEs), especially those facing ESG challenges. Through the lenses of finance, ESG, and digital transformation, we help these businesses achieve a sustainable transition during their succession process.</p>
-        <p>Currently, my client falls roughly into three categories:</p>
-        <p>
-            <ul>
-                <li>The <strong>textile industry in Taiwan</strong></li>
-                <li>The <strong>steel industry in Malaysia</strong></li>
-                <li>The <strong>financial sector</strong> (We provide services like preparing reports and CDP surveys)</li>
-            </ul>
-        </p>
-
-        <p><strong> Which three key words best describe your role, and why?</strong></p>
-        <p>
-            <ul>
-                <li><strong>Systemic reform</strong>：This comes from MIT’s systems thinking theory, and is used to solve complex issues.</li>
-                <li><strong>Legacy</strong>：We focus on challenges faced by second-generation successors from SMEs and help them achieve the goal of sustainable operation.</li>
-                <li><strong>Minimize</strong>：We try to minimize the unnecessary processes within SMEs to reduce waste and create greater value.</li>
-            </ul>
-        </p>
+        <p><strong>If you had to describe your work with three keywords, what would they be and why?</strong></p>
+        <p>First, “sustainable development.” Second, “ESG.” We not only help companies implement ESG actions through green energy initiatives, but we are also involved in net-zero policies and climate governance. I serve as a civil committee member of the <span class="keyword" data-tooltip="A government-established advisory body in Taiwan that provides recommendations to ensure a fair and inclusive shift to net-zero emissions—supporting affected workers, communities, and industries during the transition.">National Development Council’s Just Transition Committee</span> and the <span class="keyword" data-tooltip="Presidential Office's National Climate Change Committee : Established in 2024, this committee is led by the President and brings together experts from government, industry, academia, and civil society to guide Taiwan’s national climate policy, promote cross-sector collaboration, and enhance climate resilience.">Presidential Office's National Climate Change Committee</span>, supporting both public and private sectors in balancing economic growth with sustainability and justice. Third, “social innovation.” I believe sustainability and net-zero transition require systemic change, which in turn demands innovative thinking and practices. To ensure vulnerable groups are not left behind during this transition, I advocate for a creative model that integrates green energy with public welfare. I also participate in the development of the <span class="keyword" data-tooltip="TISFD (Taskforce on Inequality and Social-related Financial Disclosures) : The Taskforce on Inequality and Social-related Financial Disclosures (TISFD) is a global initiative combining TIFD and TSFD frameworks, aiming to develop recommendations and guidance for businesses and financial institutions to understand and report on impacts, dependencies, risks, and opportunities related to people.">TISFD (Taskforce on Inequality and Social-related Financial Disclosures)</span> to encourage businesses to consider inequality and social issues in their operations.</p>
         
     </div>
 
     <div class="post-section">
-        <h3>Career</h3>
+        <h3>Career Journey</h3>
 
-        <p><strong>Could you walk us through your career since you graduated?</strong></p>
-        <p> My career has roughly four stages:：</p>
-        <p>
-            <ul>
-                <li><strong>AECOM</strong>：I was an environmental data analyst at this world-famous environmental engineering consulting firm.</li>
-                <li><strong>Systemic Innovation & Mutual Flourishing Office (SIMFO)</strong>：Focusing on impact investing and promoting MIT Systems thinking and systems mapping.</li>
-                <li><strong>E.SUN Financial Holding</strong>：articipating in the preparation of <span class="keyword" data-tooltip="A global framework for companies to disclose how climate-related risks and opportunities impact their business, helping investors make informed financial decisions.">TCFD (Task Force on Climate Related Financial Disclosures)</span> and <span class="keyword" data-tooltip="A global initiative that helps organizations assess and disclose their impacts and dependencies on nature, aiming to integrate nature-related risks and opportunities into financial and business decision-making.">TNFD (Task Force on Nature Related Financial Disclosures)</span> reports. At the same time, supporting E.SUN in building systems for managing <span class="keyword" data-tooltip="Greenhouse gas emissions that are attributed to financial institutions through their lending and investment activities.">Financed emissions</span>.</li>
-                <li><strong>Enterpreneurship</strong>：I founded my own consulting company, focusing on helping SMEs go through transition and respond to sustainability-related challenges.</li>
-            </ul>
-        </p>
+        <p><strong>Could you share your career path from graduation to your current position?</strong></p>
+        <p>As a “pure sociologist,” I studied sociology from undergraduate through Ph.D. My master’s thesis focused on the social conditions of people with disabilities in Taiwan. During my doctoral studies, I encountered <span class="keyword" data-tooltip="STS (Science, Technology and Society) : An interdisciplinary field that examines the creation, development, and consequences of science and technology in their historical, cultural, and social contexts.">STS (Science, Technology, and Society)</span>, which broadened my perspective on the interplay between technology and society. I worked as a research assistant on an interdisciplinary project called “Sustainable Smart Homes,” which sparked my interest in Taiwan’s renewable energy development.</p>
+        <p>I realized that while Taiwan excels in manufacturing solar panels, their domestic usage is remarkably low. This gap prompted me to ask: why? That question led me to research energy transition from a user-centered perspective. I conducted fieldwork with early adopters of solar energy in Taiwan and found that most were motivated not by economic gains but by environmental responsibility and concern for future generations. These actions deeply inspired me and raised another question: how can ordinary people participate in and support energy transition?</p>
+        <p>After completing my Ph.D. dissertation, I co-founded Taiwan’s first civic power plant platform, Sunnyfounder, enabling everyone—not just large corporations—to be part of the energy transition. In 2018, to further promote energy justice, I founded the Taiwan Green Energy for Charity Association to create innovative models and expand energy education. My mission is to empower everyone to move toward a just and sustainable future.</p>
+        <p>I started as a sociological researcher and became a social entrepreneur promoting green energy. My motivation has always been to make sustainable energy accessible to all—including marginalized groups—and to realize the vision of "Sustainable Energy for All.</p>
 
-        
-
-        <div class="collapsible-container">
-            <div class="collapsible-header">
-                <div class="collapsible-title">系統影響力聯合家族辦公室（Systemic Innovation & Mutual Flourishing Office, SIMFO）</div>
-                <div class="collapsible-icon"></div>
-            </div>
-            <div class="collapsible-content">
-                <p>一個致力於推動深層社會轉型的組織，透過系統思維、關係重建與集體智慧，協助個人、組織與社群共同創造更具韌性與共融的未來。</p>
-            </div>
-        </div>
-
-        <p><strong>What made you decide to work in the sustainability sector?</strong></p>
-        <p>My background began in civil engineering and landscape design. Later, I started to realize that <a>capital lies at the heart of transformation</a>, and that gradually led me toward finance-related work. From environmental data analysis to impact investing and eventually to sustainability projects in financial holding companies. All of these experiences brought me to where I am now—starting my own business.</p>
+        <p><strong>What motivated you to pursue work in sustainability?</strong></p>
+        <p>My interest in solar energy began during my research. Despite Taiwan’s strong manufacturing capability, the usage of solar power among the public was minimal. From a people-centered sociological viewpoint, I explored this issue in depth. After completing my dissertation, I saw the barriers that hinder public participation in energy transition. Although starting a business was never my life goal, as someone who had long studied solar energy and civic engagement, I felt a strong sense of responsibility. I believed I was in a unique position to drive change in the real world—so I stepped out of academia and into entrepreneurship to become part of the solution.</p>
     
-        <p><strong>Was there any differences between what you expected and what you saw for real?</strong></p>
-        <p>Sustainability was mistaken as just CSR (Corporate Social Responsibility), but I think ESG takes it even further—it’s the process of “capitalizing external costs.” For example, a river would be seen as a public good, which usually is not properly managed. However, if we capitalize it and make it a resource belonging to the government or a corporation, it becomes possible to implement an effective management method, and, in turn, create greater value.</p>
+        <p><strong>How does the reality of your work differ from your initial expectations?</strong></p>
+        <p>Before entering the industry, I didn’t fully understand its logic and business models. Practical experience gave me a clearer picture of how it operates and where change is possible. I often asked myself: how can innovation happen? For instance, our green energy public welfare model succeeds because it enables companies to achieve their ESG goals without changing their core operations. I learned that the hardest part of innovation is going from zero to one.</p>
 
-        <p><strong>What has been the biggest challenge in your career, and how did you overcome it?</strong></p>
-        <p>At SIMFO, we devoted large amounts of time to creating complicated systematic diagrams, yet it was too theoretical, making it hard for stakeholders to truly understand, let alone to take action. This experience made me realize that overly complex theories don’t translate well into real-world practice, and only simplified solutions can truly bring action.</p>
+        <blockquote>You have to believe change is possible to convince others and find like-minded partners. Only through persistence and resilience can you create a successful case—and from there, keep building momentum.</blockquote>
 
+        <p><strong>What has been your biggest workplace challenge and how did you overcome it?</strong></p>
+        <p>Every step of the way has been filled with challenges—both in work and in dealing with people. Sustainability work is, in a sense, laboring for an ideal. Beyond earning a living, we want to make a difference for the planet and society. The greatest challenge is turning ideas into practical services or products and quantifying their impact. Another personal challenge is my introverted nature—especially with public speaking, which was once a major fear. When the media began inviting me for interviews in 2016, I was hesitant. But I shifted my mindset:</p>
+        <blockquote>I am here to convey a message, not to perform perfectly. That shift helped me overcome my fear, and I’ve since given hundreds of speeches. A motto I often share is this: “The first step to changing the world is to become the change you want to see.”</blockquote>
 
-    </div>
-
-    <div class="post-section">
-        <h3>Work Life</h3>
-
-        <p><strong>Could you describe a typical day for you?</strong></p>
-        <p>There are some differences between each job I’ve done. When I was at SIMFO, my work consisted of reading a huge number of reports, developing systems models, and communicating with the founder and the upper management. Later on during my time in E.SUN, I was mainly planning on TCFD and TNFD projects. I had to frequently communicate with both internal and external teams, while adapting international reporting frameworks to fit the local context.</p>
-        <p>Currently, my daily work is pretty much about consulting, which basically is answering ESG-related questions raised by my clients, and providing suitable strategies for execution. For example, after signing on to the SBTi, I help clients choose the most suitable reporting framework—whether it's ESG or TCFD—tailored to the organization’s size and capabilities.</p>
-
-        <p><strong>How’s your work-life balance?</strong></p>
-        <p>Personally, I think it’s a transitioning process. During my past couple jobs, I had fixed working hours, but still I often deal with work during weekends. Now that I started my business, though my working hours have become more flexible, there’s also more pressure. So I’ll say there’s still room for improvement in terms of work-life balance.</p>
 
     </div>
 
     <div class="post-section">
-        <h3>Advice for young people</h3>
+        <h3>Daily Work Life</h3>
 
-        <p><strong>What kind of qualities do you think are more suited for a career in sustainability? Are there any professional skills that are particularly important?</strong></p>
-        <p>People who are good at data analysis often get to be involved in planning and decision-making. On the other hand, those without much experience with data might end up doing execution or marketing work. That’s why being able to work with data really gives you an edge.</p>
+        <p><strong>Could you describe a typical day at work?</strong></p>
+        <p>My main tasks involve designing project proposals and sourcing resources. As a key driver of the organization, I constantly seek new opportunities while making strategic choices within limited resources. Our current priorities include addressing energy inequality and promoting a just transition to net-zero emissions.</p>
+        <p>Aside from continuously advancing the “GW100+ Green Well 100+” initiative, I’ve recently been focused on securing resources for the Taiwan Gender Network for NetZero Initiative, which includes expanding training for female energy auditors, and organizing empowerment programs such as Sustainable Girls and climate education. I’m also actively developing green job opportunities tailored to women—because the power to change the world should not be limited by gender.</p>
 
-        <p><strong>According to your observation, what is the future trend in your particular field?</strong></p>
-        <p>Right now, most people still think of ESG as an extension of CSR, but as the demand for global carbon reduction accelerates, the concept of capitalizing external costs will become more widespread. If resources like water and forest are not well managed, it will affect corporations' long-term competitiveness.</p>
-        
-        <p><strong>Lastly, what advice or encouragement do you have for young people who are looking to get into this field?</strong></p>
-        <p>A sustainability career requires interest, professional skills, and contribution to society. Also, networking is a crucial step. By attending events or chatting with experts, you'll open up more opportunities and gain new insights. At the same time, looking for the right mentors or managers can really make a difference in your future career development.</p>
+        <p><strong>On a scale of 1-10, how would you rate your work-life balance? Why?</strong></p>
+        <p>It depends on how you define “balance.” For me, work is part of life—it’s my calling and mission. This job has broadened my horizons and made me braver in ways I never expected. To promote sustainability, I’ve even stepped beyond Taiwan to attend international conferences like <span class="keyword" data-tooltip="COP (Conference of the Parties) is the annual United Nations climate summit where countries meet to assess progress on climate goals and negotiate actions to address climate change.">COP (Conference of the Parties)</span>26 and COP28. As someone who’s naturally introverted, I’ve pushed myself for the sake of this mission, step by step, showing how change can be both gentle and resilient.</p>
+
+        <p><strong>Who do you interact with most in your work, and what makes these interactions unique?</strong></p>
+        <p>I mainly interact with three types of partners. Government agencies – advocating for inclusive net-zero policies, just transition, and gender empowerment. Corporate sustainability teams – collaborating on ESG and green energy initiatives. NPOs and the public – building grassroots partnerships.</p>
+        <p>In recent years, through our “Gender-Wave NetZero” advocacy, we’ve worked to amplify the voices and participation of women—especially youth. Beyond offering gender-responsive training for a just transition, we’ve also created the “Sustainability Girl Squad”, a mentorship-style community that encourages young women to launch innovative sustainability actions.</p>
+        <p>One of our current projects, “Sustainable Girls on a Mission”, will take a group of girls to New York Climate Week and COP30 in Brazil to represent Taiwanese youth on the global stage. As the leader of the Sustainability Girl Squad, I’m continually amazed by the creativity of the younger generation. I look forward to co-creating more climate resilience solutions with them—ones that are inclusive and creative across all SDG domains.</p>
 
     </div>
+
     
-    <img src="../img/blogs/謝敬輝.png" alt="合影" width="100%" height="auto" />
 
+    <div class="post-section">
+        <h3>Advice for Young People</h3>
 
+        <p><strong>What trends do you see in this field?</strong></p>
+        <p>There’s a noticeable gender gap in the justis transition process. While Taiwan has made progress in gender equality, much more needs to be done in the energy transition space. According to the <span class="keyword" data-tooltip="IEA (International Energy Agency): An intergovernmental organization that provides policy advice, data, and analysis to promote secure, affordable, and sustainable energy worldwide.">IEA (International Energy Agency)</span>, the global shift to net-zero will create 30 million green jobs. Yet LinkedIn data shows that men are currently over three times more likely than women to possess green skills.</p>
+        <p>To help close this gap, we’re creating opportunities for women to build green expertise—such as through our training programs for female energy auditors. The goal is to ensure that women aren’t left behind in the green transition.</p>
+        
+        <p><strong>What qualities and skills are needed for this work?</strong></p>
+        <p>People from all backgrounds can bring unique perspectives to sustainable development. For example, my background in sociology helps me see energy transition and climate action through a human-centered lens. I encourage everyone to develop their own sustainability perspective based on their field of study, and to strengthen cross-disciplinary communication and collaboration skills. That’s how we can build a truly diverse and resilient sustainable ecosystem.</p>
+        
+        <p><strong>What advice would you give to young people interested in this field?</strong></p>
+        <p>Being unbounded, brave, and open to failure—these are the greatest strengths of youth. Don’t be afraid to stumble; this is the best stage in life to try, learn, and grow. Each setback is valuable fuel for future success.</p>
+        <p>I recommend seeking out diverse perspectives and not hesitating to express your own views—that’s how you grow quickly. If you’re interested in this field, follow sustainable communities (like our association’s Facebook or Instagram), and participate in training programs to broaden your knowledge.</p>
+        <p>Above all, your academic background is a foundation, but what really matters is how you connect it to the Sustainable Development Goals. That’s how you create your own vision and leave your unique mark on a more sustainable world.</p>
 
-
-
-<span class="keyword" data-tooltip="A global non-profit that helps companies, cities, and regions report their environmental impact. By promoting transparency and risk management, CDP encourages action toward a more sustainable economy.">CDP</span>
-<span class="keyword" data-tooltip="A global partnership that helps companies set science-based emissions reduction targets aligned with the Paris Agreement, aiming to limit global warming to 1.5°C and achieve net-zero by 2050.">SBTi</span>
-<span class="keyword" data-tooltip="A global framework for companies to disclose how climate-related risks and opportunities impact their business, helping investors make informed financial decisions.">TCFD</span>
-<span class="keyword" data-tooltip="A global initiative that helps organizations assess and disclose their impacts and dependencies on nature, aiming to integrate nature-related risks and opportunities into financial and business decision-making.">TNFD</span>
-<span class="keyword" data-tooltip="Greenhouse gas emissions that are attributed to financial institutions through their lending and investment activities.">Financed emissions</span>
+    </div>

@@ -787,6 +787,12 @@ body {
     margin-bottom: 10px;
 }
 
+.timeline-tag:hover {
+    color: #fff;            /* 懸停時變為白色文字 */
+    background: #333;            /* 懸停時變為深灰色 */
+    cursor: pointer;
+}
+
 .timeline-intro {
     font-family: 'HarmonyOS Sans TC Regular', sans-serif;
     font-size: 14px;

@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Predefine a list of possible files (from blog1_zh.txt to blog99_zh.txt)
-    const files = Array.from({ length: 5 }, (_, i) => `blog${i + 1}_zh.txt`);
+    const files = Array.from({ length: 10 }, (_, i) => `blog${i + 1}_zh.txt`);
 
     // Define patterns for comments and examples
     const commentPattern = /^<註解>/;

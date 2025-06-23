@@ -1,0 +1,134 @@
+<註解> 貼文英文標題
+<範例> 訪談偉大的企業家: 王大明　
+Bringing German Offshore Wind to Taiwan: Interview with General Manager of Deutsche Windtechnik Taiwan
+
+<註解> 貼文英文子標題 (請以全大寫填寫)
+<範例> 一篇有關於偉大的企業家王大明先生的專訪
+Hao-wei Chiu, the General Manager of Deutsche Windtechnik Taiwan, shares his career journey and work life. He also mentioned the challenges Taiwan faces on the practical end when developing  wind power.
+
+<註解> 貼文創建日期 (格式為 YYYY/MM/DD)
+<範例> 2025/05/01
+2025/06/22
+
+<註解> 貼文封面圖片名稱 (圖檔請放置於 /img/blogs/ 底下，圖片長寬比建議為 2:1)
+<範例> interview_with_wang_da_ming.png
+blogs/post9_en_face.jpg
+
+<註解> 貼文中文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #企業家#訪談#王大明#永續
+#永續發展#離岸風電#風力發電#再生能源#產學合作
+
+<註解> 貼文英文標籤 (請勿添加空格或標點符號，標籤之間以 # 分隔即可)
+<範例> #entrepreneur#interview#wang_da_ming#sustainability
+#SustainableDevelopment#OffshoreWindPower#RenewableEnergy#IndustryAcademiaCollaboration
+
+<註解> 貼文作者 (暫不追蹤，以 N/A 代替)
+<範例> N/A
+Photo by Hsin-Lu Yeh / Text by Yu-de Chang, Jen-Fu Huang, Hsiang-Chien Tseng, Hsin-Lu Yeh, Huei-Yu Yen
+
+<註解> 貼文強制釘選 (是: 1 / 否: 0，預設為 0)
+<範例> 0
+0
+
+<註解> 貼文點讚數 (僅限數字，初次請填寫 0，後台會自動更新)
+<範例> 0
+0
+
+<註解> 貼文格式 (預設為 0)
+<範例> 0
+0
+
+<註解> 永續發展目標 (輸入 1-17，若有多個目標，請以逗號分隔，不得有空格)
+<範例> 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+13,17
+
+<註解> 貼文系列 (氣候職人誌 或 與部長有約)
+<範例> 氣候職人誌
+氣候職人誌
+
+<註解> 貼文內容 (請遵循 html 語法撰寫)
+<範例> <h>第一章 產業洞察</h><br>近年來，全球經濟景氣波動劇烈，新興科技如雨後春筍般快速發展，企業家們必須具備敏銳的<em>產業洞察力</em>，才能在激烈的市場競爭中脫穎而出。<br><br>...
+
+    <div class="post-section">
+        <h3>Background Introduction</h3>
+
+        <p><strong>Could you please introduce yourself and your current work?</strong></p>
+        <p>I am Hao-wei Chiu. I am now the general chairman of Deutsche Windtechnik Taiwan. We are a company specializing in operations and maintenance, primarily focusing on offshore wind power equipment. My work mainly falls into two key areas:</p>
+        <p>First is management, which includes internal company operations, such as overseeing <span class="keyword" data-tooltip="These refer to management and quality system standards developed by the International Organization for Standardization (ISO), such as ISO 9001 (Quality Management) and ISO 14001 (Environmental Management). Companies often use these frameworks for internal audits and to align with international standards.">ISO Quality Systems</span>, as well as reporting to and communicating with our headquarters.</p>
+        <p>The second area involves business and market development, particularly in the Asia-Pacific region. Our Taiwan branch is actually the first foothold in Asia-Pacific, so both I and our business development team are actively involved in expanding the market in this region.</p>
+
+        <p><strong>How is your work connected to sustainable development? Can you give some practical examples?</strong></p>
+        <p>What we do is offshore wind power, which is, of course, a form of renewable energy. For me, “energy independence” is a really important concept. As far as I know, over 95% of Taiwan’s energy is imported—whether it’s natural gas or coal—so I’ve always been concerned with how to enhance our energy autonomy and reduce reliance on international supply chains.</p>
+        <p>One of the great things about offshore wind is that it significantly reduces the need for fossil fuels. For example, a single large offshore wind turbine can generate enough electricity in one rotation to power a household for a day. Taiwan has already built around 3GW of offshore wind capacity, which can supply electricity to about 2–3 million households for an entire year. These are concrete examples of how renewable energy can contribute to achieving energy independence.</p>
+
+        <p><strong>If you had to choose three keywords to describe your work, what would they be and why?</strong></p>
+        <p>Internally, we actually held a series of discussions with all our senior management and eventually agreed on three core values: <a>Professional, Reliable, and Safe</a>.</p>
+        <p>From a general manager’s perspective, Professionalism is the minimum standard I must uphold. This includes market sensitivity, understanding client needs, and presenting both a professional image and technical expertise when delivering services.</p>
+        <p>Reliability is one of the most important values we offer as an <span class="keyword" data-tooltip="An ISP is a maintenance provider that operates independently from the wind farm developer. It offers objective and professional technical support, along with long-term maintenance services. This role plays a key part in improving system stability and extending the lifespan of offshore wind power equipment.">Independent Service Provider (ISP)</span>. Clients choose us because they know we are a long-term, trustworthy partner.</p>
+        <p>Safety is the baseline requirement in the offshore wind industry, which is inherently high-risk. Working offshore involves climbing, exposure to heat and humidity, and other hazardous conditions. We’ve adopted European safety culture and training standards, including <span class="keyword" data-tooltip="Formerly known as Oil and Gas UK, OGUK is the trade association for the UK’s offshore energy industry. Its medical examination standards are widely used in the industry to assess whether engineering personnel are fit for the physically demanding conditions of offshore work.">OGUK (Offshore Energies UK)</span> health checks and <span class="keyword" data-tooltip="The Global Wind Organisation sets standardized safety training protocols for the wind power industry, covering areas such as working at heights, fire awareness, and first aid. These certifications serve as essential safety benchmarks across the international wind energy sector.">GWO (Global Wind Organisation)</span> safety training, to ensure our team can perform at the highest standards under any circumstances.</p>
+
+    </div>
+    <div class="post-section">
+        <h3>Career Journey</h3>
+
+        <p><strong>Could you walk us through your career journey—from graduation to where you are now?</strong></p>
+        <p>I studied Environmental Engineering at National Chung Hsing University. Back then, when thinking about career options, I noticed that most of my seniors went into consulting firms or government agencies like the Environmental Protection Administration (環保署). Some joined companies like TSMC to work on environmental compliance. But honestly, none of those paths really spoke to me, so I decided to go abroad for graduate school.</p>
+        <p>I chose to study in Germany, mainly because the country had a more mature approach to environmental protection and sustainability. Plus, my professor had studied there and spoke highly of the experience. Another major incentive was that German universities don’t charge tuition. As long as you get accepted, you don’t have to pay tuition fees, which was a huge plus for me.</p>
+        <p>In Germany, I studied environmental engineering with a focus on sustainability and renewable energy. My master’s thesis also centered on sustainability and renewable systems. After graduation, I interned at an NGO, working on the conflict between onshore wind development and cultural heritage sites. That experience helped deepen my understanding of the wind energy industry.</p>
+        <p>Around 2016, I began job hunting. At that time, Taiwan was just starting to explore offshore wind, and I thought—maybe I could use my background in Germany to connect with companies interested in entering the Taiwanese market. So I took the initiative to reach out to several German firms, offering to help them develop their business in Taiwan. Fortunately, most of them responded positively and invited me for interviews. I eventually joined a company that specialized in subsea cable installation, working as a sales engineer in charge of preparing bid proposals for Taiwan’s tenders.</p>
+        <p>Later, I transitioned into an on-site engineering role and took on small project leadership assignments. That gave me hands-on experience across various stages of offshore wind development. In 2021, I decided to return to Taiwan for family reasons. Around the same time, I was invited to join my current company to help grow the Taiwan and broader Asia-Pacific market. On January 1, 2024, I officially became General Manager, overseeing overall operations and strategy.</p>
+
+        <p><strong>What inspired you to pursue a career in sustainability?</strong></p>
+        <p>I’ve had a passion for environmental protection since I was a kid. I still remember watching a cartoon where characters wore rings representing different elements—fire, water, earth, wind—and together they summoned “Captain Planet.” That left a big impression on me. I didn’t know the term “sustainability” back then, but I knew I wanted to do something that would help protect the planet. That passion carried through to my decision to study environmental engineering, focus on renewable energy, and ultimately enter this industry.</p>
+
+        <p><strong>How does your current job compare with your expectations when you were a student?</strong></p>
+        <p>To be honest, the gap is pretty big. A lot of what I learned in school wasn’t directly applicable to real-world work. But one thing engineering training taught me was how to analyze problems—how to work backward from a problem, break it down, and figure out a solution. That kind of logical thinking has been extremely helpful, especially when working on bid proposals or planning cable installation.</p>
+        <p>Back then, offshore wind was still a very new industry in Taiwan, and everyone—regardless of background—had to start from scratch. I was the first Taiwanese hire at my company, and they gave me many opportunities to learn every part of the value chain, from early development to execution. That experience helped me integrate quickly and contribute meaningfully.</p>
+
+
+        <p><strong>What has been your biggest challenge at work, and how did you overcome it?</strong></p>
+        <p>The biggest challenge I faced was when I first joined the German offshore wind company. They brought me on board with a clear goal: to help them win offshore wind contracts in Taiwan. It was very results-driven—if I didn’t deliver, there was a good chance I wouldn’t stay long. So right from the beginning, I knew I had to prove my value.</p>
+        <p>Taiwan’s offshore wind permitting process is very different from Europe’s. For instance, developers here need to pass environmental impact assessments (EIAs) before applying for construction permits. The government also enforces localization requirements—such as mandating that a certain percentage of offshore crew be Taiwanese, or that companies provide local training plans. These were all unfamiliar concepts for my German colleagues.</p>
+        <p>As the only Taiwanese employee, my role was to translate and interpret these local requirements for our head office—essentially, helping them understand how to prepare competitive proposals that complied with local laws. I spent a lot of time reading EIA documents and developing tailored strategies. In the end, we successfully won the contract, which allowed me to stay on and continue supporting the projects. That experience was a major turning point in my career.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Daily Work Life</h3>
+
+        <p><strong>Could you describe what a typical day looks like for you, from morning to evening?</strong></p>
+        <p>As General Manager, I’d say I wear more hats than anyone else. My responsibilities generally fall into two main areas: management and business development/market growth.</p>
+        <p>My mornings usually start with checking emails and responding to important messages. I often attend meetings with organizations like the European Chamber of Commerce Taiwan, where we discuss market trends, policy proposals, and provide feedback to the government. I also meet with my direct sales team in the morning to get updates on project progress and market developments. After that, I have meetings with department heads to stay on top of operations, HR matters, and project execution.</p>
+        <p>Afternoons are typically spent reviewing internal documents, preparing client presentations, and going through contract drafts. I also have regular update calls with our German headquarters, which are usually scheduled after 2 or 3 PM Taiwan time due to the time difference. In the evenings, I sometimes attend networking events or business dinners. Even though my schedule is packed, I still make it a point to carve out time for exercise—either hitting the gym or playing sports—to stay healthy.</p>
+
+        <p><strong>On a scale of 1 to 10, how would you rate your work-life balance, and why?</strong></p>
+        <p>I’d give myself a 9. One of the reasons the company invited me to take on the GM role was because they hoped I could preserve the flexibility and efficiency of a multinational work culture. I’ve always emphasized that after-hours time should belong to the individual. So generally, I don’t deal with work matters after hours, nor do I send messages to colleagues in the evenings. This helps create a culture where the team feels confident that they won’t be expected to work around the clock.</p>
+        <p>That said, as GM, I still reserve 1 point for flexibility—because sometimes urgent issues do require immediate decisions. But overall, I value the boundary between work and life and hope to instill that mindset in the company as well.</p>
+
+        <p><strong>Who do you interact with most frequently at work? Are there any memorable aspects of those interactions?</strong></p>
+        <p>I work most closely with my sales team, and each team member has their own unique style when it comes to engaging with clients, pitching ideas, and understanding the market. I learn a lot from observing their different approaches and thought processes.</p>
+        <p>I also serve as a bridge between the sales team and the project execution team. Sales focuses more on client needs and strategic goals, while execution cares about feasibility and quality control. These priorities don’t always align, so I often have to mediate and help both sides reach common ground. On top of that, I coordinate with the admin team, HR, and our German HQ. All of this makes communication and alignment a big part of my everyday work.</p>
+
+    </div>
+
+    <div class="post-section">
+        <h3>Based on your observation, what are the future trends in this field?</h3>
+
+        <p><strong>就您觀察，這個領域未來的發展趨勢會是如何？</strong></p>
+        <p>I believe renewable energy will absolutely be a central focus moving forward. The industry has already matured significantly in Europe, and the Asia-Pacific region is quickly catching up—countries like Japan and South Korea are investing heavily in wind energy and emerging technologies like hydrogenic energy. As an island nation, Taiwan in particular needs to strengthen its energy independence, especially considering our high reliance on imported fuels and the risks associated with global geopolitical instability.</p>
+        <p>Technologies such as offshore wind, hydrogenic energy, geothermal, and tidal power all have strong growth potential. These developments will also require more interdisciplinary talent. It’s a field that’s evolving and expanding.</p>
+
+
+        <p><strong>What kind of person is best suited for this line of work? What professional skills are important?</p>
+        <p>I think there are three essential qualities for this industry:</p>
+        <p>First, <a>the ability to collaborate</a>. This is a field that crosses cultures, languages, and departments, so strong communication skills and empathy are key.</p>
+        <p>Second, <a>a willingness to keep learning</a>. Offshore wind and the broader renewable energy industry evolve quickly, with new technologies and regulations emerging all the time.</p>
+        <p>Third, <a>language skills—especially English—are crucial</a>, as most of our daily communication and documentation is in English.</p>
+        <p>As long as someone has these qualities, even if they’re not yet familiar with the technical details, most companies will provide training. If you’re willing to learn, you’ll pick things up quickly.</p>
+
+        <p><strong>Finally, do you have any advice or words of encouragement for young people hoping to enter this field?</strong></p>
+        <p>I’d encourage young people to maintain a <a>“problem-solving mindset.”</a> Every part of this industry requires different teams and individuals to collaborate toward a common goal. No one can do it all alone—what matters is whether you can identify solutions and bring people together to make progress.</p>
+        <p>In fact, you can start building this mindset as a student. For instance, during graduate school, professors often ask students to come up with their own research topics, find teammates, develop methods, test hypotheses, and write up the results. That’s essentially problem-solving in action.</p>
+        <p>Once you enter the workforce, this ability becomes incredibly valuable. You don’t need to be an expert right away, but if you’re able to learn quickly and find a path forward, you’ll go far in this industry.</p>
+
+    </div>

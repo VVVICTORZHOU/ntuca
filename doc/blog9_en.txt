@@ -114,12 +114,12 @@ Photo by Hsin-Lu Yeh / Text by Yu-de Chang, Jen-Fu Huang, Hsiang-Chien Tseng, Hs
     <div class="post-section">
         <h3>Based on your observation, what are the future trends in this field?</h3>
 
-        <p><strong>就您觀察，這個領域未來的發展趨勢會是如何？</strong></p>
+        <p><strong>What trends do you foresee in this field?</strong></p>
         <p>I believe renewable energy will absolutely be a central focus moving forward. The industry has already matured significantly in Europe, and the Asia-Pacific region is quickly catching up—countries like Japan and South Korea are investing heavily in wind energy and emerging technologies like hydrogenic energy. As an island nation, Taiwan in particular needs to strengthen its energy independence, especially considering our high reliance on imported fuels and the risks associated with global geopolitical instability.</p>
         <p>Technologies such as offshore wind, hydrogenic energy, geothermal, and tidal power all have strong growth potential. These developments will also require more interdisciplinary talent. It’s a field that’s evolving and expanding.</p>
 
 
-        <p><strong>What kind of person is best suited for this line of work? What professional skills are important?</p>
+        <p><strong>What kind of person is best suited for this line of work? What professional skills are important?</strong></p>
         <p>I think there are three essential qualities for this industry:</p>
         <p>First, <a>the ability to collaborate</a>. This is a field that crosses cultures, languages, and departments, so strong communication skills and empathy are key.</p>
         <p>Second, <a>a willingness to keep learning</a>. Offshore wind and the broader renewable energy industry evolve quickly, with new technologies and regulations emerging all the time.</p>

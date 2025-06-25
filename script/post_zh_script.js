@@ -225,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const postDate = document.querySelector('.post-date span');
                 const postAuthor = document.querySelector('.post-author span');
                 const postTagsContainer = document.querySelector('.blog-posts-item-tags');
+                const postSDGsContainer = document.querySelector('.blog-posts-item-sdgs');
                 const postLikes = document.querySelector('.blog-posts-item-likes span');
                 const postPinned = document.querySelector('.blog-posts-item-pinned');
                 const postSeries = document.querySelector('.blog-posts-item-series');
@@ -243,6 +244,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (line.includes('貼文點讚數')) currentField = 'postLikes';
                         if (line.includes('貼文格式')) currentField = 'postFormat';
                         if (line.includes('貼文系列')) currentField = 'postSeries';
+                        if (line.includes('永續發展目標')) {
+                            // 本變數也是單行字串，例如 13,17，請以逗號,作為分隔，將各個檔案的 SDGs 皆以子陣列形式存放入此變數
+                            currentField = 'postSDGs';
+                            //blogData.postSDGs.push(line.split(',').map(sdg => sdg.trim()));
+                        }
                         if (line.includes('貼文內容')) {
                             currentField = 'postContent';
                             postContentCapture = true;
@@ -338,6 +344,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         tagElement.textContent = tag.trim();
                         postTagsContainer.appendChild(tagElement);
                     });
+                }
+
+                // 設置SDGs（以 , 作為分隔）
+                if (blogData.postSDGs) {
+                    console.log('SDGs:', blogData.postSDGs); //SDGs: 8,9,12
+                    const sdgs = blogData.postSDGs.split(',').map(sdg => sdg.trim());
+                    sdgs.forEach(sdg => {
+                        // sdgnum: SDG1, SDG2, ...
+                        const sdgClass = `SDG${sdg}`;
+                        const sdgElement = document.createElement('span');
+                        sdgElement.classList.add('sdg');
+                        sdgElement.textContent = sdgClass.trim();
+                        postSDGsContainer.appendChild(sdgElement);
+                    }
+                    );
                 }
 
 

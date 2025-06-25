@@ -427,10 +427,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const postSDGs = blogData.postSDGs;  // Array for SDG data (e.g., ["13,17"])
         const postTagsEn = blogData.postTagsEn;  // Array for tags (e.g., ["#碳中和#氣候變遷"])
 
-        console.log('Rank SDGs',postSDGs);
-        console.log('Rank Tags',postTagsEn);
-
-
         const sdgCounts = {};
         const tagCounts = {};
 
@@ -442,6 +438,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Initial chart load
         createBarChart(tagCounts, 'bar-chart-container');
+
+        // Create SDGs chart
+        //createSDGsChart(sdgCounts, 'sdg-chart-container');
+
     }).catch(error => {
         console.error('Error fetching files:', error);
     });
@@ -566,7 +566,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Create bar chart for SDG or Tag data
+    // Create bar chart for Tag data
     function createBarChart(data, containerId) {
         const container = document.getElementById(containerId);
         container.innerHTML = '';  // Clear previous content
@@ -581,7 +581,7 @@ document.addEventListener('DOMContentLoaded', function() {
             barItem.classList.add('bar-item');
 
             // 設置長條的比例寬度，最大數據為 100%，其他按比例調整
-            const barWidthPercentage = (count / maxCount) * 100;
+            const barWidthPercentage = (count / maxCount) * 70;
             
             // 創建長條元素
             barItem.innerHTML = `
@@ -596,6 +596,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 barItem.querySelector('.bar-fill').style.width = `${barWidthPercentage}%`;
             }, 500);  // Delay for smoother animation
         });
+    }
+
+
+    // Create SDGs chart !
+    function createSDGsChart(data, containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+        container.className = 'sdg-circles';
+        
+        const maxCount = Math.max(...Object.values(data));
+        
+        for (let i = 1; i <= 17; i++) {
+            const count = data[i] || 0;
+            const percentage = maxCount > 0 ? (count / maxCount) * 100 : 0;
+            const circumference = 2 * Math.PI * 40; // 半徑40的圓周長
+            const offset = circumference - (percentage / 100) * circumference;
+            
+            const sdgItem = document.createElement('div');
+            sdgItem.className = 'sdg-circle-item';
+            
+            sdgItem.innerHTML = `
+                <div class="progress-ring">
+                    <svg>
+                        <circle class="progress-ring-bg" cx="45" cy="45" r="40"></circle>
+                        <circle class="progress-ring-fill" cx="45" cy="45" r="40"
+                                style="stroke-dashoffset: ${offset};"></circle>
+                    </svg>
+                    <img src="https://vvvictorzhou.github.io/ntuca/img/sdgs/sdgs${i}.png" 
+                            alt="SDG ${i}" class="sdg-mini-image">
+                </div>
+                <div class="sdg-info">
+                    <div class="sdg-number">SDG ${i}</div>
+                    <div>${count} 篇</div>
+                </div>
+            `;
+            
+            container.appendChild(sdgItem);
+        }
     }
 });
 

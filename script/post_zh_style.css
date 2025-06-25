@@ -730,6 +730,24 @@ body {
     border-radius: 10px;
 }
 
+.blog-posts-item-sdgs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.blog-posts-item-sdgs .sdg {
+    font-size: 12px;
+    color: #83CBEB;
+    background-color: #fff;
+    border-color: #83CBEB;
+    border-style: solid;
+    border-width: 1px;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
 .blog-posts-item-interactions {
     display: flex;
     gap: 15px;
